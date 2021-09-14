@@ -43,14 +43,14 @@
     <form class="form-horizontal" id="form" name="myForm" method="POST">
 
         <div class="form-group">
-        <label class="control-label col-sm-2" for="username">Username</label>
-        <div class="col-sm-10" style="text-align: center;">
+        <label class="control-label col-sm-2" for="username"><b>Username</b></label>
+        <div class="col-sm-10">
             <input value="<?php if (isset($_POST['username'])) echo htmlspecialchars($_POST['username']) ?>" type="text" name="username" class="form-control" id="username" placeholder="Enter username" required/>
             <div class="invalid-feedback">Please fill out this field.</div>
         </div>
         </div>
         <div class="form-group">
-        <label class="control-label col-sm-2" for="passwd">Password</label>
+        <label class="control-label col-sm-2" for="passwd"><b>Password</b></label>
         <div class="col-sm-10">          
             <input value="<?php if (isset($_POST['passwd'])) echo htmlspecialchars($_POST['passwd']) ?>" type="password" class="form-control" id="passwd" placeholder="Enter password" name="passwd" required />
             <div class="invalid-feedback">Please fill out this field.</div>

@@ -44,22 +44,20 @@
 
         <div class="form-group">
         <label class="control-label col-sm-2" for="username"><b>Username</b></label>
-        <div class="col-sm-10">
+        <div class="col-sm-12">
             <input value="<?php if (isset($_POST['username'])) echo htmlspecialchars($_POST['username']) ?>" type="text" name="username" class="form-control" id="username" placeholder="Enter username" required/>
             <div class="invalid-feedback">Please fill out this field.</div>
         </div>
         </div>
         <div class="form-group">
         <label class="control-label col-sm-2" for="passwd"><b>Password</b></label>
-        <div class="col-sm-10">          
+        <div class="col-sm-12">          
             <input value="<?php if (isset($_POST['passwd'])) echo htmlspecialchars($_POST['passwd']) ?>" type="password" class="form-control" id="passwd" placeholder="Enter password" name="passwd" required />
             <div class="invalid-feedback">Please fill out this field.</div>
         </div>
         </div>
-        <div class="form-group">        
-        <div class="col-sm-offset-2 col-sm-10">
-            <button style="margin-bottom: 45px" type="submit" class="btn btn-primary" value="Login" name="login">Login</button>
-        </div>
+        <div class="form-group" style="text-align: center;">        
+            <button style="margin-bottom: 45px" type="submit" class="btn btn-success" value="Login" name="login">Login</button>
         </div>
     </form>
     </div>

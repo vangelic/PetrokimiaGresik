@@ -26,7 +26,7 @@
 			</div>
 			<div class="main">
 				<form>
-					<button>INSERT DATA</button>
+					<button><a href="insert.php">INSERT DATA</a></button>
 					<button>LIST DATA</button>
 				</form>
 			</div>

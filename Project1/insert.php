@@ -30,11 +30,15 @@
 				<span>
 					<input type="text" placeholder="Nama Latin" name="">
 				</span><br>
-				<h3>Lokasi</h3>
+				<h3>Deskripsi</h3>
 				<span>
-					<input type="text" placeholder="Lokasi" name="">
+					<input type="text" placeholder="Deskripsi" name="">
 				</span><br>
-				<button style="margin-top: 50px;">insert</button>
+				<h3>File Browser</h3>
+				<span>
+					<input type="File" placeholder="File Browser" name="">
+				</span><br>
+				<button style="margin-top: 50px;">INSERT</button>
 			</form>
 		</div>
 	</div>

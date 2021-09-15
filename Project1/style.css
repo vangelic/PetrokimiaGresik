@@ -23,6 +23,7 @@ thead{
 }
 .container{
 	width: 380px;
+	text-align: center;
 	margin: 5% auto;
 	border-radius: 25px;
 	background-color: rgba(255,255,255,0.5);
@@ -46,7 +47,6 @@ thead{
 	height: 40px;
 	border: none;
 	outline: none;
-	padding-left: 40px;
 	box-sizing: border-box;
 	font-size: 15px;
 	color: #333;
@@ -84,5 +84,12 @@ h1{
 h3{
 	margin-bottom: 0;
 	margin-left: 40px;
+	text-align: left;
+}
+table{
+	text-align: left;
+	border: 1px solid black;
+}
+table input{
 	text-align: left;
 }

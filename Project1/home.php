@@ -27,7 +27,7 @@
 			<div class="main">
 				<form>
 					<button><a href="insert.php">INSERT DATA</a></button>
-					<button>LIST DATA</button>
+					<button><a href="list.php">LIST DATA</a></button>
 				</form>
 			</div>
 		</div>

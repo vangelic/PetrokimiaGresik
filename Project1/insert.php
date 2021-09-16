@@ -13,25 +13,28 @@
 	<div class="container">
 		<h2>Form</h2>
 		<hr style="position: relative; border: none; height: 1px; background: #999;" />
-		<form class="row g-3" id="form" name="myForm" method="POST">
+		<form class="row g-3" id="form" name="myForm" method="POST" action="pgcode.php">
 			<div class="col-md-6">
 				<div class="mb-3">
 					<label for="nm_lokal" class="form-label">Nama Lokal</label>
-    				<input type="text" class="form-control" id="nm_lokal" placeholder="Masukkan nama lokal">
+    				<input type="text" class="form-control" id="nm_lokal" placeholder="Masukkan nama lokal" required>
 				</div>
 				<div class="mb-3">
 					<label for="nm_latin" class="form-label">Nama Latin</label>
-    				<input type="text" class="form-control" id="nm_latin" placeholder="Masukkan nama latin">
+    				<input type="text" class="form-control" id="nm_latin" placeholder="Masukkan nama latin" required>
 				</div>
 				<div class="mb-3">
 					<label for="deskripsi" class="form-label">Deskripsi</label>
-    				<textarea class="form-control" id="deskripsi" placeholder="Masukkan deskripsi" rows="3"></textarea>
+    				<textarea class="form-control" id="deskripsi" placeholder="Masukkan deskripsi" rows="3" required></textarea>
 				</div>
 			</div>
 			<div class="col-md-6">
 				<div class="mb-3">
 					<label for="formFile" class="form-label">Upload Foto</label>
-					<input class="form-control" type="file" id="formFile">
+					<input class="form-control" type="file" id="formFile" required>
+				</div>
+				<div class="mb-3">
+					<img src="placeholder_img.png" class="img-thumbnail w-100" style="height: 200px; object-fit:cover;" alt="image">
 				</div>
 			</div>	
 			<div class="text-end">

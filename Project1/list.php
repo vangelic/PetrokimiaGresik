@@ -43,7 +43,8 @@ $result = mysqli_query($koneksi, "SELECT * FROM info_tanaman");
 	</thead>
 	<tbody>
 		<div class="container">
-			<h1>Daftar Tanaman</h1>
+		<h2>Daftar Tanaman</h2>
+		<hr style="position: relative; border: none; height: 1px; background: #999;" />
 			<table border="1" cellpadding="10" cellspacing="0">
 				<tr>
 					<th>No.</th>

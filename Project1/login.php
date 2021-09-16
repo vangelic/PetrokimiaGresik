@@ -21,17 +21,15 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://kit.fontawesome.com/484db9065f.js" crossorigin="anonymous"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <title>Login</title>
 </head>
 
@@ -44,16 +42,22 @@
 
         <div class="form-group">
         <label class="control-label col-sm-2" for="username"><b>Username</b></label>
-        <div class="col-sm-12">
-            <input value="<?php if (isset($_POST['username'])) echo htmlspecialchars($_POST['username']) ?>" type="text" name="username" class="form-control" id="username" placeholder="Enter username" required/>
-            <div class="invalid-feedback">Please fill out this field.</div>
+        <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input value="<?php if (isset($_POST['username'])) echo htmlspecialchars($_POST['username']) ?>" type="text" name="username" class="form-control" id="username" placeholder="Enter username" required/>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
         </div>
         </div>
         <div class="form-group">
         <label class="control-label col-sm-2" for="passwd"><b>Password</b></label>
-        <div class="col-sm-12">          
-            <input value="<?php if (isset($_POST['passwd'])) echo htmlspecialchars($_POST['passwd']) ?>" type="password" class="form-control" id="passwd" placeholder="Enter password" name="passwd" required />
+        <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input value="<?php if (isset($_POST['passwd'])) echo htmlspecialchars($_POST['passwd']) ?>" type="password" class="form-control" id="passwd" placeholder="Enter password" name="passwd" required />
             <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
         </div>
         </div>
         <div class="form-group" style="text-align: center;">        

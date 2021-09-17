@@ -71,11 +71,11 @@ thead{
 	position: relative;
 }
 .main i{
-	position: absolute;
-	left: 15px;
-	color: #333;
-	font-size: 16px;
-	top: 2px;
+    position: absolute;
+    left: 0px;
+    color: #333;
+    font-size: 16px;
+    top: 10px;
 }
 h1{
 	font-family: serif;

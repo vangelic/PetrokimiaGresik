@@ -1,4 +1,6 @@
 <?php 
+	require 'adminPermission.inc.php';
+	
 //require 'functions.php';
 
 //array ambil dari database

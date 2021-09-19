@@ -1,3 +1,14 @@
+<?php
+    $c_id = $_GET['id'];
+
+	$dbc = new PDO('mysql:host=localhost;dbname=pg1', 'root', '');
+		
+    $statement = $dbc->prepare("SELECT gambar, nama_lokal, nama_latin, deskripsi FROM `pgpedia` WHERE id=:id");
+	$statement->bindValue(':id', $c_id);
+	$statement->execute();
+	$row = $statement->fetch();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -122,14 +133,14 @@
 
 <body>
 	<div style="z-index: 100;">
-		<img class="logoatas" src="logo_atas.png">
+		<img class="logoatas" src="aset/logo_atas.png">
 	</div>
-	<img class="gambar" src="Buah_Merah_Bawean.jpeg">
+	<img class="gambar" src="aset/Buah_Merah_Bawean.jpeg">
 	<div class="gel">
-		<img style="width: 700px; height: 500px;" src="gel1.png">
+		<img style="width: 700px; height: 500px;" src="aset/gel1.png">
 	</div>
 	<div class="orang">
-		<img style="width: 150px; padding-left: 100px;" src="orang.png">
+		<img style="width: 150px; padding-left: 100px;" src="aset/orang.png">
 	</div>
 	<div class="judul">
 		<div>
@@ -141,20 +152,18 @@
 	</div>
 	<div class="ctext">
 		<div class="paragraf">
-			<P>Pohon Trembesi dengan nama latin (Samanea saman) merupakan jenis pohon yang memiliki kemampuan menyerap karbon dioksida dari udara yang sangat besar. Trambesi mampu menyerap karbondioksida mencapai 28.488,39 kg/tahun. Pohon Trembesi memiliki julukan sebagai pohon hujan (Rain Tree) atau ki hujan karena memiliki kemampuan untuk menyerap air tanah yang kuat, sehingga tajuknya sering meneteskan air.
-			Trembesi termasuk pohon yang cepat tumbuh dan menyebar baik di negara tropis maupun sub tropis. Trembesi merupakan tanaman asli yang berasal dari Amerika tropis seperti Meksiko, Venezuela, Peru dan Brazil, namun dapat tumbuh di berbagai daerah tropis dan subtropis. Jenis trembesi ini memerlukan drainasi yang baik, namun masih toleran terhadap tanah yang tergenang air dalam waktu pendek.
-			Trembesi termasuk pohon yang cepat tumbuh dan menyebar baik di negara tropis maupun sub tropis. Trembesi merupakan tanaman asli yang berasal dari Amerika tropis seperti Meksiko, Venezuela, Peru dan Brazil, namun dapat tumbuh di berbagai daerah tropis dan subtropis. Jenis trembesi ini memerlukan drainasi yang baik, namun masih toleran terhadap tanah yang tergenang air dalam waktu pendek.
-			</P>
+			<p><?php echo $row['deskripsi']; ?></p>
+			
 		</div>
 		<div class="daun">
-			<img style="width: 200px" src="daun.png">
+			<img style="width: 200px" src="aset/daun.png">
 		</div>
 	</div>
 	<div class="logobawah">
-		<img style="width: 500px; bottom: 0;" src="logo_bawah.png">
+		<img style="width: 500px; bottom: 0;" src="aset/logo_bawah.png">
 	</div>
 	<div class="daunpojok">
-		<img style="width: 250px; height: 200px" src="daun_pojok.png">
+		<img style="width: 250px; height: 200px" src="aset/daun_pojok.png">
 	</div>
 
 </body>

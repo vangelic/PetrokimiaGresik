@@ -13,7 +13,7 @@
         if (checkPassword($_POST['username'], $_POST['passwd'])) {
             session_start();
             $_SESSION['isAdmin'] = true;
-            header('Location: http://localhost/PetrokimiaGresik/Project1/home.php');
+            header('Location: http://localhost/PetrokimiaGresik/Project1/index.php');
             exit();
         }
     }

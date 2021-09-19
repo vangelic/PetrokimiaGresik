@@ -2,7 +2,7 @@
     session_start();
     if (!isset($_SESSION['isAdmin'])) 
     {
-        header("Location: http://{$_SERVER['HTTP_HOST']}/5.%20PAW/TM4/login.php");
+        header("Location: http://{$_SERVER['HTTP_HOST']}/PetrokimiaGresik/Project1/login.php");
         exit();
     }
 ?>

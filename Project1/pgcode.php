@@ -1,3 +1,9 @@
+<?php
+    require 'adminPermission.inc.php';
+
+    $c_id = $_GET['id'];
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -15,14 +21,16 @@
 		<hr style="position: relative; border: none; height: 1px; background: #999;" />
 		<div class="row">
             <div class="col-md-6 text-center">
-                <img src="qrcode.png" class="img-thumbnail" alt="qrcode">
+                <img src="aset/placeholder_img.png" class="img-thumbnail" alt="qrcode">
             </div>
             <div class="col-md-6 text-center d-flex flex-column justify-content-center align-items-center">
                 <p>Klik Tombol dibawah untuk Mengunduh QR Code :</p>
                 <button type="submit" name="simpan" value="simpan" class="btn btn-success mb-5">Simpan</button>
 
                 <div>Klik Link berikut untuk melihat tampilan informasi tanaman :</div>
-                <a href="home.php">Kembali</a>
+                <?php
+                    echo "<a href='user.php?id=$c_id'>Lihat Halaman Deskripsi</a>"
+                ?>
             </div>
         </div>
 	</div>

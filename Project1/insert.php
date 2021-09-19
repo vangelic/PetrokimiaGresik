@@ -1,3 +1,31 @@
+<?php
+
+	require 'adminPermission.inc.php';
+
+    if (isset($_POST['upload'])) {
+
+		//upload foto
+		$target = "image/".basename($_FILES['image']['name']);
+
+		if (!move_uploaded_file($_FILES['image']['tmp_name'], $target)) die('Gagal');
+
+		$dbc = new PDO('mysql:host=localhost;dbname=pg1', 'root', '');
+		
+        $statement = $dbc->prepare("INSERT INTO pgpedia (gambar, nama_lokal, nama_latin, deskripsi) VALUES(:gambar, :nama, :latin, :desk)");
+        $statement->bindValue(':gambar',$_FILES['image']['name']);
+        $statement->bindValue(':nama', $_POST['nm_lokal']);
+		$statement->bindValue(':latin', $_POST['nm_latin']);
+		$statement->bindValue(':desk', $_POST['deskripsi']);
+        $statement->execute();
+
+		$id = $dbc->lastInsertId();
+
+		header('Location: http://localhost/PetrokimiaGresik/Project1/pgcode.php?id=$id');
+        exit();
+    }
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -13,28 +41,34 @@
 	<div class="container">
 		<h2>Form</h2>
 		<hr style="position: relative; border: none; height: 1px; background: #999;" />
-		<form class="row g-3" id="form" name="myForm" method="POST" action="pgcode.php">
+		<form class="row g-3" id="form" name="myForm" method="POST" enctype="multipart/form-data">
 			<div class="col-md-6">
 				<div class="mb-3">
 					<label for="nm_lokal" class="form-label">Nama Lokal</label>
-    				<input type="text" class="form-control" id="nm_lokal" placeholder="Masukkan nama lokal" required>
+    				<input type="text" class="form-control" id="nm_lokal" name="nm_lokal" placeholder="Masukkan nama lokal" required>
 				</div>
 				<div class="mb-3">
 					<label for="nm_latin" class="form-label">Nama Latin</label>
-    				<input type="text" class="form-control" id="nm_latin" placeholder="Masukkan nama latin" required>
+    				<input type="text" class="form-control" id="nm_latin" name="nm_latin" placeholder="Masukkan nama latin" required>
 				</div>
 				<div class="mb-3">
 					<label for="deskripsi" class="form-label">Deskripsi</label>
-    				<textarea class="form-control" id="deskripsi" placeholder="Masukkan deskripsi" rows="3" required></textarea>
+    				<textarea class="form-control" id="deskripsi" name="deskripsi" placeholder="Masukkan deskripsi" rows="4" required></textarea>
 				</div>
 			</div>
 			<div class="col-md-6">
 				<div class="mb-3">
 					<label for="formFile" class="form-label">Upload Foto</label>
-					<input class="form-control" type="file" id="formFile" required>
+					<input class="form-control" type="file" name="image" id="image" onchange="loadfile(event)" required>
 				</div>
 				<div class="mb-3">
-					<img src="placeholder_img.png" class="img-thumbnail w-100" style="height: 200px; object-fit:cover;" alt="image">
+					<img src="aset/placeholder_img.png" id="preimage" class="img-thumbnail w-100" style="height: 230px; object-fit:cover;" alt="image">
+					<script type="text/javascript">
+						function loadfile(event){
+							var output = document.getElementById('preimage');
+							output.src = URL.createObjectURL(event.target.files[0]);
+						};
+					</script>
 				</div>
 			</div>	
 			<div class="text-end">

@@ -7,7 +7,7 @@
     $kode = "$url/user.php?id=$c_id";
     require_once("qrcode/qrlib.php");
 
-    QRcode::png("$kode","pgqrcode/qr".$c_id.".png","M", 3,3);
+    QRcode::png("$kode","pgqrcode/qr".$c_id.".png","M", 5,3);
 
 ?>
 

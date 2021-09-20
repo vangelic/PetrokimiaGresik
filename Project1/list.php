@@ -1,4 +1,5 @@
 <?php 
+	include "inisiasi.php";
 	require 'adminPermission.inc.php';
 	
 //require 'functions.php';
@@ -7,7 +8,7 @@
 //$result = query("SELECT * FROM info_tanaman");
 
 //koneksi ke database
-$koneksi = mysqli_connect("localhost","root","","pg1");
+
 
 //ambil data dari tabel info_tanaman
 $result = mysqli_query($koneksi, "SELECT * FROM pgpedia");
@@ -51,7 +52,7 @@ $result = mysqli_query($koneksi, "SELECT * FROM pgpedia");
 		<div class="logo">
 			<img src="Logonobg.png" width="140px" height="50px">
 				<ul class="home">
-					<a href="home.php" style="margin-right: 30px">Home</a>
+					<a href="insert.php" style="margin-right: 30px">Home</a>
 					<a href="logout.php">Logout</a>
 				</ul>
 		</div>
@@ -83,12 +84,12 @@ $result = mysqli_query($koneksi, "SELECT * FROM pgpedia");
 						</td>
 						<td>
 							<?php
-								$kode = "user.php?id=".$row["id"]."";
+								$kode = "$url/user.php?id=".$row["id"]."";
 								require_once("qrcode/qrlib.php");
 							
-								QRcode::png("$kode","qr".$row["id"].".png","M", 2,2);
+								QRcode::png("$kode","pgqrcode/qr".$row["id"].".png","M", 3,3);
 							?>
-							<img src="qr<?php echo $row["id"] ?>.png" alt="">
+							<img src="pgqrcode/qr<?php echo $row["id"] ?>.png" alt="">
 						</td>
 					</tr>
 					<?php $i++; ?>

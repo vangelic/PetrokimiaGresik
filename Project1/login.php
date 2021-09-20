@@ -1,8 +1,9 @@
 <?php
+    include "inisiasi.php";
+
     function checkPassword($username, $password)
     {
-        $dbc = new PDO('mysql:host=localhost;dbname=pg1', 'root', '');
-    
+        global $dbc;
         $statement = $dbc->prepare("SELECT * FROM admin WHERE username = :username AND password = SHA2(:password,0)");
         $statement->bindValue(':username', $username);
         $statement->bindValue(':password', $password);
@@ -13,7 +14,7 @@
         if (checkPassword($_POST['username'], $_POST['passwd'])) {
             session_start();
             $_SESSION['isAdmin'] = true;
-            header('Location: http://localhost/PetrokimiaGresik/Project1/index.php');
+            header("Location: $url/index.php");
             exit();
         }
     }

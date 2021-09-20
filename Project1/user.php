@@ -1,7 +1,6 @@
 <?php
+	include "inisiasi.php";
     $c_id = $_GET['id'];
-
-	$dbc = new PDO('mysql:host=localhost;dbname=pg1', 'root', '');
 		
     $statement = $dbc->prepare("SELECT gambar, nama_lokal, nama_latin, deskripsi FROM `pgpedia` WHERE id=:id");
 	$statement->bindValue(':id', $c_id);

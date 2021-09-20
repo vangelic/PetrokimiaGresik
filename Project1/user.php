@@ -6,7 +6,6 @@
     $statement = $dbc->prepare("SELECT gambar, nama_lokal, nama_latin, deskripsi FROM `pgpedia` WHERE id=:id");
 	$statement->bindValue(':id', $c_id);
 	$statement->execute();
-	$row = $statement->fetch();
 ?>
 
 <!DOCTYPE html>

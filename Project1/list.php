@@ -20,17 +20,28 @@ $result = mysqli_query($koneksi, "SELECT * FROM pgpedia");
 	<style>
 		body{
 			font-family: sans-serif;
-			background-image: url(bg.jpg);
+			background-image: url(aset/bg.jpg);
 			background-repeat: no-repeat;
 			overflow: hidden;
 			background-size: cover;
 		}
 		.container{
-			width: auto;
+			width: 480px;
 			margin: 5% auto;
 			border-radius: 25px;
 			background-color: rgba(255,255,255,0.5);
 			box-shadow: 0 0 17px #333;
+		}
+		.home{
+			float: right;
+			display: inline-block;
+			width: 200px;
+			height: 50px;
+			list-style: none;
+			line-height: 50px;	
+			color: black;
+			text-align: center;
+			font-size: 20px;
 		}
 
 	</style>
@@ -39,8 +50,10 @@ $result = mysqli_query($koneksi, "SELECT * FROM pgpedia");
 	<thead>
 		<div class="logo">
 			<img src="Logonobg.png" width="140px" height="50px">
-				<a href="home.php" style="margin-left: 1200px">Home</a>
-				<a href="logout.php" style="margin-left: 30px">Logout</a>
+				<ul class="home">
+					<a href="home.php" style="margin-right: 30px">Home</a>
+					<a href="logout.php">Logout</a>
+				</ul>
 		</div>
 	</thead>
 	<tbody>

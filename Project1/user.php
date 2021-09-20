@@ -7,6 +7,7 @@
 	$statement->bindValue(':id', $c_id);
 	$statement->execute();
 	$row = $statement->fetch();
+
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +26,7 @@
 	.paragraf{
 		width: 500px;
 		height: auto;
-		background-image: url(kotak.png);
+		background-image: url(aset/kotak.png);
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 		padding: 15px;
@@ -34,7 +35,7 @@
 	}
 	.daun{
 		position: absolute;
-		top: 250px;
+		top: 450px;
 		left: 530px;
 	}
 	.daunpojok{
@@ -50,7 +51,7 @@
 		height: 500px;
 	}
 	.judul{
-		margin-top: 200px;
+		margin-top: 100px;
 	}
 	@media screen and (max-width: 768px){
 		.gel{
@@ -72,10 +73,14 @@
 			z-index: 100;
 		}
 		.ctext{
-			margin-top: 200px;
+			margin-top: 50px;
 		}
 		.daun{
-			margin-top: 200px;
+			margin-top: 30px;
+			margin-left: 10px;
+		}
+		.daun img{
+			width: 120px !important;
 		}
 		.logoatas{
 			width: 250px !important;
@@ -91,6 +96,9 @@
 		.logobawah{
 			position: fixed;
 			bottom: 0;
+		}
+		.judul{
+			margin-top: 150px;
 		}
 	}
 	@media screen and (max-width: 425px){
@@ -119,7 +127,7 @@
 			font-size: 20px;
 		}
 		.daun{
-			margin-top: 300px;
+			margin-top: 20px;
 			margin-left: 110px;
 		}
 		.daun img{
@@ -128,6 +136,9 @@
 		.ctext{
 			margin-top: 0;
 		}
+		.judul{
+			margin-top: 150px;
+		}
 	}
 </style>
 
@@ -135,7 +146,7 @@
 	<div style="z-index: 100;">
 		<img class="logoatas" src="aset/logo_atas.png">
 	</div>
-	<img class="gambar" src="aset/Buah_Merah_Bawean.jpeg">
+	<img class="gambar" src=<?php echo $row['gambar'] ??=$c_id;?>>
 	<div class="gel">
 		<img style="width: 700px; height: 500px;" src="aset/gel1.png">
 	</div>
@@ -144,19 +155,19 @@
 	</div>
 	<div class="judul">
 		<div>
-			<h1 style="font-size: 50px" >ANGGUR LAUT</h1>
+			<h1 style="font-size: 50px" ><?php echo $row['nama_lokal'] ??=$c_id;?></h1>
 		</div>
 		<div>
-			<h3 style="font-style: italic; font-size: 40px; margin-top: -10px">Caulerpa Rasemosa</h3>
+			<h3 style="font-style: italic; font-size: 40px; margin-top: -10px"><?php echo $row['nama_latin'] ??=$c_id;?></h3>
 		</div>
 	</div>
 	<div class="ctext">
 		<div class="paragraf">
-			<p><?php echo $row['deskripsi']; ?></p>
+			<p><?php echo $row['deskripsi'] ??=$c_id;?></p>
 			
 		</div>
 		<div class="daun">
-			<img style="width: 200px" src="aset/daun.png">
+			<img style="width: 150px" src="aset/daun.png">
 		</div>
 	</div>
 	<div class="logobawah">

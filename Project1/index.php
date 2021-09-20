@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://kit.fontawesome.com/484db9065f.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body style="background-image: url(aset/bg.jpg);">
 	<thead>
 		<div class="logo">
 			<img src="Logonobg.png" width="140px" height="50px">

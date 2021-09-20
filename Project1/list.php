@@ -88,7 +88,7 @@ $result = mysqli_query($koneksi, "SELECT * FROM pgpedia");
 							
 								QRcode::png("$kode","pgqrcode/qr".$row["id"].".png","M", 5,3);
 							?>
-							<img src="pgqrcode/qr<?php echo $row["id"] ?>.png" alt="">
+							<img src="pgqrcode/qr<?php echo $row["id"] ?>.png" alt="" style="width:100px;">
 						</td>
 					</tr>
 					<?php $i++; ?>

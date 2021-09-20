@@ -43,10 +43,10 @@
     }
 </style>
 
-<body>
+<body style="background-image: url(aset/bg.jpg)">
     <div class="container">
         <div class="header">
-            <img src="Logonobg.png">
+            <img src="aset/Logonobg.png">
         </div>
         <div class="main">
             <form class="row g-3" id="form" name="myForm" method="POST">

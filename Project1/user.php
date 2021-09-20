@@ -7,6 +7,9 @@
 	$statement->bindValue(':id', $c_id);
 	$statement->execute();
 	$row = $statement->fetch();
+
+	//gambar
+	$gmbr = $row['gambar'] ??=$c_id;
 ?>
 
 <!DOCTYPE html>
@@ -145,7 +148,7 @@
 	<div style="z-index: 100;">
 		<img class="logoatas" src="aset/logo_atas.png">
 	</div>
-	<img class="gambar" src=<?php echo $row['gambar'] ??=$c_id;?>>
+	<img class="gambar" src=<?php echo "image/".$gmbr ?>>
 	<div class="gel">
 		<img style="width: 700px; height: 500px;" src="aset/gel1.png">
 	</div>

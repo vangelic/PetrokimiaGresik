@@ -86,7 +86,7 @@ $result = mysqli_query($koneksi, "SELECT * FROM pgpedia");
 								$kode = "$url/user.php?id=".$row["id"]."";
 								require_once("qrcode/qrlib.php");
 							
-								QRcode::png("$kode","pgqrcode/qr".$row["id"].".png","M", 5,3);
+								QRcode::png("$kode","pgqrcode/qr".$row["id"].".png","M", 10,3);
 							?>
 							<img src="pgqrcode/qr<?php echo $row["id"] ?>.png" alt="" style="width:100px;">
 						</td>

@@ -35,7 +35,7 @@
 	}
 	.daun{
 		position: absolute;
-		top: 450px;
+		top: 550px;
 		left: 530px;
 	}
 	.daunpojok{

@@ -7,10 +7,10 @@
 //$result = query("SELECT * FROM info_tanaman");
 
 //koneksi ke database
-$koneksi = mysqli_connect("localhost","root","","dbproject");
+$koneksi = mysqli_connect("localhost","root","","pg1");
 
 //ambil data dari tabel info_tanaman
-$result = mysqli_query($koneksi, "SELECT * FROM info_tanaman");
+$result = mysqli_query($koneksi, "SELECT * FROM pgpedia");
 ?>
 
 <!DOCTYPE html>
@@ -63,9 +63,9 @@ $result = mysqli_query($koneksi, "SELECT * FROM info_tanaman");
 						<td>
 							<a href="#">Ubah</a> | <a href="#">Hapus</a>
 						</td>
-						<td><?= $row["nama"] ?></td>
+						<td><?= $row["nama_lokal"] ?></td>
 						<td>
-							<?= $row["link"]?>
+							<a href="user.php?id=<?php echo $row["id"] ?>">user.php?id=<?php echo $row["id"] ?></a>
 						</td>
 					</tr>
 					<?php $i++; ?>

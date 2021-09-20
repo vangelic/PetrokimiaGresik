@@ -23,7 +23,6 @@ $result = mysqli_query($koneksi, "SELECT * FROM pgpedia");
 			font-family: sans-serif;
 			background-image: url(aset/bg.jpg);
 			background-repeat: no-repeat;
-			overflow: hidden;
 			background-size: cover;
 		}
 		.container{

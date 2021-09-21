@@ -7,7 +7,7 @@
     $kode = "$url/user.php?id=$c_id";
     require_once("qrcode/qrlib.php");
 
-    QRcode::png("$kode","pgqrcode/qr".$c_id.".png","M", 5,3);
+    QRcode::png("$kode","pgqrcode/qr".$c_id.".png","M", 10,3);
 
 ?>
 
@@ -28,7 +28,7 @@
 		<hr style="position: relative; border: none; height: 1px; background: #999;" />
 		<div class="row">
             <div class="col-md-6 text-center">
-                <img src="pgqrcode/qr<?php echo $c_id ?>.png" id="pg_code" class="img-thumbnail" alt="qrcode" style="width:200px;">
+                <img src="pgqrcode/qr<?php echo $c_id ?>.png" id="pg_code" class="img-thumbnail" alt="qrcode" style="width:300px;">
             </div>
             <div class="col-md-6 text-center d-flex flex-column justify-content-center align-items-center">
                 <p>Klik Tombol dibawah untuk Mengunduh QR Code :</p>

@@ -31,7 +31,6 @@ $result = mysqli_query($koneksi, "SELECT * FROM pgpedia");
     	box-shadow: 0 0 17px #333;
 		}
 		.home{
-			float: right;
 			display: inline-block;
 			width: 200px;
 			height: 50px;

@@ -34,11 +34,6 @@
 		padding-right: 30px;
 		margin-bottom: 5px; 
 	}
-	.daun{
-		position: absolute;
-		top: 550px;
-		left: 530px;
-	}
 	.daunpojok{
 		position: fixed;
 		right: 0;
@@ -76,18 +71,8 @@
 		.ctext{
 			margin-top: 50px;
 		}
-		.daun{
-			margin-top: 30px;
-			margin-left: 10px;
-		}
-		.daun img{
-			width: 120px !important;
-		}
 		.logoatas{
 			width: 250px !important;
-		}
-		.daunpojok{
-			width: 200px;
 		}
 		.orang img{
 			width: 250px !important;
@@ -112,9 +97,36 @@
 			height: 450px;
 			right: -325px;
 		}
-		.daun img{
-			width: 150px !important;
-			margin-top: 70px;
+		.orang img{
+			width: 250px !important;
+			margin-top: 50px;
+			margin-bottom: -140px;
+			margin-left: -50px;
+		}
+		.paragraf{
+			margin-top: 0px;
+			width: 600px;
+			font-size: 20px;
+		}
+		.ctext{
+			margin-top: 0;
+		}
+		.judul{
+			margin-top: 150px;
+		}
+	}
+	@media screen and (max-width: 320px){
+		.gel{
+			width: 200px;
+			right: -90px;
+		}
+		.logoatas{
+			width: 200px !important;
+		}
+		.gambar{
+			width: 400px;
+			height: 450px;
+			right: -335px;
 		}
 		.orang img{
 			width: 250px !important;
@@ -127,18 +139,11 @@
 			width: 600px;
 			font-size: 20px;
 		}
-		.daun{
-			margin-top: 20px;
-			margin-left: 110px;
-		}
-		.daun img{
-			width: 100px !important;
-		}
 		.ctext{
 			margin-top: 0;
 		}
 		.judul{
-			margin-top: 150px;
+			margin-top: 170px;
 		}
 	}
 </style>
@@ -165,10 +170,6 @@
 	<div class="ctext">
 		<div class="paragraf">
 			<p><?php echo $row['deskripsi'] ??=$c_id;?></p>
-			
-		</div>
-		<div class="daun">
-			<img style="width: 150px" src="aset/daun.png">
 		</div>
 	</div>
 	<div class="logobawah">

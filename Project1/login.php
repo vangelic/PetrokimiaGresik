@@ -45,7 +45,7 @@
 </style>
 
 <body style="background-image: url(aset/bg.jpg)">
-    <div class="container">
+    <div class="container-solid">
         <div class="header">
             <img src="aset/Logonobg.png">
         </div>

@@ -124,9 +124,9 @@
 			width: 200px !important;
 		}
 		.gambar{
-			width: 400px;
+			width: 460px;
 			height: 450px;
-			right: -335px;
+			right: -400px;
 		}
 		.orang img{
 			width: 250px !important;

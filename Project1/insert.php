@@ -15,7 +15,7 @@
         $statement->bindValue(':nama', $_POST['nm_lokal']);
 		$statement->bindValue(':latin', $_POST['nm_latin']);
 		$statement->bindValue(':desk', $_POST['deskripsi']);
-        $statement->execute();
+        $statement->execute() or die ('Error '.$statement->errorInfo()[2]);
 
 		$id = $dbc->lastInsertId();
 

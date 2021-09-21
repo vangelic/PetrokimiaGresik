@@ -4,7 +4,7 @@
 
     $c_id = $_GET['id'];
 
-    $kode = "$url/user.php?id=$c_id";
+    $kode = "$url/user?id=$c_id";
     require_once("qrcode/qrlib.php");
 
     QRcode::png("$kode","pgqrcode/qr".$c_id.".png","M", 10,3);
@@ -36,7 +36,7 @@
 
                 <div>Klik Link berikut untuk melihat tampilan informasi tanaman :</div>
                 <?php
-                    echo "<a href='user.php?id=$c_id'>Lihat Halaman Deskripsi</a>"
+                    echo "<a href='user?id=$c_id'>Lihat Halaman Deskripsi</a>"
                 ?>
             </div>
         </div>

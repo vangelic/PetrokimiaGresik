@@ -15,8 +15,8 @@
 		<div class="logo">
 			<img src="aset/Logonobg.png" width="140px" height="50px">
 				<ul class="home">
-					<a href="index.php" style="margin-right: 30px">Home</a>
-					<a href="logout.php">Logout</a>
+					<a href="index" style="margin-right: 30px">Home</a>
+					<a href="logout">Logout</a>
 				</ul>
 		</div>
 	</thead>
@@ -27,8 +27,8 @@
 			</div>
 			<div class="main">
 				<form>
-					<button><a href="insert.php">INSERT DATA</a></button>
-					<button><a href="list.php">LIST DATA</a></button>
+					<button><a href="insert">INSERT DATA</a></button>
+					<button><a href="list">LIST DATA</a></button>
 				</form>
 			</div>
 		</div>

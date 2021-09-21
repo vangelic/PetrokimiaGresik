@@ -19,7 +19,7 @@
 
 		$id = $dbc->lastInsertId();
 
-		header("Location: $url/pgcode.php?id=$id");
+		header("Location: $url/pgcode?id=$id");
         exit();
     }
 
@@ -71,8 +71,8 @@
 		<div class="logo">
 			<img src="aset/Logonobg.png" width="140px" height="50px">
 				<ul class="home">
-					<a href="index.php" style="margin-right: 30px">Home</a>
-					<a href="logout.php">Logout</a>
+					<a href="index" style="margin-right: 30px">Home</a>
+					<a href="logout">Logout</a>
 				</ul>
 		</div>
 	</thead>

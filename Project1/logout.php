@@ -2,6 +2,6 @@
     include "inisiasi.php";
     session_start();
     unset($_SESSION['isAdmin']);
-    header("Location: $url/login.php");
+    header("Location: $url/login");
     exit();    
 ?>

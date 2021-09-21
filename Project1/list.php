@@ -52,8 +52,8 @@ $result = mysqli_query($koneksi, "SELECT * FROM pgpedia");
 		<div class="logo">
 			<img src="aset/Logonobg.png" width="140px" height="50px">
 				<ul class="home">
-					<a href="index.php" style="margin-right: 30px">Home</a>
-					<a href="logout.php">Logout</a>
+					<a href="index" style="margin-right: 30px">Home</a>
+					<a href="logout">Logout</a>
 				</ul>
 		</div>
 	</thead>
@@ -81,11 +81,11 @@ $result = mysqli_query($koneksi, "SELECT * FROM pgpedia");
 						</td>
 						<td><?= $row["nama_lokal"] ?></td>
 						<td>
-							<a href="user.php?id=<?php echo $row["id"] ?>">user.php?id=<?php echo $row["id"] ?></a>
+							<a href="user?id=<?php echo $row["id"] ?>">user?id=<?php echo $row["id"] ?></a>
 						</td>
 						<td>
 							<?php
-								$kode = "$url/user.php?id=".$row["id"]."";
+								$kode = "$url/user?id=".$row["id"]."";
 								require_once("qrcode/qrlib.php");
 							
 								QRcode::png("$kode","pgqrcode/qr".$row["id"].".png","M", 10,3);

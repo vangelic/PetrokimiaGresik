@@ -14,7 +14,7 @@
         if (checkPassword($_POST['username'], $_POST['passwd'])) {
             session_start();
             $_SESSION['isAdmin'] = true;
-            header("Location: $url/index.php");
+            header("Location: $url/index");
             exit();
         }
     }

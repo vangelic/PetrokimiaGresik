@@ -52,7 +52,7 @@ $result = mysqli_query($koneksi, "SELECT * FROM pgpedia");
 		<div class="logo">
 			<img src="aset/Logonobg.png" width="140px" height="50px">
 				<ul class="home">
-					<a href="insert.php" style="margin-right: 30px">Home</a>
+					<a href="index.php" style="margin-right: 30px">Home</a>
 					<a href="logout.php">Logout</a>
 				</ul>
 		</div>

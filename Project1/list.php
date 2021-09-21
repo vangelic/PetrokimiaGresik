@@ -31,6 +31,7 @@ $result = mysqli_query($koneksi, "SELECT * FROM pgpedia");
     	box-shadow: 0 0 17px #333;
 		}
 		.home{
+			float: right;
 			display: inline-block;
 			width: 200px;
 			height: 50px;
@@ -89,7 +90,7 @@ $result = mysqli_query($koneksi, "SELECT * FROM pgpedia");
 							
 								QRcode::png("$kode","pgqrcode/qr".$row["id"].".png","M", 10,3);
 							?>
-							<img src="pgqrcode/qr<?php echo $row["id"] ?>.png" alt="" style="width:100px;">
+							<img src="pgqrcode/qr<?php echo $row["id"] ?>.png" alt="" style="width:50px;">
 						</td>
 					</tr>
 					<?php $i++; ?>

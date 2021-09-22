@@ -33,6 +33,8 @@
 		padding: 15px;
 		padding-right: 30px;
 		margin-bottom: 5px; 
+		font-family: signika;
+		color: #004a21;
 	}
 	.daunpojok{
 		position: fixed;
@@ -48,6 +50,8 @@
 	}
 	.judul{
 		margin-top: 100px;
+		font-family: signika;
+		color: #335a31;
 	}
 	@media screen and (max-width: 768px){
 		.gel{
@@ -67,9 +71,13 @@
 		}
 		.paragraf{
 			z-index: 100;
+			font-family: signika;
+			color: #004a21;
 		}
 		.ctext{
 			margin-top: 50px;
+			font-family: signika;
+			color: #004a21;
 		}
 		.logoatas{
 			width: 250px !important;
@@ -85,6 +93,8 @@
 		}
 		.judul{
 			margin-top: 150px;
+			font-family: signika;
+			color: #335a31;
 		}
 	}
 	@media screen and (max-width: 425px){
@@ -107,12 +117,18 @@
 			margin-top: 0px;
 			width: 600px;
 			font-size: 20px;
+			font-family: signika;
+			color: #004a21;
 		}
 		.ctext{
 			margin-top: 0;
+			font-family: signika;
+			color: #004a21;
 		}
 		.judul{
 			margin-top: 150px;
+			font-family: signika;
+			color: #335a31;
 		}
 	}
 	@media screen and (max-width: 320px){
@@ -138,12 +154,18 @@
 			margin-top: 0px;
 			width: 600px;
 			font-size: 20px;
+			font-family: signika;
+			color: #004a21;
 		}
 		.ctext{
 			margin-top: 0;
+			font-family: signika;
+			color: #004a21;
 		}
 		.judul{
 			margin-top: 170px;
+			font-family: signika;
+			color: #335a31;
 		}
 	}
 </style>

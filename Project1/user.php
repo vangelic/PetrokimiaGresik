@@ -185,8 +185,8 @@
 		<div>
 			<h1 style="font-size: 50px" ><b><?php echo $row['nama_lokal'] ??=$c_id;?><b></h1>
 		</div>
-		<div>
-			<p style="font-style: italic; font-size: 40px; margin-top: -10px; width: 300px;"><?php echo $row['nama_latin'] ??=$c_id;?></p>
+		<div style="width: 300px;">
+			<p style="font-style: italic; font-size: 40px; margin-top: -10px;"><?php echo $row['nama_latin'] ??=$c_id;?></p>
 		</div>
 	</div>
 	<div class="ctext">

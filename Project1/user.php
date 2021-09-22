@@ -32,7 +32,7 @@
 		background-size: 100% 100%;
 		padding: 15px;
 		padding-right: 30px;
-		margin-bottom: 5px; 
+		margin-bottom: 200px; 
 		font-family: signika;
 		color: #004a21;
 	}
@@ -183,10 +183,10 @@
 	</div>
 	<div class="judul">
 		<div>
-			<h1 style="font-size: 50px" ><?php echo $row['nama_lokal'] ??=$c_id;?></h1>
+			<h1 style="font-size: 50px" ><b><?php echo $row['nama_lokal'] ??=$c_id;?><b></h1>
 		</div>
 		<div>
-			<h3 style="font-style: italic; font-size: 40px; margin-top: -10px"><?php echo $row['nama_latin'] ??=$c_id;?></h3>
+			<p style="font-style: italic; font-size: 40px; margin-top: -10px; width: 100px;"><?php echo $row['nama_latin'] ??=$c_id;?></p>
 		</div>
 	</div>
 	<div class="ctext">

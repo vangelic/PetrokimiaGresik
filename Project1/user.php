@@ -16,7 +16,7 @@
 <head>
 	<title>User</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="viewport" content="width=device-width">
 </head>
 <style>
 	.gel{
@@ -32,7 +32,9 @@
 		background-size: 100% 100%;
 		padding: 15px;
 		padding-right: 30px;
-		margin-bottom: 5px; 
+		margin-bottom: 200px; 
+		font-family: signika;
+		color: #004a21;
 	}
 	.daunpojok{
 		position: fixed;
@@ -48,6 +50,8 @@
 	}
 	.judul{
 		margin-top: 100px;
+		font-family: signika;
+		color: #335a31;
 	}
 	@media screen and (max-width: 768px){
 		.gel{
@@ -67,9 +71,13 @@
 		}
 		.paragraf{
 			z-index: 100;
+			font-family: signika;
+			color: #004a21;
 		}
 		.ctext{
 			margin-top: 50px;
+			font-family: signika;
+			color: #004a21;
 		}
 		.logoatas{
 			width: 250px !important;
@@ -85,6 +93,8 @@
 		}
 		.judul{
 			margin-top: 150px;
+			font-family: signika;
+			color: #335a31;
 		}
 	}
 	@media screen and (max-width: 425px){
@@ -107,12 +117,18 @@
 			margin-top: 0px;
 			width: 600px;
 			font-size: 20px;
+			font-family: signika;
+			color: #004a21;
 		}
 		.ctext{
 			margin-top: 0;
+			font-family: signika;
+			color: #004a21;
 		}
 		.judul{
 			margin-top: 150px;
+			font-family: signika;
+			color: #335a31;
 		}
 	}
 	@media screen and (max-width: 320px){
@@ -124,9 +140,9 @@
 			width: 200px !important;
 		}
 		.gambar{
-			width: 400px;
+			width: 460px;
 			height: 450px;
-			right: -335px;
+			right: -400px;
 		}
 		.orang img{
 			width: 250px !important;
@@ -138,12 +154,18 @@
 			margin-top: 0px;
 			width: 600px;
 			font-size: 20px;
+			font-family: signika;
+			color: #004a21;
 		}
 		.ctext{
 			margin-top: 0;
+			font-family: signika;
+			color: #004a21;
 		}
 		.judul{
 			margin-top: 170px;
+			font-family: signika;
+			color: #335a31;
 		}
 	}
 </style>
@@ -161,10 +183,10 @@
 	</div>
 	<div class="judul">
 		<div>
-			<h1 style="font-size: 50px" ><?php echo $row['nama_lokal'] ??=$c_id;?></h1>
+			<h1 style="font-size: 50px" ><b><?php echo $row['nama_lokal'] ??=$c_id;?><b></h1>
 		</div>
-		<div>
-			<h3 style="font-style: italic; font-size: 40px; margin-top: -10px"><?php echo $row['nama_latin'] ??=$c_id;?></h3>
+		<div style="width: 700px;">
+			<p style="font-style: italic; font-size: 40px; margin-top: -10px;"><?php echo $row['nama_latin'] ??=$c_id;?></p>
 		</div>
 	</div>
 	<div class="ctext">

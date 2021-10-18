@@ -52,7 +52,7 @@
 			</div>
 			<div class="main">
 				<form>
-					<button><a href="#">INSERT</a></button>
+					<button><a href="insert.php">INSERT</a></button>
 					<button><a href="#">HISTORY</a></button>
 					<button><a href="#">KALIBRASI</a></button>
 				</form>

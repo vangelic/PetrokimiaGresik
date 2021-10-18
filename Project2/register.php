@@ -41,12 +41,16 @@
 </style>
 
 <body style="background-image: url(aset/bg.jpg)">
+    <div class="logo">
+            <img src="Logonobg.png" width="140px" height="50px">
+                <ul class="home">
+                    <a href="admin.php" style="margin-right: 30px">Home</a>
+                    <a href="login.php">Logout</a>
+                </ul>
+    </div>
     <div class="container">
-        <div class="header">
-            <img src="aset/Logonobg.png">
-        </div>
         <div class="main">
-            <h2>Create Account</h2>
+            <h2 style="font-family: serif;"><b>Create Account</b></h2>
             <form class="row g-3" id="form" name="myForm" method="POST">
             <div class="col-12">
                 <label for="nama" class="form-label"><b>Name</b></label>

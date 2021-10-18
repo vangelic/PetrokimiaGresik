@@ -71,8 +71,8 @@
 		<div class="logo">
 			<img src="aset/Logonobg.png" width="140px" height="50px">
 				<ul class="home">
-					<a href="index" style="margin-right: 30px">Home</a>
-					<a href="logout">Logout</a>
+					<a href="admin.php" style="margin-right: 30px">Home</a>
+					<a href="login.php">Logout</a>
 				</ul>
 		</div>
 	</thead>

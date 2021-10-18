@@ -1,20 +1,24 @@
 <?php
     include "inisiasi.php";
 
-    function checkPassword($username, $password)
+    function checkPassword($nik, $password)
     {
         global $dbc;
-        $statement = $dbc->prepare("SELECT * FROM admin WHERE username = :username AND password = SHA2(:password,0)");
-        $statement->bindValue(':username', $username);
+        $statement = $dbc->prepare("SELECT * FROM user WHERE nik = :nik AND password = SHA2(:password,0)");
+        $statement->bindValue(':nik', $nik);
         $statement->bindValue(':password', $password);
         $statement->execute();
         return $statement->rowCount() > 0;
     }
     if (isset($_POST['login'])) {
-        if (checkPassword($_POST['username'], $_POST['passwd'])) {
+        if (checkPassword($_POST['nik'], $_POST['passwd'])) {
             session_start();
-            $_SESSION['isAdmin'] = true;
-            header("Location: $url/index");
+            $_SESSION['isLogin'] = true;
+            if($_POST['nik'] == 'admin'){
+                header("Location: $url/admin.php");
+            }else{
+                header("Location: $url/user.php");
+            }
             exit();
         }
     }
@@ -50,12 +54,13 @@
             <img src="aset/Logonobg.png">
         </div>
         <div class="main">
+            <h2>Log In</h2>
             <form class="row g-3" id="form" name="myForm" method="POST">
             <div class="col-12">
-                <label for="username" class="form-label"><b>Username</b></label>
+                <label for="nik" class="form-label"><b>NIK</b></label>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
-                    <input value="<?php if (isset($_POST['username'])) echo htmlspecialchars($_POST['username']) ?>" name="username" type="text" class="form-control" id="username" placeholder="Masukkan username" required>
+                    <input value="<?php if (isset($_POST['nik'])) echo htmlspecialchars($_POST['nik']) ?>" name="nik" type="text" class="form-control" id="nik" placeholder="Masukkan NIK" required>
                 </div>
             </div>
             <div class="col-12">
@@ -66,8 +71,9 @@
                 </div>
             </div>
             <div class="col-12">
-                <button type="submit" name="login" value="Login" class="btn btn-success">Login</button>
+                <button type="submit" name="login" value="Login" class="btn btn-success">Submit</button>
             </div>
+            <div>Don’t have an account ? <a href='register.php'>Register here</a></div>
             </form>
         </div>
     </div>

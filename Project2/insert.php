@@ -36,12 +36,18 @@
 </head>
 <style>
 	.container{
-		width: auto;
+		width: 450px;
 		text-align: center;
 		margin: 5% auto;
 		border-radius: 25px;
-		background-color: rgba(255,255,255,0.5);
+		background-color: rgba(255,255,255,0.9);
 		box-shadow: 0 0 17px #333;
+	}
+	.form{
+		text-align: left;
+		margin-left: 50px;
+		margin-bottom: 10px;
+
 	}
 	.text-end{
 		margin-bottom: 15px;
@@ -64,6 +70,11 @@
 		overflow: hidden;
 		background-size: cover;
 	}
+	button{
+		border-radius: 5px;
+		margin-bottom: 25px;
+
+	}
 </style>
 
 <body>
@@ -71,7 +82,6 @@
 		<div class="logo">
 			<img src="aset/Logonobg.png" width="140px" height="50px">
 				<ul class="home">
-					<a href="admin.php" style="margin-right: 30px">Home</a>
 					<a href="login.php">Logout</a>
 				</ul>
 		</div>
@@ -80,39 +90,18 @@
 		<div class="container">
 			<h2>INSERT DATA</h2>
 			<hr style="position: relative; border: none; height: 1px; background: #999;" />
-			<form class="row g-3" id="form" name="myForm" method="POST" enctype="multipart/form-data">
-				<div class="col-md-6">
-					<div class="mb-3">
-						<label for="nm_lokal" class="form-label"><b>Nama Lokal</b></label>
-	    				<input type="text" class="form-control" id="nm_lokal" name="nm_lokal" placeholder="Masukkan nama lokal" required>
-					</div>
-					<div class="mb-3">
-						<label for="nm_latin" class="form-label"><b>Nama Latin</b></label>
-	    				<input type="text" class="form-control" id="nm_latin" name="nm_latin" placeholder="Masukkan nama latin" required>
-					</div>
-					<div class="mb-3">
-						<label for="deskripsi" class="form-label"><b>Deskripsi</b></label>
-	    				<textarea class="form-control" id="deskripsi" name="deskripsi" placeholder="Masukkan deskripsi" rows="4" required></textarea>
-					</div>
+			<form>
+				<div class="form">
+					<label><b>Nama Alat</b></label><br>
+					<select >
+						<option></option>
+					</select>
 				</div>
-				<div class="col-md-6">
-					<div class="mb-3">
-						<label for="formFile" class="form-label"><b>Upload Foto</b></label>
-						<input class="form-control" type="file" name="image" id="image" onchange="loadfile(event)" required>
-					</div>
-					<div class="mb-3">
-						<img src="aset/placeholder_img.png" id="preimage" class="img-thumbnail w-100" style="height: 230px; object-fit:cover;" alt="image">
-						<script type="text/javascript">
-							function loadfile(event){
-								var output = document.getElementById('preimage');
-								output.src = URL.createObjectURL(event.target.files[0]);
-							};
-						</script>
-					</div>
-				</div>	
-				<div class="text-end" >
-					<button type="submit" name="upload" value="Upload" class="btn btn-success">INSERT</button>
-				</div>		
+				<div class="form">
+					<input style="width: 325px; margin-bottom: 25px;" type="" name="" placeholder="Nambah Alat Baru">
+				</div>
+				<button><a href="admin.php">Kembali</a></button>
+				<button><a href="#">Insert</a></button>
 			</form>
 		</div>
 	</tbody>

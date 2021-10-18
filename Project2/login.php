@@ -54,7 +54,6 @@
             <img src="aset/Logonobg.png">
         </div>
         <div class="main">
-            <h2>Log In</h2>
             <form class="row g-3" id="form" name="myForm" method="POST">
             <div class="col-12">
                 <label for="nik" class="form-label"><b>NIK</b></label>
@@ -73,7 +72,9 @@
             <div class="col-12">
                 <button type="submit" name="login" value="Login" class="btn btn-success">Submit</button>
             </div>
-            <div>Don’t have an account ? <a href='register.php'>Register here</a></div>
+            <div style="margin-top: 0px;">
+                Don’t have an account ? <a href='register.php'>Register here</a>
+            </div>
             </form>
         </div>
     </div>

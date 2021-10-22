@@ -2,7 +2,8 @@
 	include "inisiasi.php";
 	require 'adminPermission.inc.php';
 	
-	$result = mysqli_query($koneksi, "SELECT * FROM daftar_alat WHERE id_pinjam=$_SESSION['id']");
+	$result = mysqli_query($koneksi, "SELECT * FROM daftar_alat WHERE id_pinjam=$_SESSION[id]");
+	
 ?>
 
 <!DOCTYPE html>
@@ -43,8 +44,8 @@
 		<div class="logo">
 			<img src="aset/Logonobg.png" width="140px" height="50px">
 				<ul class="home">
-					<a href="index" style="margin-right: 30px">Home</a>
-					<a href="logout">Logout</a>
+					<a href="user.php" style="margin-right: 30px">Home</a>
+					<a href="logout.php">Logout</a>
 				</ul>
 		</div>
 	</thead>
@@ -56,10 +57,10 @@
 		<table class="table text-center align-middle">
 				<tr>
 					<th>No.</th>
-					<th>Aksi</th>
-					<th>Nama</th>
-					<th>Link</th>
-					<th>QR Code</th>
+					<th>Nama Alat</th>
+					<th>Status</th>
+					<th></th>
+					<th></th>
 				</tr>
 
 				<?php $i = 1; ?>
@@ -68,20 +69,16 @@
 					<tr>
 						<td><?=$i; ?></td>
 						<td>
-							<a href="#">Ubah</a> | <a href="#">Hapus</a>
+							<?= $row["nama_alat"] ?>
 						</td>
-						<td><?= $row["nama_lokal"] ?></td>
+						<td>Aktif</td>
 						<td>
-							<a href="user?id=<?php echo $row["id"] ?>">user?id=<?php echo $row["id"] ?></a>
+							<a href="rekan.php">Tambah Rekan</a>
 						</td>
 						<td>
-							<?php
-								$kode = "$url/user?id=".$row["id"]."";
-								require_once("qrcode/qrlib.php");
-							
-								QRcode::png("$kode","pgqrcode/qr".$row["id"].".png","M", 10,3);
-							?>
-							<img src="pgqrcode/qr<?php echo $row["id"] ?>.png" alt="" style="width:100px;">
+							<form method="POST">
+								<button type="submit" name="checkout" value="checkout" class="btn btn-success mb-5">Check out</button>
+							</form>
 						</td>
 					</tr>
 					<?php $i++; ?>

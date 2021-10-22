@@ -76,9 +76,7 @@
 							<a href="rekan.php">Tambah Rekan</a>
 						</td>
 						<td>
-							<form method="POST">
-								<button type="submit" name="checkout" value="checkout" class="btn btn-success mb-5">Check out</button>
-							</form>
+							<a href="checkout.php?id=<?= $row["nama_alat"] ?>">Check out</a>
 						</td>
 					</tr>
 					<?php $i++; ?>

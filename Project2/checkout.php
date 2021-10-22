@@ -4,16 +4,19 @@
 
     $c_id = $_GET['id'];
 
-    if (isset($_POST['checkin'])) {
+    if (isset($_POST['checkout'])) {
 
-		$db->update('daftar_alat', ['id_pinjam' => $_SESSION['id']], ['nama_alat'=> $c_id]);
+		$db->update('daftar_alat', ['id_pinjam' => null], ['nama_alat'=> $c_id]);
 
 		$query = $db->row("SELECT * FROM daftar_alat WHERE nama_alat=?",$c_id);
 		$id = $query['id_alat'];
 
-		$db->insert("history", ["id_alat" => $id, "checkin" => date('Y-m-d H:i:s'), "id_user" => $_SESSION['id']]);
+		$query = $db->row("SELECT * FROM history WHERE id_alat=? ORDER BY id_history DESC LIMIT 1",$id);
+		$history = $query['id_history'];
 
-		header("Location: $url/user.php");
+		$db->update('history', ['checkout' => date('Y-m-d H:i:s'), 'review' => $_POST['review']], ['id_user'=> $_SESSION['id'], 'id_history' => $history]);
+
+		header("Location: $url/scan.php");
         exit();
     }
 
@@ -36,11 +39,26 @@
 		<hr style="position: relative; border: none; height: 1px; background: #999;" />
 		<form method="POST">
 		<div class="row">
-            <div class="col-md-6 text-center d-flex flex-column justify-content-center align-items-center">
-                <button type="submit" name="checkin" value="checkin" class="btn btn-success mb-5">Check In</button>
-
-                <div>Klik untuk menggunakan alat</div>
-            </div>
+			<div class="col-12">
+				<div>Bagaimana kondisi alat?</div>
+					<div class="form-check">
+						<div class="input-group mb-3">
+						<input class="form-check-input" type="checkbox" value="rusak" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							Rusak
+						</label>
+						</div>
+					</div>
+			</div>
+			<div class="col-12">
+				<label for="review" class="form-label">Tulis Review</label>
+				<div class="input-group mb-3">
+				<textarea class="form-control" name="review" id="review" rows="3"></textarea>
+				</div>
+			</div>
+        </div>
+		<div class="col-12">
+            <button type="submit" name="checkout" value="checkout" class="btn btn-success">Check out</button>
         </div>
 		</form>
 	</div>

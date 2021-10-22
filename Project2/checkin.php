@@ -4,10 +4,18 @@
 
     $c_id = $_GET['id'];
 
-    $kode = "$url/checkin.php?id=$c_id";
-    require_once("qrcode/qrlib.php");
+    if (isset($_POST['checkin'])) {
 
-    QRcode::png("$kode","pgqrcode/".$c_id.".png","M", 10,3);
+		$db->update('daftar_alat', ['id_pinjam' => $_SESSION['id']], ['nama_alat'=> $c_id]);
+
+		$query = $db->row("SELECT * FROM daftar_alat WHERE nama_alat=?",$c_id);
+		$id = $query['id_alat'];
+
+		$db->insert("history", ["id_alat" => $id, "checkin" => date('Y-m-d H:i:s'), "id_user" => $_SESSION['id']]);
+
+		header("Location: $url/user.php");
+        exit();
+    }
 
 ?>
 
@@ -24,22 +32,17 @@
 
 <body>
 	<div class="container">
-		<h2>QR Code</h2>
+		<h2><?php echo $c_id ?></h2>
 		<hr style="position: relative; border: none; height: 1px; background: #999;" />
+		<form method="POST">
 		<div class="row">
-            <div class="col-md-6 text-center">
-                <img src="pgqrcode/<?php echo $c_id ?>.png" id="pg_code" class="img-thumbnail" alt="qrcode" style="width:400px;">
-            </div>
             <div class="col-md-6 text-center d-flex flex-column justify-content-center align-items-center">
-                <p>Klik Tombol dibawah untuk Mengunduh QR Code :</p>
-                <button type="submit" name="simpan" value="simpan" class="btn btn-success mb-5">Simpan</button>
+                <button type="submit" name="checkin" value="checkin" class="btn btn-success mb-5">Check In</button>
 
-                <div>Klik Link berikut untuk melihat tampilan informasi tanaman :</div>
-                <?php
-                    echo "<a href='user?id=$c_id'>Lihat Halaman Deskripsi</a>"
-                ?>
+                <div>Klik untuk menggunakan alat</div>
             </div>
         </div>
+		</form>
 	</div>
 </body>
 </html>

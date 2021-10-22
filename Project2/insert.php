@@ -5,21 +5,36 @@
 
     if (isset($_POST['upload'])) {
 
-		//upload foto
-		$target = "image/".basename($_FILES['image']['name']);
+		if ($_POST['jenis']=='custom'){
+			$statement = $dbc->prepare("INSERT INTO kategori (nama_kategori, jumlah) VALUES(:kategori, 1)");
+			$statement->bindValue(':kategori', $_POST['nm_kategori']);
+			$statement->execute() or die ('Error '.$statement->errorInfo()[2]);
 
-		if (!move_uploaded_file($_FILES['image']['tmp_name'], $target)) die('Gagal');
+			$id = $dbc->lastInsertId();
+			$nama = $_POST['nm_kategori'].'1';
+		} else {
+			$statement = $dbc->prepare("UPDATE kategori SET jumlah=jumlah+1 WHERE id_kategori=:kategori");
+			$statement->bindValue(':kategori', $_POST['jenis']);
+			$statement->execute() or die ('Error '.$statement->errorInfo()[2]);
 
-        $statement = $dbc->prepare("INSERT INTO pgpedia (gambar, nama_lokal, nama_latin, deskripsi) VALUES(:gambar, :nama, :latin, :desk)");
-        $statement->bindValue(':gambar',$_FILES['image']['name']);
-        $statement->bindValue(':nama', $_POST['nm_lokal']);
-		$statement->bindValue(':latin', $_POST['nm_latin']);
-		$statement->bindValue(':desk', $_POST['deskripsi']);
-        $statement->execute() or die ('Error '.$statement->errorInfo()[2]);
+			$query = $dbc->prepare("SELECT id_kategori, nama_kategori, jumlah FROM kategori WHERE id_kategori=:kategori");
+			$query->bindValue(':kategori', $_POST['jenis']);
+			$query->execute() or die ('Error '.$query->errorInfo()[2]);
+			foreach ($query as $row) {
+				
+				$id = $row['id_kategori'];
+				$nama = $row['nama_kategori'].$row['jumlah'];
+			}
+		}
 
-		$id = $dbc->lastInsertId();
+		$statement = $dbc->prepare("INSERT INTO daftar_alat (nama_alat, id_kategori, qr) VALUES(:alat, :id, :qr)");
+			$statement->bindValue(':alat', $nama);
+			$statement->bindValue(':id', $id);
+			$statement->bindValue(':qr', $nama.".png");
+			
+			$statement->execute() or die ('Error '.$statement->errorInfo()[2]);
 
-		header("Location: $url/pgcode?id=$id");
+		header("Location: $url/pgcode.php?id=$nama");
         exit();
     }
 
@@ -90,18 +105,32 @@
 		<div class="container">
 			<h2>INSERT DATA</h2>
 			<hr style="position: relative; border: none; height: 1px; background: #999;" />
-			<form>
+			<form method="POST">
 				<div class="form">
-					<label><b>Nama Alat</b></label><br>
-					<select >
-						<option></option>
-					</select>
+					<div class="col-md-6">
+						<div class="mb-3">
+							<label><b>Nama Alat</b></label><br>
+							<select class="form-select" aria-label="Default select example" name="jenis" id="jenis">
+							<option selected disabled value="">Open this select menu</option>
+								<?php 
+									$statement = $dbc->prepare("SELECT id_kategori, nama_kategori FROM kategori ");
+									$statement->execute() or die ('Error '.$statement->errorInfo()[2]);
+									
+									foreach ($statement as $row) {
+										echo "<option value={$row['id_kategori']}>{$row['nama_kategori']}</option>";
+									}
+									echo "<option value='custom'>Tambah Lainnya</option>"
+								?>
+							</select>
+						</div>
+						<div class="mb-3">
+							<label for="nm_kategori" class="form-label"><b>Nama Alat</b></label>
+							<input type="text" class="form-control" id="nm_kategori" name="nm_kategori" placeholder="Masukkan nama alat">
+						</div>
+
+						<button type="submit" name="upload" value="Upload" class="btn btn-success">INSERT</button>
+					</div>
 				</div>
-				<div class="form">
-					<input style="width: 325px; margin-bottom: 25px;" type="" name="" placeholder="Nambah Alat Baru">
-				</div>
-				<button><a href="admin.php">Kembali</a></button>
-				<button><a href="#">Insert</a></button>
 			</form>
 		</div>
 	</tbody>

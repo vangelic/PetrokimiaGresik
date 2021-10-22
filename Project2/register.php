@@ -3,7 +3,7 @@
 
     if (isset($_POST['register'])) {
         if ($_POST['passwd']==$_POST['pw']) {
-            $statement = $dbc->prepare("INSERT INTO user VALUES(:nik, :nama, :email, SHA2(:password,0))");
+            $statement = $dbc->prepare("INSERT INTO user VALUES(null, :nik, :nama, :email, SHA2(:password,0))");
             $statement->bindValue(':nik', $_POST['nik']);
             $statement->bindValue(':nama', $_POST['nama']);
             $statement->bindValue(':email', $_POST['email']);

@@ -3,17 +3,15 @@
 
     function checkPassword($nik, $password)
     {
-        global $dbc;
-        $statement = $dbc->prepare("SELECT * FROM user WHERE nik = :nik AND password = SHA2(:password,0)");
-        $statement->bindValue(':nik', $nik);
-        $statement->bindValue(':password', $password);
-        $statement->execute();
-        return $statement->rowCount() > 0;
+        global $db;
+        $query = $db->row('SELECT * FROM user WHERE nik = ? AND `password` = SHA2(?,0)', $nik, $password);
+		return $query ['id_user'];
     }
     if (isset($_POST['login'])) {
-        if (checkPassword($_POST['nik'], $_POST['passwd'])) {
+        if ($id = checkPassword($_POST['nik'], $_POST['passwd'])) {
             session_start();
             $_SESSION['isLogin'] = true;
+            $_SESSION['id'] = $id;
             if($_POST['nik'] == 'admin'){
                 header("Location: $url/admin.php");
             }else{

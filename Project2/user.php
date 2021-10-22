@@ -52,7 +52,7 @@
 			</div>
 			<div class="main">
 				<form>
-					<button><a href="#">SCAN</a></button>
+					<button><a href="scan.php">SCAN</a></button>
 					<button><a href="#">STATUS ALAT</a></button>
 					<button><a href="#">HISTORY</a></button>
 				</form>

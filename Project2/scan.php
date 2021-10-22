@@ -52,7 +52,7 @@
 	<tbody>
 		<div class="container-fluid" style="margin: 50px; padding:30px;
 	width: calc(100% - 100px);">
-		<h2>Daftar Tanaman</h2>
+		<h2>Daftar Alat</h2>
 		<hr style="position: relative; border: none; height: 1px; background: #999;" />
 		<table class="table text-center align-middle">
 				<tr>

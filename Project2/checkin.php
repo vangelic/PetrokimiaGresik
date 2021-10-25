@@ -7,7 +7,7 @@
 	$datetime = new DateTime;
 	$otherTZ = new DateTimeZone("Asia/Jakarta");
 	$datetime->setTimezone($otherTZ);
-	$date = $datetime->format('Y-m-d H:i:s');
+	$date = $datetime->format('Y-m-d H:i');
 
     if (isset($_POST['checkin'])) {
 

@@ -58,7 +58,7 @@
 			</div>
         </div>
 		<div class="col-12">
-            <button type="submit" name="checkout" value="checkout" class="btn btn-success">Check out</button>
+            <button type="submit" name="checkout" value="checkout" class="btn btn-danger">Check out</button>
         </div>
 		</form>
 	</div>

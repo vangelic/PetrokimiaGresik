@@ -11,12 +11,11 @@
 
     if (isset($_POST['simpan'])) {
         header('Content-Type: application/download');
-        header("Content-Disposition: attachment; filename=".$c_id.".png"."");
+        header("Content-Disposition: attachment; filename="."qr".$c_id.".png"."");
         header("Content-Length: " . filesize("pgqrcode/qr".$c_id.".png"));
         $fp = fopen("pgqrcode/qr".$c_id.".png", "r");
         fpassthru($fp);
         fclose($fp);
-
     }
 
 ?>
@@ -41,6 +40,7 @@
                 <img src="pgqrcode/qr<?php echo $c_id ?>.png" id="pg_code" class="img-thumbnail" alt="qrcode" style="width:400px;">
             </div>
             <div class="col-md-6 text-center d-flex flex-column justify-content-center align-items-center">
+            <form method="POST">
                 <p>Klik Tombol dibawah untuk Mengunduh QR Code :</p>
                 <button type="submit" name="simpan" value="simpan" class="btn btn-success mb-5">Simpan</button>
 
@@ -48,6 +48,7 @@
                 <?php
                     echo "<a href='user?id=$c_id'>Lihat Halaman Deskripsi</a>"
                 ?>
+            </form>
             </div>
         </div>
 	</div>

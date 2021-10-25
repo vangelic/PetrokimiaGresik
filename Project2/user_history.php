@@ -1,9 +1,8 @@
 <?php 
 	include "inisiasi.php";
 	require 'adminPermission.inc.php';
-	
-	$result = mysqli_query($koneksi, "SELECT * FROM daftar_alat WHERE id_pinjam=$_SESSION[id]");
-	
+
+	$result = mysqli_query($koneksi, "SELECT checkin, checkout, nama_alat FROM history, daftar_alat WHERE history.id_alat=daftar_alat.id_alat AND id_user=$_SESSION[id]");
 ?>
 
 <!DOCTYPE html>
@@ -52,15 +51,13 @@
 	<tbody>
 		<div class="container-fluid" style="margin: 50px; padding:30px;
 	width: calc(100% - 100px);">
-		<h2>Daftar Alat</h2>
+		<h2>History Penggunaan</h2>
 		<hr style="position: relative; border: none; height: 1px; background: #999;" />
 		<table class="table text-center align-middle">
 				<tr>
 					<th>No.</th>
 					<th>Nama Alat</th>
-					<th>Status</th>
-					<th></th>
-					<th></th>
+					<th>Waktu</th>
 				</tr>
 
 				<?php $i = 1; ?>
@@ -68,15 +65,13 @@
 					while ($row = mysqli_fetch_assoc($result)) : ?>
 					<tr>
 						<td><?=$i; ?></td>
+						<td><?= $row["nama_alat"] ?></td>
 						<td>
-							<?= $row["nama_alat"] ?>
-						</td>
-						<td>Aktif</td>
-						<td>
-							<a href="rekan.php"><button type="button" class="btn btn-secondary">Tambah Rekan</button></a>
-						</td>
-						<td>
-							<a href="checkout.php?id=<?= $row["nama_alat"] ?>"><button type="button" class="btn btn-danger">Check out</button></a>
+							<div class="card border-primary mb-3" style="max-width: 21rem;">
+								<div class="card-body text-primary">
+									<p class="card-text"><?= $row["checkin"] ?>-<?= $row["checkout"] ?></p>
+								</div>
+							</div>
 						</td>
 					</tr>
 					<?php $i++; ?>

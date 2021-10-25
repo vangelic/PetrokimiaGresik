@@ -53,7 +53,7 @@
 			<div class="main">
 				<form>
 					<button><a href="insert.php">INSERT</a></button>
-					<button><a href="historyadm.php">HISTORY</a></button>
+					<button><a href="adm_history.php">HISTORY</a></button>
 					<button><a href="#">KALIBRASI</a></button>
 				</form>
 			</div>

@@ -37,7 +37,7 @@
 		<form method="POST">
 		<div class="row">
             <div class="col-md-6 text-center d-flex flex-column justify-content-center align-items-center">
-                <button type="submit" name="checkin" value="checkin" class="btn btn-success mb-5">Check In</button>
+                <button type="submit" name="checkin" value="checkin" class="btn btn-primary mb-5">Check In</button>
 
                 <div>Klik untuk menggunakan alat</div>
             </div>

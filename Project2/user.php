@@ -54,7 +54,7 @@
 				<form>
 					<button><a href="scan.php">SCAN</a></button>
 					<button><a href="#">STATUS ALAT</a></button>
-					<button><a href="#">HISTORY</a></button>
+					<button><a href="user_history.php">HISTORY</a></button>
 				</form>
 			</div>
 		</div>

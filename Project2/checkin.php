@@ -4,9 +4,10 @@
 
     $c_id = $_GET['id'];
 
-	date_default_timezone_set('Asia/Jakarta');
-
-	$script_tz = date_default_timezone_get();
+	$datetime = new DateTime;
+	$otherTZ = new DateTimeZone("Asia/Jakarta");
+	$datetime->setTimezone($otherTZ);
+	$date = $datetime->format('Y-m-d H:i:s');
 
     if (isset($_POST['checkin'])) {
 
@@ -15,7 +16,7 @@
 		$query = $db->row("SELECT * FROM daftar_alat WHERE nama_alat=?",$c_id);
 		$id = $query['id_alat'];
 
-		$db->insert("history", ["id_alat" => $id, "checkin" => $script_tz('Y-m-d H:i:s'), "id_user" => $_SESSION['id']]);
+		$db->insert("history", ["id_alat" => $id, "checkin" => $date, "id_user" => $_SESSION['id']]);
 
 		header("Location: $url/user.php");
         exit();

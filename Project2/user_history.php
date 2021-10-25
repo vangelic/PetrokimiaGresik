@@ -67,7 +67,7 @@
 						<td><?=$i; ?></td>
 						<td><?= $row["nama_alat"] ?></td>
 						<td>
-							<div class="card border-primary mb-3" style="max-width: 21rem;">
+							<div class="card border-primary" style="max-width: 21rem;">
 								<div class="card-body text-primary">
 									<p class="card-text"><?= $row["checkin"] ?>-<?= $row["checkout"] ?></p>
 								</div>

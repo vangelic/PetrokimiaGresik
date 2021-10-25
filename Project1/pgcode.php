@@ -11,9 +11,9 @@
 
     if (isset($_POST['simpan'])) {
         header('Content-Type: application/download');
-        header("Content-Disposition: attachment; filename="."qr".$c_id.".png"."");
+        header("Content-Disposition: attachment; filename=".$c_id.".png"."");
         header("Content-Length: " . filesize("pgqrcode/qr".$c_id.".png"));
-        $fp = fopen("pgqrcode/".$c_id.".png", "r");
+        $fp = fopen("pgqrcode/qr".$c_id.".png", "r");
         fpassthru($fp);
         fclose($fp);
 

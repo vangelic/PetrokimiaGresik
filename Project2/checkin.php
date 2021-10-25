@@ -4,6 +4,10 @@
 
     $c_id = $_GET['id'];
 
+	date_default_timezone_set('Asia/Jakarta');
+
+	$script_tz = date_default_timezone_get();
+
     if (isset($_POST['checkin'])) {
 
 		$db->update('daftar_alat', ['id_pinjam' => $_SESSION['id']], ['nama_alat'=> $c_id]);
@@ -11,7 +15,7 @@
 		$query = $db->row("SELECT * FROM daftar_alat WHERE nama_alat=?",$c_id);
 		$id = $query['id_alat'];
 
-		$db->insert("history", ["id_alat" => $id, "checkin" => date('Y-m-d H:i:s'), "id_user" => $_SESSION['id']]);
+		$db->insert("history", ["id_alat" => $id, "checkin" => $script_tz('Y-m-d H:i:s'), "id_user" => $_SESSION['id']]);
 
 		header("Location: $url/user.php");
         exit();

@@ -46,11 +46,13 @@
 		<div class="row">
             <div class="col-md-6 text-center d-flex flex-column justify-content-center align-items-center">
 				<?php
+					$result = mysqli_query($koneksi, "SELECT nama_alat, id_pinjam, nama FROM daftar_alat, user WHERE daftar_alat.nama_alat LIKE '$c_id' AND daftar_alat.id_pinjam=user.id_user");
+					$row = mysqli_fetch_assoc($result);
 
-					if ($row["id_pinjam"]!=null) {
-						echo "<button type='submit' name='checkin' value='checkin' class='btn btn-primary mb-5' disabled>Check In</button>";
+					if (!isset($row["id_pinjam"])) {
+						echo "<button type='submit' name='checkin' value='checkin' class='btn btn-primary mb-5'>Check In</button>";
 
-                		echo "<div>Sedang  digunakan oleh ".$row["nama"]."</div>";
+                		echo "<div>Klik untuk menggunakan alat.</div>";
 					}
 					elseif ($row["id_pinjam"]==$_SESSION['id']) {
 						echo "<button type='submit' name='checkin' value='checkin' class='btn btn-primary mb-5' disabled>Check In</button>";
@@ -58,9 +60,9 @@
                 		echo "<div>Alat sedang anda gunakan.</div>";
 					}
 					else{
-						echo "<button type='submit' name='checkin' value='checkin' class='btn btn-primary mb-5'>Check In</button>";
+						echo "<button type='submit' name='checkin' value='checkin' class='btn btn-primary mb-5' disabled>Check In</button>";
 
-                		echo "<div>Klik untuk menggunakan alat.</div>";
+                		echo "<div>Sedang  digunakan oleh ".$row["nama"]."</div>";
 					}
 				?>
             </div>

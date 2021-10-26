@@ -11,6 +11,12 @@
 	<script src="https://kit.fontawesome.com/484db9065f.js" crossorigin="anonymous"></script>
 </head>
 <style>
+	body{
+		font-family: sans-serif;
+		background-image: url(aset/bg.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
 	.header{
 		text-align: center;
 		padding-top: 50px;
@@ -36,7 +42,7 @@
 <body>
 	<thead>
 		<div class="logo">
-			<img src="Logonobg.png" width="140px" height="50px">
+			<img src="aset/Logonobg.png" width="140px" height="50px">
 				<ul class="home">
 					<a href="admin.php" style="margin-right: 30px">Home</a>
 					<a href="login.php">Logout</a>

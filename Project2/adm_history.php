@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Petrocode</title>
+	<title>History Admin</title>
 	<style>
 		body{
 			font-family: sans-serif;
@@ -52,6 +52,8 @@
 		<div class="container-fluid" style="margin: 50px; padding:30px;
 	width: calc(100% - 100px);">
 		<h2>History Penggunaan</h2>
+		<input style="margin-left: 950px;" class="search" type="text" placeholder="Cari..." required>
+		<input class="button" type="button" value="Cari">
 		<hr style="position: relative; border: none; height: 1px; background: #999;" />
 		<table class="table text-center align-middle">
 				<tr>
@@ -81,7 +83,6 @@
 					//endforeach; 
 					endwhile;
 				?>
-				
 			</table>
 		</div>
 	</tbody>

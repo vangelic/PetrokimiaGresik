@@ -45,7 +45,7 @@
 
                 <div>Klik Link berikut untuk kembali :</div>
                 <?php
-                    echo "<a href='admin.php'>Kembali ke Halaman Home</a>"
+                    echo "<a href='admin.php'>Kembali ke Halaman Home</a>";
                 ?>
             </form>
             </div>

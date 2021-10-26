@@ -4,6 +4,11 @@
 
     $c_id = $_GET['id'];
 
+	$datetime = new DateTime;
+	$otherTZ = new DateTimeZone("Asia/Jakarta");
+	$datetime->setTimezone($otherTZ);
+	$date = $datetime->format('Y-m-d H:i');
+
     if (isset($_POST['checkout'])) {
 
 		$db->update('daftar_alat', ['id_pinjam' => null], ['nama_alat'=> $c_id]);
@@ -14,7 +19,7 @@
 		$query = $db->row("SELECT * FROM history WHERE id_alat=? ORDER BY id_history DESC LIMIT 1",$id);
 		$history = $query['id_history'];
 
-		$db->update('history', ['checkout' => date('Y-m-d H:i:s'), 'review' => $_POST['review']], ['id_user'=> $_SESSION['id'], 'id_history' => $history]);
+		$db->update('history', ['checkout' => $date, 'review' => $_POST['review']], ['id_user'=> $_SESSION['id'], 'id_history' => $history]);
 
 		header("Location: $url/scan.php");
         exit();

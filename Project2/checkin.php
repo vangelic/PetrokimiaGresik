@@ -58,6 +58,8 @@
 						echo "<button type='submit' name='checkin' value='checkin' class='btn btn-primary mb-5' disabled>Check In</button>";
 
                 		echo "<div>Alat sedang anda gunakan.</div>";
+
+						echo "<a href='checkout.php?id=".$c_id."'>Klik untuk check out.</a>";
 					}
 					else{
 						echo "<button type='submit' name='checkin' value='checkin' class='btn btn-primary mb-5' disabled>Check In</button>";

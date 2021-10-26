@@ -43,7 +43,7 @@
 		<div class="row">
             <div class="col-md-6 text-center d-flex flex-column justify-content-center align-items-center">
 				<?php
-					$result = mysqli_query($koneksi, "SELECT nama_alat, id_pinjam, nama FROM daftar_alat, user WHERE daftar_alat.nama_alat = $c_id AND daftar_alat.id_pinjam=user.id_user");
+					$result = mysqli_query($koneksi, "SELECT nama_alat, id_pinjam, nama FROM daftar_alat, user WHERE daftar_alat.nama_alat LIKE '$c_id' AND daftar_alat.id_pinjam=user.id_user");
 
 					if ($row["id_pinjam"]==$_SESSION['id']) {
 						echo "<button type='submit' name='checkin' value='checkin' class='btn btn-primary mb-5' disabled>Check In</button>";

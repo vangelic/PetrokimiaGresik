@@ -66,7 +66,14 @@
 					<th>Pengguna</th>
 				</tr>
 
-				<?php $i = 1; ?>
+				<?php $i = 1; 
+				$pencarian = $_POST['keyword'];
+					if ($pencarian != '') {
+						$select = mysqli_query($koneksi, "SELECT nama_alat, nama FROM daftar_alat, user WHERE history.id_alat=daftar_alat.id_alat AND history.id_user=user.id_user ");
+					}else{
+						echo "CEK LAGI";
+					}
+				?>
 				<?php 
 					while ($row = mysqli_fetch_assoc($result)) : ?>
 					<tr>

@@ -2,7 +2,7 @@
 	include "inisiasi.php";
 	require 'adminPermission.inc.php';
 
-	$result = mysqli_query($koneksi, "SELECT checkin, checkout, nama_alat, nama FROM history, daftar_alat, user WHERE history.id_alat=daftar_alat.id_alat AND history.id_user=user.id_user");
+	$result = mysqli_query($koneksi, "SELECT checkin, checkout, nama_alat, nama FROM history, daftar_alat, user WHERE history.id_alat=daftar_alat.id_alat AND history.id_user=user.id_user ORDER BY checkin DESC");
 ?>
 
 <!DOCTYPE html>
@@ -52,8 +52,10 @@
 		<div class="container-fluid" style="margin: 50px; padding:30px;
 	width: calc(100% - 100px);">
 		<h2>History Penggunaan</h2>
-		<input style="margin-left: 950px;" class="search" type="text" placeholder="Cari..." required>
-		<input class="button" type="button" value="Cari">
+		<form action="" method="post">
+			<input style="margin-left: 900px;" class="search" type="text" name="keyword" placeholder="Cari..." autocomplete="off" required>
+			<input class="button" type="submit" name="cari" value="Cari">
+		</form>
 		<hr style="position: relative; border: none; height: 1px; background: #999;" />
 		<table class="table text-center align-middle">
 				<tr>

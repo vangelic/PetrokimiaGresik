@@ -55,7 +55,7 @@
 		<h2>History Penggunaan</h2>
 		<form action="" method="post">
 			<input style="margin-left: 900px;" class="search" type="text" name="keyword" placeholder="Cari..." autocomplete="off" required>
-			<button type="submit" name="cari">Cari</button>
+			<input class="button" type="submit" name="cari" value="Cari">
 		</form>
 		<hr style="position: relative; border: none; height: 1px; background: #999;" />
 		<table class="table text-center align-middle">
@@ -66,13 +66,27 @@
 					<th>Pengguna</th>
 				</tr>
 
-				<?php $i = 1; 
-				$pencarian = $_POST['keyword'];
-					if ($pencarian != '') {
-						$select = mysqli_query($koneksi, "SELECT nama_alat, nama FROM daftar_alat INNER JOIN user WHERE nama_alat,nama LIKE '".$pencarian."' ");
-					}else{
-						echo "ADA YANG SALAH!";
-					}
+				<?php $i = 1;
+				/*if (isset($_POST["cari"])) {
+					if (isset($_POST["cari"])) {
+						$query = cari($_POST["keyword"]);
+					};
+
+					function cari($keyword){
+						$query = "SELECT * FROM daftar_alat 
+									WHERE
+									nama_alat LIKE '%$keyword%'
+									";
+						return result($query);
+					};
+
+					//$pencarian = $_POST['keyword'];
+					//if ($pencarian != '') {
+					//	$select = mysqli_query($koneksi, "SELECT * FROM daftar_alat WHERE nama_alat LIKE '".%$keyword%."'");
+					//}else{
+					//	echo "ADA YANG SALAH!";
+					//}
+				};*/
 				?>
 				<?php 
 					while ($row = mysqli_fetch_assoc($result)) : ?>

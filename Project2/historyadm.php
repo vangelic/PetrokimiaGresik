@@ -55,7 +55,7 @@
 		<h2>History Penggunaan</h2>
 		<form action="" method="post">
 			<input style="margin-left: 900px;" class="search" type="text" name="keyword" placeholder="Cari..." autocomplete="off" required>
-			<input class="button" type="submit" name="cari" value="Cari">
+			<button type="submit" name="cari">Cari</button>
 		</form>
 		<hr style="position: relative; border: none; height: 1px; background: #999;" />
 		<table class="table text-center align-middle">
@@ -69,9 +69,9 @@
 				<?php $i = 1; 
 				$pencarian = $_POST['keyword'];
 					if ($pencarian != '') {
-						$select = mysqli_query($koneksi, "SELECT nama_alat, nama FROM daftar_alat, user WHERE history.id_alat=daftar_alat.id_alat AND history.id_user=user.id_user ");
+						$select = mysqli_query($koneksi, "SELECT nama_alat, nama FROM daftar_alat INNER JOIN user WHERE nama_alat,nama LIKE '".$pencarian."' ");
 					}else{
-						echo "CEK LAGI";
+						echo "ADA YANG SALAH!";
 					}
 				?>
 				<?php 

@@ -148,16 +148,12 @@
 			</form>
 		</div>
 	</tbody>
-	<script type="text/javascript">
-        $(function(){
-        $("#to").datepicker({ dateFormat: 'yyyy-mm-dd' });
-        $("#from").datepicker({ dateFormat: 'yyyy-mm-dd' }).bind("change",function(){
-            var minValue = $(this).val();
-            minValue = $.datepicker.parseDate("yyyy-mm-dd", minValue);
-            minValue.setDate(minValue.getDate()+1);
-            $("#to").datepicker( "option", "minDate", minValue );
-        })
-    });
-    </script>
+	<script> 
+		$( document ).ready(function() {     
+		$("#datepicker").datepicker({          
+		format: 'yyyy-mm-dd' //can also use format: 'dd-mm-yyyy'     
+		});      
+		});  
+	</script> 
 </body>
 </html>

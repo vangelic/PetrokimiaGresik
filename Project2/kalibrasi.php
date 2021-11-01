@@ -48,6 +48,9 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 </head>
 <style>
 	.container{
@@ -104,15 +107,14 @@
 	</thead>
 	<tbody>
 		<div class="container">
-			<h2>INSERT DATA</h2>
+			<h2>ATUR JADWAL</h2>
 			<hr style="position: relative; border: none; height: 1px; background: #999;" />
 			<form method="POST">
 				<div class="form">
 					<div class="col-md-6">
 						<div class="mb-3">
 							<label><b>Nama Alat</b></label><br>
-							<select class="form-select" aria-label="Default select example" name="jenis" id="jenis">
-							<option selected disabled value="">Open this select menu</option>
+							<select class="form-select" aria-label="Default select example" name="jenis" id="jenis" aria-placeholder="Pilih Alat">
 								<?php 
 									$statement = $dbc->prepare("SELECT id_kategori, nama_kategori FROM kategori ");
 									$statement->execute() or die ('Error '.$statement->errorInfo()[2]);
@@ -120,12 +122,13 @@
 									foreach ($statement as $row) {
 										echo "<option value={$row['id_kategori']}>{$row['nama_kategori']}</option>";
 									}
-									echo "<option value='custom'>Tambah Lainnya</option>"
 								?>
 							</select>
 						</div>
+
 						<div class="mb-3">
-							<input type="text" class="form-control" id="nm_kategori" name="nm_kategori" placeholder="Masukkan nama alat">
+							<label for="tgl" class="form-label"><b>Atur Tanggal</b></label>
+							<input type="text" class="form-control" id="tgl" name="tgl" placeholder="Masukkan nama alat">
 						</div>
 
 						<button type="submit" name="upload" value="Upload" class="btn btn-success">INSERT</button>

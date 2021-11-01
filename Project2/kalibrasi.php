@@ -150,7 +150,7 @@
 	</tbody>
 	<script type="text/javascript">
         $(function() {
-            $('#datetimepicker1').datetimepicker();
+            $('#datepicker').datepicker();
         });
     </script>
 </body>

@@ -129,7 +129,7 @@
 						<div class="col-12">
 							<label for="date" class="form-label"><b>Atur Tanggal</b></label>
 							<div class="input-group mb-3">
-								<span class="input-group-text" id="basic-addon1"><i class="fas fa-calender"></i></span>
+								<span class="input-group-text" id="basic-addon1"><i class="fas fa-calendar-alt"></i></span>
 								<input name="date" type="text" class="form-control" id="datepicker" placeholder="Pilih Tanggal" required>
 							</div>
 						</div>

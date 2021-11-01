@@ -126,19 +126,11 @@
 							</select>
 						</div>
 
-						<div class="mb-3">
-							<div class="row form-group">
-								<label for="date">Atur Tanggal</label>
-								<div class="col-sm-4">
-									<div class="input-group date" id="datepicker">
-										<input type="text" class="form-control">
-										<span class="input-group-append">
-											<span class="input-group-text bg-white d-block">
-												<i class="fa fa-calendar"></i>
-											</span>
-										</span>
-									</div>
-								</div>
+						<div class="col-12">
+							<label for="date" class="form-label"><b>Atur Tanggal</b></label>
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="basic-addon1"><i class="fas fa-calender"></i></span>
+								<input name="date" type="text" class="form-control" id="datepicker" placeholder="Pilih Tanggal" required>
 							</div>
 						</div>
 

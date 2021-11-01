@@ -60,7 +60,7 @@
 				<form>
 					<button><a href="insert.php">INSERT</a></button>
 					<button><a href="adm_history.php">HISTORY</a></button>
-					<button><a href="#">KALIBRASI</a></button>
+					<button><a href="kalibrasi.php">KALIBRASI</a></button>
 				</form>
 			</div>
 		</div>

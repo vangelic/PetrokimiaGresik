@@ -128,7 +128,7 @@
 
 						<div class="mb-3">
 							<div class="row form-group">
-								<label for="date" class="col-sm-1 col-form-label">Atur Tanggal</label>
+								<label for="date">Atur Tanggal</label>
 								<div class="col-sm-4">
 									<div class="input-group date" id="datepicker">
 										<input type="text" class="form-control">
@@ -149,9 +149,15 @@
 		</div>
 	</tbody>
 	<script type="text/javascript">
-        $(function() {
-            $('#datepicker').datepicker();
-        });
+        $(function(){
+        $("#to").datepicker({ dateFormat: 'yyyy-mm-dd' });
+        $("#from").datepicker({ dateFormat: 'yyyy-mm-dd' }).bind("change",function(){
+            var minValue = $(this).val();
+            minValue = $.datepicker.parseDate("yyyy-mm-dd", minValue);
+            minValue.setDate(minValue.getDate()+1);
+            $("#to").datepicker( "option", "minDate", minValue );
+        })
+    });
     </script>
 </body>
 </html>

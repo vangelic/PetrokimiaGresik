@@ -127,12 +127,18 @@
 						</div>
 
 						<div class="mb-3">
-							<label for="tgl" class="form-label"><b>Atur Tanggal</b></label>
-							<div class='input-group date' id='datetimepicker1'>
-								<input type='text' class="form-control" />
-								<span class="input-group-addon">
-										<span class="glyphicon glyphicon-calendar"></span>
-								</span>
+							<div class="row form-group">
+								<label for="date" class="col-sm-1 col-form-label">Atur Tanggal</label>
+								<div class="col-sm-4">
+									<div class="input-group date" id="datepicker">
+										<input type="text" class="form-control">
+										<span class="input-group-append">
+											<span class="input-group-text bg-white d-block">
+												<i class="fa fa-calendar"></i>
+											</span>
+										</span>
+									</div>
+								</div>
 							</div>
 						</div>
 

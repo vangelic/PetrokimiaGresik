@@ -114,7 +114,7 @@
 					<div class="col-md-6">
 						<div class="mb-3">
 							<label><b>Nama Alat</b></label><br>
-							<select class="form-select" aria-label="Default select example" name="jenis" id="jenis" aria-placeholder="Pilih Alat">
+							<select class="form-select" aria-label="Default select example" name="jenis" id="jenis">
 								<?php 
 									$statement = $dbc->prepare("SELECT id_kategori, nama_kategori FROM kategori ");
 									$statement->execute() or die ('Error '.$statement->errorInfo()[2]);
@@ -128,7 +128,12 @@
 
 						<div class="mb-3">
 							<label for="tgl" class="form-label"><b>Atur Tanggal</b></label>
-							<input type="text" class="form-control" id="tgl" name="tgl" placeholder="Masukkan nama alat">
+							<div class='input-group date' id='datetimepicker1'>
+								<input type='text' class="form-control" />
+								<span class="input-group-addon">
+										<span class="glyphicon glyphicon-calendar"></span>
+								</span>
+							</div>
 						</div>
 
 						<button type="submit" name="upload" value="Upload" class="btn btn-success">INSERT</button>
@@ -137,5 +142,10 @@
 			</form>
 		</div>
 	</tbody>
+	<script type="text/javascript">
+        $(function() {
+            $('#datetimepicker1').datetimepicker();
+        });
+    </script>
 </body>
 </html>

@@ -29,8 +29,14 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </head>
+<style>
+    body{
+        background-repeat: no-repeat;
+        background-image: url(bg.jpg);
+    }
+</style>
 
-<body style="background-image: url(bg.jpg);">
+<body>
 	<div class="container">
 		<h2>QR Code</h2>
 		<hr style="position: relative; border: none; height: 1px; background: #999;" />

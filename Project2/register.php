@@ -38,9 +38,13 @@
         font-size: 16px;
         top: 10px;
     }
+    body{
+        background-repeat: no-repeat;
+        background-image: url(bg.jpg);
+    }
 </style>
 
-<body style="background-image: url(bg.jpg)">
+<body>
     <div class="logo">
             <img src="Logonobg.png" width="140px" height="50px">
                 <ul class="home">

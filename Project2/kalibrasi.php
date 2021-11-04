@@ -3,7 +3,7 @@
 	include "inisiasi.php";
 	require 'adminPermission.inc.php';
 
-    if (isset($_POST['upload'])) {
+    if (isset($_POST['submit'])) {
 
 		if ($_POST['jenis']=='custom'){
 			$statement = $dbc->prepare("INSERT INTO kategori (nama_kategori, jumlah) VALUES(:kategori, 1)");
@@ -134,7 +134,7 @@
 							</div>
 						</div>
 
-						<button type="submit" name="upload" value="Upload" class="btn btn-success">INSERT</button>
+						<button type="submit" name="submit" value="submit" class="btn btn-success">SUBMIT</button>
 					</div>
 				</div>
 			</form>

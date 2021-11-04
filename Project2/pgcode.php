@@ -31,10 +31,12 @@
 </head>
 <style>
     body{
-            font-family: sans-serif;
-            background-image: url(bg.jpg);
-            background-size: cover;
-        }
+        font-family: sans-serif;
+        background-image: url(bg.jpg);
+        background-repeat: no-repeat;
+        overflow: hidden;
+        background-size: cover;
+    }
 </style>
 
 <body>

@@ -38,7 +38,7 @@
 
 </head>
 
-<body>
+<body style="background-image: url(bg.jpg);">
 	<div class="container">
 		<h2><?php echo $c_id ?></h2>
 		<hr style="position: relative; border: none; height: 1px; background: #999;" />

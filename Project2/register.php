@@ -40,7 +40,7 @@
     }
 </style>
 
-<body style="background-image: url(aset/bg.jpg)">
+<body style="background-image: url(bg.jpg)">
     <div class="logo">
             <img src="Logonobg.png" width="140px" height="50px">
                 <ul class="home">

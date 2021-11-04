@@ -79,7 +79,7 @@
 		font-size: 20px;
 	}
 	body{
-		background-image: url(aset/bg.jpg);
+		background-image: url(bg.jpg);
 		font-family: sans-serif;
 		background-repeat: no-repeat;
 		overflow: hidden;

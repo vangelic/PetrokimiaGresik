@@ -13,7 +13,7 @@
 <style>
 	body{
 		font-family: sans-serif;
-		background-image: url(aset/bg.jpg);
+		background-image: url(bg.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
 	}

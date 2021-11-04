@@ -31,9 +31,11 @@
 </head>
 <style>
     body{
-        background-repeat: no-repeat;
-        background-image: url(bg.jpg);
-    }
+            font-family: sans-serif;
+            background-image: url(bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 </style>
 
 <body>
@@ -47,7 +49,7 @@
             <div class="col-md-6 text-center d-flex flex-column justify-content-center align-items-center">
             <form method="POST">
                 <p>Klik Tombol dibawah untuk Mengunduh QR Code :</p>
-                <button type="submit" name="simpan" value="simpan" class="btn btn-success mb-5">Simpan</button>
+                <button type="submit" name="simpan" value="simpan" class="btn btn-secondary mb-5">Simpan</button>
 
                 <div>Klik Link berikut untuk kembali :</div>
                 <?php

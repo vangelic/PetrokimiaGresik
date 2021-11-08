@@ -46,7 +46,7 @@
     }
 </style>
 
-<body style="background-image: url(aset/Buncob2.jpg)">
+<body style="background-image: url(aset/bg.jpg)">
     <div class="container">
         <div class="header">
             <img src="aset/Logonobg.png">

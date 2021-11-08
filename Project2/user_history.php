@@ -69,7 +69,14 @@
 						<td>
 							<div class="card border-primary" style="max-width: 21rem;">
 								<div class="card-body text-primary">
-									<p class="card-text"><?= $row["checkin"] ?>-<?= $row["checkout"] ?></p>
+									<?php 
+									$masuk = new DateTime($row["checkin"]);
+									$masuk->format('Y-m-d H:i');
+
+									$keluar = new DateTime($row["checkout"]);
+									$keluar->format('Y-m-d H:i')
+									?>
+									<p class="card-text"><?= $masuk ?>-<?= $keluar ?></p>
 								</div>
 							</div>
 						</td>

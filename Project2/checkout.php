@@ -7,7 +7,7 @@
 	$datetime = new DateTime;
 	$otherTZ = new DateTimeZone("Asia/Jakarta");
 	$datetime->setTimezone($otherTZ);
-	$date = $datetime->format('Y-m-d H:i');
+	$date = $datetime->format('Y-m-d H:i:s');
 
     if (isset($_POST['checkout'])) {
 

@@ -71,17 +71,11 @@
 								<div class="card-body text-primary">
 									<?php 
 									$in = new DateTime($row["checkin"]);
-									$temp = $in->format('Y/m/d');
 									$masuk = $in->format('Y/m/d H:i');
 
 									$out = new DateTime($row["checkout"]);
-									$temp1 = $out->format('Y/m/d');
-									if ($temp == $temp1){
-										$keluar = $out->format('H:i');
-									} else {
-										$keluar = $out->format('Y/m/d H:i');
-									}
-									
+									$keluar = $out->format('Y+1/m/d H:i');
+																		
 									?>
 									<p class="card-text"><?= $masuk ?>-<?= $keluar ?></p>
 								</div>

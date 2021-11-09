@@ -25,18 +25,32 @@
 	}
 	.container{
 		width: 450px !important;
-		margin:2% auto;
+		margin:5% auto;
 		border-radius: 25px;
 		background-color: rgba(255,255,255,0.5);
 		box-shadow: 0 0 17px #333;
 	}
 	.main button{
 		padding-left: 0;
-		background-color: #939896;
+		background-color:  #4b4e4d;
 		letter-spacing: 2px;
 		font-weight: bold;
-		margin-bottom: 70px;
+		width: 200px;
+		height: 200px;
+		margin-top: 10px;
+		margin-bottom: 30px;
 		border-radius: 15px ;
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+	.main img{
+		width: 120px; 
+		height: 120px;
+		margin-bottom: 15px;
+	}
+	.main a{
+		color: white;
+		font-size: 20px;
 	}
 </style>
 <body>
@@ -58,9 +72,18 @@
 			</div>
 			<div class="main">
 				<form>
-					<button><a href="insert.php">INSERT</a></button>
-					<button><a href="adm_history.php">HISTORY</a></button>
-					<button><a href="kalibrasi.php">KALIBRASI</a></button>
+					<button>
+						<img src="gambar/insertt.png"><br>
+						<a href="insert.php">INSERT</a>
+					</button>
+					<button>
+						<img src="gambar/history1.png"><br>
+						<a href="adm_history.php">HISTORY</a>
+					</button>
+					<button>
+						<img src="gambar/kalibrasi1.png"><br>
+						<a href="kalibrasi.php">KALIBRASI</a>
+					</button>
 				</form>
 			</div>
 		</div>

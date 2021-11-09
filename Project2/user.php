@@ -32,11 +32,29 @@
 	}
 	.main button{
 		padding-left: 0;
-		background-color: #939896;
+		background-color:  #4b4e4d;
 		letter-spacing: 2px;
 		font-weight: bold;
-		margin-bottom: 70px;
+		width: 200px;
+		height: 200px;
+		margin-top: 10px;
+		margin-bottom: 30px;
 		border-radius: 15px ;
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+	.main img{
+		width: 120px; 
+		height: 120px;
+		margin-bottom: 15px;
+	}
+	.main a{
+		color: white;
+		font-size: 20px;
+	}
+	.main button:hover{
+		box-shadow: 2px 5px 5px #555;
+		background-color: #8a8f8d;
 	}
 </style>
 <body>
@@ -58,9 +76,18 @@
 			</div>
 			<div class="main">
 				<form>
-					<button><a href="scan.php">SCAN</a></button>
-					<button><a href="user_statusalat.php">STATUS ALAT</a></button>
-					<button><a href="user_history.php">HISTORY</a></button>
+					<button formaction="scan.php">
+						<img src="gambar/scanner.png"><br>
+						<a href="scan.php">SCAN</a>
+					</button>
+					<button formaction="user_statusalat.php">
+						<img src="gambar/statusalat.png"><br>
+						<a href="user_statusalat.php">STATUS ALAT</a>
+					</button>
+					<button formaction="user_history.php">
+						<img src="gambar/history.png"><br>
+						<a href="user_history.php">HISTORY</a>
+					</button>
 				</form>
 			</div>
 		</div>

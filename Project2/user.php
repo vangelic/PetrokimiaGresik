@@ -81,7 +81,7 @@
 						<a href="scan.php">SCAN</a>
 					</button>
 					<button formaction="user_statusalat.php">
-						<img src="gambar/statusalat.png"><br>
+						<img src="gambar/status_alat.png"><br>
 						<a href="user_statusalat.php">STATUS ALAT</a>
 					</button>
 					<button formaction="user_history.php">

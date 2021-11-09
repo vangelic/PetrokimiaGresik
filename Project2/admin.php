@@ -84,7 +84,7 @@
 						<img src="gambar/history1.png"><br>
 						<a href="adm_history.php">HISTORY</a>
 					</button>
-					<button value="kalibrasi.php">
+					<button formaction="kalibrasi.php">
 						<img src="gambar/kalibrasi1.png"><br>
 						<a href="kalibrasi.php">KALIBRASI</a>
 					</button>

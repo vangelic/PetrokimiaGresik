@@ -5,9 +5,12 @@
 
     if (isset($_POST['submit'])) {
 
+		$datetime = new DateTime($_POST['date']);
+		$date = $datetime->format('Y-m-d H:i:s');
+
 		$statement = $dbc->prepare("INSERT INTO kalibrasi (id_alat, tgl_kalibrasi) VALUES(:alat, :tgl)");
 			$statement->bindValue(':alat', $_POST['alat']);
-			$statement->bindValue(':id', $_POST['date']);
+			$statement->bindValue(':id', $date);
 			
 			$statement->execute() or die ('Error '.$statement->errorInfo()[2]);
 

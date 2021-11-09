@@ -24,7 +24,7 @@
 		padding-bottom: 50px;
 	}
 	.container{
-		width: 450px !important;
+		width: 800px !important;
 		margin:5% auto;
 		border-radius: 25px;
 		background-color: rgba(255,255,255,0.5);

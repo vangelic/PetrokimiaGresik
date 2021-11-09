@@ -85,7 +85,7 @@
 						<a href="user_statusalat.php">STATUS ALAT</a>
 					</button>
 					<button formaction="user_history.php">
-						<img src="gambar/history.png"><br>
+						<img src="gambar/historyy.png"><br>
 						<a href="user_history.php">HISTORY</a>
 					</button>
 				</form>

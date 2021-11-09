@@ -116,11 +116,11 @@
 							<label><b>Nama Alat</b></label><br>
 							<select class="form-select" aria-label="Default select example" name="jenis" id="jenis">
 								<?php 
-									$statement = $dbc->prepare("SELECT id_kategori, nama_kategori FROM kategori ");
+									$statement = $dbc->prepare("SELECT id_alat, nama_alat FROM daftar_alat ORDER BY nama_alat ASC");
 									$statement->execute() or die ('Error '.$statement->errorInfo()[2]);
 									
 									foreach ($statement as $row) {
-										echo "<option value={$row['id_kategori']}>{$row['nama_kategori']}</option>";
+										echo "<option value={$row['id_alat']}>{$row['nama_alat']}</option>";
 									}
 								?>
 							</select>

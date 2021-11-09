@@ -52,6 +52,10 @@
 		color: white;
 		font-size: 20px;
 	}
+	.main button:hover{
+		box-shadow: 2px 5px 5px #555;
+		background-color: #8a8f8d;
+	}
 </style>
 <body>
 	<thead>

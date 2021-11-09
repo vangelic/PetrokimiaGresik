@@ -5,36 +5,13 @@
 
     if (isset($_POST['submit'])) {
 
-		if ($_POST['jenis']=='custom'){
-			$statement = $dbc->prepare("INSERT INTO kategori (nama_kategori, jumlah) VALUES(:kategori, 1)");
-			$statement->bindValue(':kategori', $_POST['nm_kategori']);
-			$statement->execute() or die ('Error '.$statement->errorInfo()[2]);
-
-			$id = $dbc->lastInsertId();
-			$nama = $_POST['nm_kategori'].'1';
-		} else {
-			$statement = $dbc->prepare("UPDATE kategori SET jumlah=jumlah+1 WHERE id_kategori=:kategori");
-			$statement->bindValue(':kategori', $_POST['jenis']);
-			$statement->execute() or die ('Error '.$statement->errorInfo()[2]);
-
-			$query = $dbc->prepare("SELECT id_kategori, nama_kategori, jumlah FROM kategori WHERE id_kategori=:kategori");
-			$query->bindValue(':kategori', $_POST['jenis']);
-			$query->execute() or die ('Error '.$query->errorInfo()[2]);
-			foreach ($query as $row) {
-				
-				$id = $row['id_kategori'];
-				$nama = $row['nama_kategori'].$row['jumlah'];
-			}
-		}
-
-		$statement = $dbc->prepare("INSERT INTO daftar_alat (nama_alat, id_kategori, qr) VALUES(:alat, :id, :qr)");
-			$statement->bindValue(':alat', $nama);
-			$statement->bindValue(':id', $id);
-			$statement->bindValue(':qr', $nama.".png");
+		$statement = $dbc->prepare("INSERT INTO kalibrasi (id_alat, tgl_kalibrasi) VALUES(:alat, :tgl)");
+			$statement->bindValue(':alat', $_POST['alat']);
+			$statement->bindValue(':id', $_POST['date']);
 			
 			$statement->execute() or die ('Error '.$statement->errorInfo()[2]);
 
-		header("Location: $url/pgcode.php?id=$nama");
+		header("Location: $url/admin.php");
         exit();
     }
 
@@ -114,7 +91,7 @@
 					<div class="col-md-6">
 						<div class="mb-3">
 							<label><b>Nama Alat</b></label><br>
-							<select class="form-select" aria-label="Default select example" name="jenis" id="jenis">
+							<select class="form-select" aria-label="Default select example" name="alat" id="alat">
 								<?php 
 									$statement = $dbc->prepare("SELECT id_alat, nama_alat FROM daftar_alat ORDER BY nama_alat ASC");
 									$statement->execute() or die ('Error '.$statement->errorInfo()[2]);

@@ -76,11 +76,11 @@
 			</div>
 			<div class="main">
 				<form>
-					<button>
+					<button formaction="insert.php">
 						<img src="gambar/insertt.png"><br>
 						<a href="insert.php">INSERT</a>
 					</button>
-					<button>
+					<button formaction="adm_history.php">
 						<img src="gambar/history1.png"><br>
 						<a href="adm_history.php">HISTORY</a>
 					</button>

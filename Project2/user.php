@@ -32,7 +32,7 @@
 	}
 	.main button{
 		padding-left: 0;
-		background-color: #83acf1;
+		background-color: #939896;
 		letter-spacing: 2px;
 		font-weight: bold;
 		margin-bottom: 70px;

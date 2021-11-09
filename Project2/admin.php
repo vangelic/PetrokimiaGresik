@@ -32,7 +32,7 @@
 	}
 	.main button{
 		padding-left: 0;
-		background-color: #83acf1;
+		background-color: #939896;
 		letter-spacing: 2px;
 		font-weight: bold;
 		margin-bottom: 70px;
@@ -65,5 +65,10 @@
 			</div>
 		</div>
 	</tbody>
+	<div style="text-align: right;">
+		<p><a href='https://www.freepik.com/photos/technology'>Technology photo created by freepik - www.freepik.com</a><br>
+		<a href='https://www.freepik.com/photos/woman'>Woman photo created by freepik - www.freepik.com</a>
+		</p>
+	</div>
 </body>
 </html>

@@ -8,18 +8,7 @@
 		$datetime = new DateTime($_POST['date']);
 		$date = $datetime->format('Y-m-d H:i:s');
 
-		try {
-			$statement = $dbc->prepare("INSERT INTO kalibrasi (id_alat, tgl_kalibrasi) VALUES(:alat, :tgl)");
-			$statement->bindValue(':alat', $_POST['alat']);
-			$statement->bindValue(':id', $date);
-			
-			$statement->execute();
-			echo "Successfully added the new user " . $_POST['name'];
-		  } catch (PDOException $e) {
-			echo "DataBase Error: The user could not be added.<br>".$e->getMessage();
-		  } catch (Exception $e) {
-			echo "General Error: The user could not be added.<br>".$e->getMessage();
-		  }
+		$db->insert("kalibrasi", ["id_alat" => $_POST['name'], "tgl_kalibrasi" => $date]);
 
 		header("Location: $url/admin.php");
         exit();

@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>History Admin</title>
+	<title>Status Alat</title>
 	<style>
 		body{
 			font-family: sans-serif;
@@ -43,7 +43,7 @@
 		<div class="logo">
 			<img src="aset/Logonobg.png" width="140px" height="50px">
 				<ul class="home">
-					<a href="admin.php" style="margin-right: 30px">Home</a>
+					<a href="user.php" style="margin-right: 30px">Home</a>
 					<a href="logout.php">Logout</a>
 				</ul>
 		</div>
@@ -51,7 +51,7 @@
 	<tbody>
 		<div class="container-fluid" style="margin: 50px; padding:30px;
 	width: calc(100% - 100px);">
-		<h2>History Penggunaan</h2>
+		<h2>Status Alat</h2>
 		<form action="" method="post">
 			<input style="margin-left: 900px;" class="search" type="text" name="keyword" placeholder="Cari..." autocomplete="off" required>
 			<input class="button" type="submit" name="cari" value="Cari">

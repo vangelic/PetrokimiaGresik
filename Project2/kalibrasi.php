@@ -12,7 +12,7 @@
 			$statement->bindValue(':alat', $_POST['alat']);
 			$statement->bindValue(':id', $date);
 			
-			$statement->execute() or die ('Error '.$statement->errorInfo()[2].$date);
+			$statement->execute() or die ('Error '.$statement->errorInfo()[2].$_POST['alat']);
 
 		header("Location: $url/admin.php");
         exit();

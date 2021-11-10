@@ -9,6 +9,7 @@
 		$date = $datetime->format('Y-m-d H:i:s');
 
 		try {
+			$dbc->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			$statement = $dbc->prepare("INSERT INTO kalibrasi (id_alat, tgl_kalibrasi) VALUES(:alat, :tgl)");
 			$statement->bindValue(':alat', $_POST['alat']);
 			$statement->bindValue(':id', $date);
@@ -20,6 +21,8 @@
 		  } catch (Exception $e) {
 			echo "General Error: The user could not be added.<br>".$e->getMessage();
 		  }
+
+		$db->insert("kalibrasi", ["id_alat" => $_POST['name'], "tgl_kalibrasi" => $date]);
 
 		header("Location: $url/admin.php");
         exit();

@@ -43,6 +43,7 @@
 		<div class="logo">
 			<img src="aset/Logonobg.png" width="140px" height="50px">
 				<ul class="home">
+					<a href="#" style="margin-right: 30px">Notifikasi</a>
 					<a href="user.php" style="margin-right: 30px">Home</a>
 					<a href="logout.php">Logout</a>
 				</ul>

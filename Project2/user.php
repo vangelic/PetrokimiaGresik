@@ -67,13 +67,18 @@
 		text-align: center;
 		font-size: 20px;
 	}
+	.home img{
+		width: 30px;
+		height: 30px;
+		margin-right: 30px;
+	}
 </style>
 <body>
 	<thead>
 		<div class="logo">
 			<img src="aset/Logonobg.png" width="140px" height="50px">
 				<ul class="home">
-					<a href="#" style="margin-right: 30px">Notifikasi</a>
+					<img src="gambar/notif.png">
 					<a href="user.php" style="margin-right: 30px">Home</a>
 					<a href="login.php">Logout</a>
 				</ul>

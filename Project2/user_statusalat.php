@@ -32,6 +32,11 @@
 			text-align: center;
 			font-size: 20px;
 		}
+		.home img{
+			width: 30px;
+			height: 30px;
+			margin-right: 30px;
+		}
 
 	</style>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -43,7 +48,7 @@
 		<div class="logo">
 			<img src="aset/Logonobg.png" width="140px" height="50px">
 				<ul class="home">
-					<a href="#" style="margin-right: 30px">Notifikasi</a>
+					<img src="gambar/notif.png">
 					<a href="user.php" style="margin-right: 30px">Home</a>
 					<a href="logout.php">Logout</a>
 				</ul>

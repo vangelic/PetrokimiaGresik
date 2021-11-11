@@ -58,7 +58,7 @@
 	width: calc(100% - 100px);">
 		<h2>History Penggunaan</h2>
 		<form action="" method="post">
-			<input style="margin-left: 900px;" class="search" type="text" name="keyword" placeholder="Cari..." autocomplete="off" required>
+			<input style="margin-left: 800px;" class="search" type="text" name="keyword" placeholder="Cari..." autocomplete="off" required>
 			<input class="button" type="submit" name="cari" value="Cari">
 		</form>
 		<hr style="position: relative; border: none; height: 1px; background: #999;" />

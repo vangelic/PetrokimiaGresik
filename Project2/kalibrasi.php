@@ -63,7 +63,7 @@
 	.home{
 		float: right;
 		display: inline-block;
-		width: 200px;
+		width: 350px;
 		height: 50px;
 		list-style: none;
 		line-height: 50px;	

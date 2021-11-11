@@ -37,8 +37,16 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
 </head>
+<style>
+	body{
+		font-family: sans-serif;
+		background-image: url(bg.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+</style>
 
-<body style="background-image: url(bg.jpg);">
+<body>
 	<div class="container">
 		<h2><?php echo $c_id ?></h2>
 		<hr style="position: relative; border: none; height: 1px; background: #999;" />

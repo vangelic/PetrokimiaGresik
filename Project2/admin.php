@@ -56,6 +56,17 @@
 		box-shadow: 2px 5px 5px #555;
 		background-color: #8a8f8d;
 	}
+	.home{
+		float: right;
+		display: inline-block;
+		width: 350px;
+		height: 50px;
+		list-style: none;
+		line-height: 50px;	
+		color: black;
+		text-align: center;
+		font-size: 20px;
+	}
 </style>
 <body>
 	<thead>

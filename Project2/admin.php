@@ -57,7 +57,7 @@
 		background-color: #8a8f8d;
 	}
 	.home{
-		float: right;
+		float: left;
 		display: inline-block;
 		width: 350px;
 		height: 50px;

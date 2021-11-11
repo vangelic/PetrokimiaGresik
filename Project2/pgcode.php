@@ -40,25 +40,37 @@
 </style>
 
 <body>
-	<div class="container">
-		<h2>QR Code</h2>
-		<hr style="position: relative; border: none; height: 1px; background: #999;" />
-		<div class="row">
-            <div class="col-md-6 text-center">
-                <img src="pgqrcode/<?php echo $c_id ?>.png" id="pg_code" class="img-thumbnail" alt="qrcode" style="width:400px;">
-            </div>
-            <div class="col-md-6 text-center d-flex flex-column justify-content-center align-items-center">
-            <form method="POST">
-                <p>Klik Tombol dibawah untuk Mengunduh QR Code :</p>
-                <button type="submit" name="simpan" value="simpan" class="btn btn-secondary mb-5">Simpan</button>
-
-                <div>Klik Link berikut untuk kembali :</div>
-                <?php
-                    echo "<a href='admin.php'>Kembali ke Halaman Home</a>";
-                ?>
-            </form>
-            </div>
+    <thead>
+        <div class="logo">
+            <img src="aset/Logonobg.png" width="140px" height="50px">
+                <ul class="home">
+                    <a href="#" style="margin-right: 30px">Notifikasi</a>
+                    <a href="admin.php" style="margin-right: 30px">Home</a>
+                    <a href="login.php">Logout</a>
+                </ul>
         </div>
-	</div>
+    </thead>
+    <tbody>
+    	<div class="container">
+    		<h2>QR Code</h2>
+    		<hr style="position: relative; border: none; height: 1px; background: #999;" />
+    		<div class="row">
+                <div class="col-md-6 text-center">
+                    <img src="pgqrcode/<?php echo $c_id ?>.png" id="pg_code" class="img-thumbnail" alt="qrcode" style="width:400px;">
+                </div>
+                <div class="col-md-6 text-center d-flex flex-column justify-content-center align-items-center">
+                <form method="POST">
+                    <p>Klik Tombol dibawah untuk Mengunduh QR Code :</p>
+                    <button type="submit" name="simpan" value="simpan" class="btn btn-secondary mb-5">Simpan</button>
+
+                    <div>Klik Link berikut untuk kembali :</div>
+                    <?php
+                        echo "<a href='admin.php'>Kembali ke Halaman Home</a>";
+                    ?>
+                </form>
+                </div>
+            </div>
+    	</div>
+    </tbody>
 </body>
 </html>

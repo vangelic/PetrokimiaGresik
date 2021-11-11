@@ -39,8 +39,22 @@
         top: 10px;
     }
     body{
-        background-repeat: no-repeat;
         background-image: url(bg.jpg);
+        font-family: sans-serif;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        background-size: cover;
+    }
+    .home{
+        float: right;
+        display: inline-block;
+        width: 350px;
+        height: 50px;
+        list-style: none;
+        line-height: 50px;  
+        color: black;
+        text-align: center;
+        font-size: 20px;
     }
 </style>
 
@@ -48,7 +62,7 @@
     <div class="logo">
             <img src="aset/Logonobg.png" width="140px" height="50px">
                 <ul class="home">
-                    <a href="#">Notifikasi</a>
+                    <a href="#" style="margin-right: 30px">Notifikasi</a>
                     <a href="admin.php" style="margin-right: 30px">Home</a>
                     <a href="login.php">Logout</a>
                 </ul>

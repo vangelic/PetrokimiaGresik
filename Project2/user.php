@@ -1,11 +1,6 @@
 <?php
 	include "inisiasi.php";
     require 'adminPermission.inc.php';
-
-	$datetime = new DateTime;
-	$otherTZ = new DateTimeZone("Asia/Jakarta");
-	$datetime->setTimezone($otherTZ);
-	$date = $datetime->format('Y-m-d H:i:s');
 ?>
 
 <!DOCTYPE html>
@@ -86,8 +81,9 @@
 					<li>
 						<img src="gambar/notif.png">
 						<ul>
-							<?php 
-							$statement = $dbc->query("SELECT nama_alat, tgl_kalibrasi FROM kalibrasi, daftar_alat WHERE kalibrasi.id_alat=daftar_alat.id_alat AND tgl_kalibrasi>= '2021-11-20 00:00:00' ORDER BY tgl_kalibrasi ASC");
+							<?php
+
+							$statement = $dbc->query("SELECT nama_alat, tgl_kalibrasi FROM kalibrasi, daftar_alat WHERE kalibrasi.id_alat=daftar_alat.id_alat AND tgl_kalibrasi>= date('Y-m-d H:i:s') ORDER BY tgl_kalibrasi ASC");
 
 							foreach ($statement as $row) {
 								echo "<a href=''><li>{$row['nama_alat']}</li></a>";

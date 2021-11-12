@@ -116,7 +116,7 @@
 									</div>
 								</div>
 						<?php
-							}else if (date('Y-m-d',strtotime("tomorrow")) == $row['tglkalibrasi']) {
+							}else if (date('Y-m-d',strtotime("tomorrow")) == $cek) {
 						?>
 							<div class="card text-white bg-warning mb-3" style="max-width: 16rem;">
 								<div class="card-body">

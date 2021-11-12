@@ -74,7 +74,7 @@
 						<td><?=$i; ?></td>
 						<td><?= $row["nama_alat"] ?></td>
 						<td>
-							<div class="card border-primary" style="max-width: 21rem;">
+							<div class="card border-primary" style="max-width: 16rem;">
 								<div class="card-body text-primary">
 									<?php 
 										$in = new DateTime($row["tgl_kalibrasi"]);
@@ -110,7 +110,7 @@
 								
 							if ($now >= $cek){
 						?>
-								<div class="card text-white bg-danger mb-3" style="max-width: 21rem;">
+								<div class="card text-white bg-danger mb-3" style="max-width: 16rem;">
 									<div class="card-body">
 										<p class="card-text">Melewati Deadline</p>
 									</div>

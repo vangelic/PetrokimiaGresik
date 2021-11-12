@@ -67,8 +67,6 @@
 	width: calc(100% - 100px);">
 		<h2>Jadwal Kalibrasi</h2>
 		<hr style="position: relative; border: none; height: 1px; background: #999;" />
-		<form method="POST">
-		<div class="row">
 		<table class="table text-center align-middle">
 				<tr>
 					<th>No.</th>
@@ -117,7 +115,7 @@
 
 							$cek = date('Y-m-d', strtotime($kal));
 
-							$interval -> days == 1;
+							$interval -> $now -> diff($cek);
 								
 							if ($now >= $cek){
 						?>
@@ -127,7 +125,7 @@
 									</div>
 								</div>
 						<?php
-							}else if ($interval->invert == 0) {
+							}else if ($interval->format('%R%a') == '+1') {
 						?>
 							<div class="card text-white bg-warning mb-3" style="max-width: 16rem;">
 								<div class="card-body">
@@ -145,8 +143,6 @@
 					endwhile;
 				?>
 			</table>
-				</div>
-		</form>
 		</div>
 	</tbody>
 </body>

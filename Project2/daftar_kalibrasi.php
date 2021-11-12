@@ -110,9 +110,9 @@
 								
 							if ($now >= $cek){
 						?>
-								<div class="card border-primary" style="max-width: 21rem;">
-									<div class="card-body text-primary">
-										<p class="card-text"><?= $row["tgl_kalibrasi"] ?></p>
+								<div class="card text-white bg-danger mb-3" style="max-width: 21rem;">
+									<div class="card-body">
+										<p class="card-text">Melewati Deadline</p>
 									</div>
 								</div>
 						<?php

@@ -122,7 +122,7 @@
 						?>
 							<div class="card text-white bg-warning mb-3" style="max-width: 16rem;">
 								<div class="card-body">
-									<p class="card-text">Kurang 1 Hari</p>
+									<p class="card-text">Kurang 1Hari</p>
 								</div>
 							</div>
 						<?php

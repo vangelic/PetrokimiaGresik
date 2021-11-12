@@ -35,7 +35,6 @@
 		.home img{
 			width: 30px;
 			height: 30px;
-			margin-right: 30px;
 		}
 
 	</style>
@@ -47,11 +46,20 @@
 	<thead>
 		<div class="logo">
 			<img src="aset/Logonobg.png" width="140px" height="50px">
+			<nav>
 				<ul class="home">
-					<img src="gambar/notif.png">
-					<a href="user.php" style="margin-right: 30px">Home</a>
-					<a href="logout.php">Logout</a>
+					<li>
+						<img src="gambar/notif.png">
+						<ul>
+							<a href=""><li>Notif 1</li></a>
+							<a href=""><li>Notif 2</li></a>
+							<a href=""><li>Notif 3</li></a>
+						</ul>
+					</li>
+					<a href="admin.php" style="margin-right: 30px">Home</a>
+					<a href="login.php">Logout</a>
 				</ul>
+			</nav>
 		</div>
 	</thead>
 	<tbody>

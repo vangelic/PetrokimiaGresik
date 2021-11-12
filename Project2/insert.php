@@ -104,10 +104,8 @@
 	nav ul li{
 		width: 20%;
 		height: 30px;
-		border: 0px solid;
 		float: left;
 		list-style: none;
-		text-align: center;
 		margin-bottom: 5px;
 	}
 	nav ul li:hover ul{
@@ -119,9 +117,10 @@
 	nav ul li ul li{
 		width: 300px;
 		height: 40px;
-		border: 2px double;
-		background-color: #476b6b;
+		background-color: #ffff;
 		margin-bottom: 2px;
+		border-style: solid !important;
+		text-align: left !important;
 	}
 </style>
 

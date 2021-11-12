@@ -111,7 +111,7 @@
 					</button>
 					<button formaction="kalibrasi.php">
 						<img src="gambar/kalibrasi1.png"><br>
-						<a href="kalibrasi.php">KALIBRASI</a>
+						<a href="daftar_kalibrasi.php">KALIBRASI</a>
 					</button>
 				</form>
 			</div>

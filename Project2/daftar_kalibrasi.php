@@ -2,6 +2,12 @@
 	include "inisiasi.php";
 	require 'adminPermission.inc.php';
 
+	if (isset($_POST['kalibrasi'])) {
+
+		header("Location: $url/kalibrasi.php");
+        exit();
+    }
+
 	$result = mysqli_query($koneksi, "SELECT id_kalibrasi, nama_alat, tgl_kalibrasi FROM kalibrasi, daftar_alat WHERE kalibrasi.id_alat=daftar_alat.id_alat ORDER BY tgl_kalibrasi ASC");
 ?>
 

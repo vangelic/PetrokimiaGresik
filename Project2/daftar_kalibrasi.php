@@ -76,7 +76,11 @@
 						<td>
 							<div class="card border-primary" style="max-width: 21rem;">
 								<div class="card-body text-primary">
-									<p class="card-text"><?= $row["tgl_kalibrasi"] ?></p>
+									<?php 
+										$in = new DateTime($row["tgl_kalibrasi"]);
+										$tgl = $in->format("Y-m-d");
+									?>
+									<p class="card-text"><?= $tgl ?></p>
 								</div>
 							</div>
 						</td>

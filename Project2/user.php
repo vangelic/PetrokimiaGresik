@@ -87,9 +87,7 @@
 						<img src="gambar/notif.png">
 						<ul>
 							<?php 
-							$now = date('Y-m-d H:i:s', strtotime($date));
-							
-							$statement = $dbc->query("SELECT nama_alat, tgl_kalibrasi FROM kalibrasi, daftar_alat WHERE kalibrasi.id_alat=daftar_alat.id_alat AND tgl_kalibrasi>= $now ORDER BY tgl_kalibrasi ASC");
+							$statement = $dbc->query("SELECT nama_alat, tgl_kalibrasi FROM kalibrasi, daftar_alat WHERE kalibrasi.id_alat=daftar_alat.id_alat AND tgl_kalibrasi>= $date ORDER BY tgl_kalibrasi ASC");
 
 							foreach ($statement as $row) {
 								echo "<a href=''><li>{$row['nama_alat']}</li></a>";

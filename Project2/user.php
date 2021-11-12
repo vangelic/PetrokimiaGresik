@@ -1,6 +1,13 @@
 <?php
 	include "inisiasi.php";
     require 'adminPermission.inc.php';
+
+	$datetime = new DateTime;
+	$otherTZ = new DateTimeZone("Asia/Jakarta");
+	$datetime->setTimezone($otherTZ);
+	$date = $datetime->format('Y-m-d H:i:s');
+
+	$result = mysqli_query($koneksi, "SELECT nama_alat, tgl_kalibrasi FROM kalibrasi, daftar_alat WHERE kalibrasi.id_alat=daftar_alat.id_alat AND tgl_kalibrasi>= $date ORDER BY tgl_kalibrasi ASC");
 ?>
 
 <!DOCTYPE html>
@@ -81,8 +88,9 @@
 					<li>
 						<img src="gambar/notif.png">
 						<ul>
-							<p>Notif1</p>
-							<p>Notif2</p>
+						<a href=""><li>Notif 1</li></a>
+							<a href=""><li>Notif 2</li></a>
+							<a href=""><li>Notif 3</li></a>
 						</ul>
 					</li>
 					<a href="admin.php" style="margin-right: 30px">Home</a>

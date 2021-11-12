@@ -84,7 +84,7 @@
 							<a href=""><li>Notif 3</li></a>
 						</ul>
 					</li>
-					<a href="admin.php" style="margin-right: 30px">Home</a>
+					<a href="user.php" style="margin-right: 30px">Home</a>
 					<a href="login.php">Logout</a>
 				</ul>
 			</nav>

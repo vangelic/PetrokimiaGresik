@@ -107,8 +107,6 @@
 							$now = date('Y-m-d', strtotime($date));
 
 							$cek = date('Y-m-d', strtotime($kal));
-
-							$interval = date('Y-m-d', strtotime("-1 days",$kal));
 								
 							if ($now >= $cek){
 						?>
@@ -118,7 +116,7 @@
 									</div>
 								</div>
 						<?php
-							}else if ($interval == $now) {
+							}else if (date('Y-m-d',strtotime("tomorrow")) == $row['tglkalibrasi']) {
 						?>
 							<div class="card text-white bg-warning mb-3" style="max-width: 16rem;">
 								<div class="card-body">

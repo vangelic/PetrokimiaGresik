@@ -108,7 +108,7 @@
 
 							$cek = date('Y-m-d', strtotime($kal));
 
-							$interval = $now -> diff($cek);
+							$interval = $now->diff($cek);
 								
 							if ($now >= $cek){
 						?>

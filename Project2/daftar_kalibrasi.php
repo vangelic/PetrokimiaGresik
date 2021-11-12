@@ -108,7 +108,7 @@
 
 							$cek = date('Y-m-d', strtotime($kal));
 
-							$interval = days == 1;
+							$interval -> days == 1;
 								
 							if ($now >= $cek){
 						?>

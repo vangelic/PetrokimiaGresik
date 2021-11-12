@@ -107,6 +107,8 @@
 							$now = date('Y-m-d', strtotime($date));
 
 							$cek = date('Y-m-d', strtotime($kal));
+
+							$yesday = date('Y-m-d', strtotime("-1 day", $cek));
 								
 							if ($now >= $cek){
 						?>
@@ -116,8 +118,14 @@
 									</div>
 								</div>
 						<?php
-							}else{
-								echo "NO GO!";  
+							}else if ($now == $yesday) {
+						?>
+							<div class="card text-white bg-warning mb-3" style="max-width: 16rem;">
+								<div class="card-body">
+									<p class="card-text">Kurang 1 Hari</p>
+								</div>
+							</div>
+						<?php
 							}
 						?>
 						</td>

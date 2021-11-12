@@ -83,7 +83,9 @@
 						<ul>
 							<?php
 
-							$statement = $dbc->query("SELECT nama_alat, tgl_kalibrasi FROM kalibrasi, daftar_alat WHERE kalibrasi.id_alat=daftar_alat.id_alat AND tgl_kalibrasi>= date('Y-m-d H:i:s') ORDER BY tgl_kalibrasi ASC");
+							$statement = $dbc->query("SELECT nama_alat, tgl_kalibrasi FROM kalibrasi, daftar_alat WHERE kalibrasi.id_alat=daftar_alat.id_alat AND tgl_kalibrasi>= :tgl ORDER BY tgl_kalibrasi ASC");
+							$statement->bindValue(':tgl', date('Y-m-d H:i:s'));
+							$statement->execute() or die ('Error '.$statement->errorInfo()[2]);
 
 							foreach ($statement as $row) {
 								echo "<a href=''><li>{$row['nama_alat']}</li></a>";

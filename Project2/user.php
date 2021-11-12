@@ -71,6 +71,34 @@
 		width: 30px;
 		height: 30px;
 	}
+	nav{
+		width: 50%;
+		height: 30px;
+		border : 0px solid;
+		line-height: 30px;
+		float: right;
+	}
+	nav ul li{
+		width: 20%;
+		height: 30px;
+		float: left;
+		list-style: none;
+		margin-bottom: 5px;
+	}
+	nav ul li:hover ul{
+		display: block;
+	}
+	nav ul li ul{
+		display: none;
+	}
+	nav ul li ul li{
+		width: 300px;
+		height: 40px;
+		background-color: #ffff;
+		margin-bottom: 2px;
+		border-style: solid !important;
+		text-align: left !important;
+	}
 </style>
 <body>
 	<thead>
@@ -95,7 +123,7 @@
 							?>
 						</ul>
 					</li>
-					<a href="admin.php" style="margin-right: 30px">Home</a>
+					<a href="user.php" style="margin-right: 30px">Home</a>
 					<a href="login.php">Logout</a>
 				</ul>
 			</nav>

@@ -99,16 +99,16 @@
 							$datetime = new DateTime;
 							$otherTZ = new DateTimeZone("Asia/Jakarta");
 							$datetime->setTimezone($otherTZ);
-							$date = $datetime->format('Y/m/d H:i:s');
+							$date = $datetime->format('Y-m-d H:i:s');
 
 							$temp = new DateTime($row["tgl_kalibrasi"]);
-							$kal = $in->format("Y/m/d H:i:s");
+							$kal = $in->format("Y-m-d H:i:s");
 
 							$now = date('Y-m-d', strtotime($date));
 
 							$cek = date('Y-m-d', strtotime($kal));
 
-							$yesday = date('Y-m-d', strtotime("-1 day", $cek));
+							$interval = $datetime->diff($temp);
 								
 							if ($now >= $cek){
 						?>
@@ -118,7 +118,7 @@
 									</div>
 								</div>
 						<?php
-							}else if ($now == $yesday) {
+							}else if ($interval->invert == 0) {
 						?>
 							<div class="card text-white bg-warning mb-3" style="max-width: 16rem;">
 								<div class="card-body">

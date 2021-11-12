@@ -35,7 +35,6 @@
 		.home img{
 			width: 30px;
 			height: 30px;
-			margin-right: 30px;
 		}
 	</style>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -46,11 +45,20 @@
 	<thead>
 		<div class="logo">
 			<img src="aset/Logonobg.png" width="140px" height="50px">
+			<nav>
 				<ul class="home">
-					<img src="gambar/notif.png">
+					<li>
+						<img src="gambar/notif.png">
+						<ul>
+							<a href=""><li>Notif 1</li></a>
+							<a href=""><li>Notif 2</li></a>
+							<a href=""><li>Notif 3</li></a>
+						</ul>
+					</li>
 					<a href="admin.php" style="margin-right: 30px">Home</a>
-					<a href="logout.php">Logout</a>
+					<a href="login.php">Logout</a>
 				</ul>
+			</nav>
 		</div>
 	</thead>
 	<tbody>

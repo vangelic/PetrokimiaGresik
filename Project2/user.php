@@ -87,7 +87,9 @@
 						<img src="gambar/notif.png">
 						<ul>
 							<?php 
-							$statement = $dbc->query("SELECT nama_alat, tgl_kalibrasi FROM kalibrasi, daftar_alat WHERE kalibrasi.id_alat=daftar_alat.id_alat AND tgl_kalibrasi>= '2021-11-16 00:00:00' ORDER BY tgl_kalibrasi ASC");
+							$statement = $dbc->query("SELECT nama_alat, tgl_kalibrasi FROM kalibrasi, daftar_alat WHERE kalibrasi.id_alat=daftar_alat.id_alat AND tgl_kalibrasi>= :tgl ORDER BY tgl_kalibrasi ASC");
+							$statement->bindValue(':tgl', $date);
+							$statement->execute() or die ('Error '.$statement->errorInfo()[2]);
 
 							foreach ($statement as $row) {
 								echo "<a href=''><li>{$row['nama_alat']}</li></a>";

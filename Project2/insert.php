@@ -94,6 +94,35 @@
 		margin-bottom: 25px;
 
 	}
+	nav{
+		width: 50%;
+		height: 30px;
+		border : 0px solid;
+		line-height: 30px;
+		float: right;
+	}
+	nav ul li{
+		width: 20%;
+		height: 30px;
+		border: 0px solid;
+		float: left;
+		list-style: none;
+		text-align: center;
+		margin-bottom: 5px;
+	}
+	nav ul li:hover ul{
+		display: block;
+	}
+	nav ul li ul{
+		display: none;
+	}
+	nav ul li ul li{
+		width: 300px;
+		height: 40px;
+		border: 2px double;
+		background-color: #476b6b;
+		margin-bottom: 2px;
+	}
 </style>
 
 <body>

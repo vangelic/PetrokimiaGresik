@@ -81,9 +81,8 @@
 					<li>
 						<img src="gambar/notif.png">
 						<ul>
-							<a href=""><li>Notif 1</li></a>
-							<a href=""><li>Notif 2</li></a>
-							<a href=""><li>Notif 3</li></a>
+							<p>Notif1</p>
+							<p>Notif2</p>
 						</ul>
 					</li>
 					<a href="admin.php" style="margin-right: 30px">Home</a>

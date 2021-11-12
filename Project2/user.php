@@ -88,12 +88,9 @@
 					<li>
 						<img src="gambar/notif.png">
 						<ul>
-							<?php while ($row = mysqli_fetch_assoc($result)) : ?>
-								<a href=""><li><?php $row['nama_alat'] ?></li></a>
-							<?php 
-								//endforeach; 
-								endwhile;
-							?>
+						<a href=""><li>Notif 1</li></a>
+							<a href=""><li>Notif 2</li></a>
+							<a href=""><li>Notif 3</li></a>
 						</ul>
 					</li>
 					<a href="admin.php" style="margin-right: 30px">Home</a>

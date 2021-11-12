@@ -100,11 +100,6 @@
 							$temp = new DateTime($row["tgl_kalibrasi"]);
 							$kal = $in->format("Y/m/d H:i:s");
 
-							if ($date > $kal) {
-								echo "<div class='card border-primary' style='max-width: 21rem;'>";
-								echo "<div class='card-body text-primary'>";
-								echo "<p class='card-text'>".$row["tgl_kalibrasi"]."</p></div></div>";
-							}
 							$now = date('Y-m-d', strtotime($date));
 
 							$cek = date('Y-m-d', strtotime($kal));

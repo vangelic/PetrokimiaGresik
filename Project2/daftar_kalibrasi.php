@@ -105,6 +105,21 @@
 								echo "<div class='card-body text-primary'>";
 								echo "<p class='card-text'>".$row["tgl_kalibrasi"]."</p></div></div>";
 							}
+							$now = date('Y-m-d', strtotime($date));
+
+							$cek = date('Y-m-d', strtotime($kal));
+								
+							if ($now >= $cek){
+						?>
+								<div class="card border-primary" style="max-width: 21rem;">
+									<div class="card-body text-primary">
+										<p class="card-text"><?= $row["tgl_kalibrasi"] ?></p>
+									</div>
+								</div>
+						<?php
+							}else{
+								echo "NO GO!";  
+							}
 						?>
 						</td>
 					</tr>

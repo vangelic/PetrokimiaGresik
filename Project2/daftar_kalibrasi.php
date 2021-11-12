@@ -10,7 +10,12 @@
 
 	if (isset($_POST['selesai'])) {
 
-		
+		$statement = $dbc->prepare("DELETE FROM kalibrasi WHERE id_kalibrasi = :id");
+        $statement->bindValue(':id', $row['id_kalibrasi']);
+        $statement->execute() or die ('Error '.$statement->errorInfo()[2]);
+
+        header("Location: $url/daftar_kalibrasi.php");
+        exit();
     }
 
 	$result = mysqli_query($koneksi, "SELECT id_kalibrasi, nama_alat, tgl_kalibrasi FROM kalibrasi, daftar_alat WHERE kalibrasi.id_alat=daftar_alat.id_alat ORDER BY tgl_kalibrasi ASC");

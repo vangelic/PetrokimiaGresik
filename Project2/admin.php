@@ -80,7 +80,11 @@
 				<ul class="home">
 					<li>
 						<img src="gambar/notif.png">
-						
+						<ul>
+							<a href=""><li>Notif 1</li></a>
+							<a href=""><li>Notif 2</li></a>
+							<a href=""><li>Notif 3</li></a>
+						</ul>
 					</li>
 					<a href="admin.php" style="margin-right: 30px">Home</a>
 					<a href="login.php">Logout</a>

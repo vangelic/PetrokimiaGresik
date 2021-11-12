@@ -108,7 +108,7 @@
 
 							$cek = date('Y-m-d', strtotime($kal));
 
-							$interval = $datetime->diff($temp);
+							$interval = date('Y-m-d', strtotime("-1 days",$kal));
 								
 							if ($now >= $cek){
 						?>
@@ -118,7 +118,7 @@
 									</div>
 								</div>
 						<?php
-							}else if ($interval->format('%R%a') == '+1') {
+							}else if ($interval == $now) {
 						?>
 							<div class="card text-white bg-warning mb-3" style="max-width: 16rem;">
 								<div class="card-body">

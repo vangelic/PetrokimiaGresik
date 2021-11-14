@@ -1,17 +1,17 @@
 <?php
 
 use function PHPSTORM_META\type;
-
+include "inisiasi.php";
 	$id = $_GET['id'];
 
 	try {
 		$statement = $dbc->prepare("DELETE FROM kalibrasi WHERE id_kalibrasi = :id");
-		$statement->bindValue(':id', intval($id));
+		$statement->bindValue(':id', $_GET['id']);
 		$statement->execute();
-		$foo = $statement->fetchAll();
-	} catch (Exception $e) {
-		die("Oh noes! There's an error in the query!");
-	}
+	} catch(PDOException $e){
+        echo 'Error : '.$e->getMessage();
+        exit();
+    }
 	
 	header("Location: $url/daftar_kalibrasi.php");
 	exit();

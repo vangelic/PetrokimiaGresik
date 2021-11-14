@@ -2,8 +2,6 @@
 
 	$id = $_GET['id'];
 
-	echo $id;
-
 	try {
 		$statement = $dbc->prepare("DELETE FROM kalibrasi WHERE id_kalibrasi = :id");
 		$statement->bindValue(':id', $id);

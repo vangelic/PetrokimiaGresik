@@ -4,7 +4,7 @@ use function PHPSTORM_META\type;
 
 	$id = $_GET['id'];
 
-	echo gettype($id);
+	echo gettype(intval($id));
 
 	try {
 		$statement = $dbc->prepare("DELETE FROM kalibrasi WHERE id_kalibrasi = :id");

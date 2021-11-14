@@ -118,7 +118,7 @@
 							$statement->execute(['date' => $date]);
 							$data = $statement->fetchAll();
 							foreach ($data as $row) {
-								echo "<a href=''><li>{$row['nama_alat']}</li>Lakukan kalibrasi sebelum {$row['tgl_kalibrasi']}</a>";
+								echo "<a href=''><li>{$row['nama_alat']}<br>Lakukan kalibrasi sebelum {$row['tgl_kalibrasi']}</li></a>";
 							}
 							?>
 						</ul>

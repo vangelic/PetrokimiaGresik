@@ -1,8 +1,10 @@
 <?php
 
+use function PHPSTORM_META\type;
+
 	$id = $_GET['id'];
 
-	$str_id = (int)$id;
+	echo type($id);
 
 	try {
 		$statement = $dbc->prepare("DELETE FROM kalibrasi WHERE id_kalibrasi = :id");

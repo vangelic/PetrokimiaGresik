@@ -114,7 +114,7 @@
 							$otherTZ = new DateTimeZone("Asia/Jakarta");
 							$datetime->setTimezone($otherTZ);
 							$date = $datetime->format('Y-m-d H:i:s');
-
+							echo $date;
 							$statement = $dbc->query("SELECT nama_alat, tgl_kalibrasi FROM kalibrasi, daftar_alat WHERE kalibrasi.id_alat=daftar_alat.id_alat AND tgl_kalibrasi>= '2021-11-20 00:00:00' ORDER BY tgl_kalibrasi ASC");
 
 							foreach ($statement as $row) {

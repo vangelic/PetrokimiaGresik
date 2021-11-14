@@ -2,9 +2,11 @@
 
 	$id = $_GET['id'];
 
+	$str_id = (int)$id;
+
 	try {
 		$statement = $dbc->prepare("DELETE FROM kalibrasi WHERE id_kalibrasi = :id");
-		$statement->bindValue(':id', $id);
+		$statement->bindValue(':id', $str_id);
 		$statement->execute();
 		$foo = $statement->fetchAll();
 	} catch (Exception $e) {

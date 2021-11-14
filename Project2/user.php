@@ -115,7 +115,7 @@
 							$datetime->setTimezone($otherTZ);
 							$date = $datetime->format('Y-m-d');
 							$statement = $dbc->prepare("SELECT nama_alat, tgl_kalibrasi FROM kalibrasi, daftar_alat WHERE kalibrasi.id_alat=daftar_alat.id_alat AND DATE(kalibrasi.tgl_kalibrasi) >= ? kalibrasi.tgl_kalibrasi ASC");
-							$statement->execute([$date]);
+							$statement->execute(['2021-11-15']);
 							while ($row = $statement->fetchAll()) {
 								echo "<a href=''><li>{$row['nama_alat']}</li></a>";
 							}

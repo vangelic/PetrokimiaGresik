@@ -4,6 +4,4 @@
 
 	echo $id;
 
-	header("Location: $url/daftar_kalibrasi.php");
-	exit();
 ?>

@@ -55,7 +55,7 @@
 			<img src="aset/Logonobg.png" width="140px" height="50px">
 				<ul class="home">
 					<img src="gambar/notif.png">
-					<a href="user.php" style="margin-right: 30px">Home</a>
+					<a href="admin.php" style="margin-right: 30px">Home</a>
 					<a href="logout.php">Logout</a>
 				</ul>
 		</div>

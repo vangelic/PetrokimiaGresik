@@ -11,6 +11,10 @@
 
     if (isset($_POST['checkout'])) {
 
+		if (isset($_POST['kons'])) {
+			$db->update('daftar_alat', ['kondisi' => 'Rusak'], ['nama_alat'=> $c_id]);
+		}
+
 		$db->update('daftar_alat', ['id_pinjam' => null], ['nama_alat'=> $c_id]);
 
 		$query = $db->row("SELECT * FROM daftar_alat WHERE nama_alat=?",$c_id);
@@ -56,7 +60,7 @@
 				<div>Bagaimana kondisi alat?</div>
 					<div class="form-check">
 						<div class="input-group mb-3">
-						<input class="form-check-input" type="checkbox" value="rusak" id="flexCheckDefault">
+						<input class="form-check-input" type="checkbox" value="rusak" name="kons" id="flexCheckDefault">
 						<label class="form-check-label" for="flexCheckDefault">
 							Rusak
 						</label>

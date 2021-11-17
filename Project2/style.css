@@ -96,10 +96,9 @@ nav{
 }
 nav ul li{
 	width: 20%;
-	height: 30px;
+	height: auto;
 	float: left;
 	list-style: none;
-	margin-bottom: 5px;
 }
 nav ul li:hover ul{
 	display: block;

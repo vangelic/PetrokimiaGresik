@@ -79,7 +79,6 @@
 	}
 	nav ul li{
 		width: 20%;
-		height: auto;
 		float: left;
 		list-style: none;
 	}
@@ -128,6 +127,7 @@
 							foreach ($data as $row) {
 								$kalibrasi = new DateTime($row["tgl_kalibrasi"]);
 								$tgl = $kalibrasi->format("Y-m-d");
+								
 								echo "<a href=''><li>{$row['nama_alat']}</li></a>";
 								echo "<p>Lakukan kalibrasi sebelum {$tgl}</p>";
 							}

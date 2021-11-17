@@ -108,7 +108,7 @@ nav ul li ul{
 	display: none;
 	height: auto;
 }
-nav ul li ul p{
+nav ul li ul a{
 	width: 300px;
 	height: auto;
 	background-color: #ffff;
@@ -118,7 +118,7 @@ nav ul li ul p{
 	font-size: 15px !important;
 	font-style: bold;
 }
-nav ul li ul a{
+nav ul li ul p{
 	width: 300px;
 	height: auto;
 	background-color: #ffff;

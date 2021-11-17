@@ -2,7 +2,7 @@
 	include "inisiasi.php";
 	require 'adminPermission.inc.php';
 
-	$result = mysqli_query($koneksi, "SELECT * FROM `daftar_alat` WHERE `id_pinjam` IS NOT NULL OR `kondisi` IS NOT NULL ORDER BY `kondisi` DESC");
+	$result = mysqli_query($koneksi, "SELECT nama_alat, kondisi, nama   FROM `daftar_alat`, `user` WHERE `id_pinjam`=`id_user` AND `id_pinjam` IS NOT NULL OR `kondisi` IS NOT NULL ORDER BY `kondisi` DESC");
 ?>
 
 <!DOCTYPE html>
@@ -115,7 +115,7 @@
 						<td><?= $row["nama_alat"] ?></td>
 						<td>
 							<?php
-								if ($row["nama_alat"] == "Rusak") {
+								if ($row["kondisi"] == "Rusak") {
 								?>
 									<div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
 										<div class="card-body">
@@ -124,7 +124,7 @@
 									</div>
 								<?php
 								}
-								else if ($row["nama_alat"] == "Belum Dikalibrasi") {
+								else if ($row["kondisi"] == "Belum Dikalibrasi") {
 								?>
 									<div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
 										<div class="card-body">

@@ -73,14 +73,12 @@
 	}
 	nav{
 		width: 50%;
-		height: 30px;
 		border : 0px solid;
 		line-height: 30px;
 		float: right;
 	}
 	nav ul li{
 		width: 20%;
-		height: 30px;
 		float: left;
 		list-style: none;
 		margin-bottom: 5px;
@@ -90,6 +88,7 @@
 	}
 	nav ul li ul{
 		display: none;
+		height: auto;
 	}
 	nav ul li ul li{
 		width: 300px;

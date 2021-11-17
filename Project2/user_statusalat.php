@@ -117,17 +117,29 @@
 							<?php
 								if ($row["kondisi"] == "Rusak") {
 								?>
-									<div class="badge bg-danger p-2 h4">Rusak</div>
+									<div class="card text-white bg-danger mb-3" style="max-width: 10rem;">
+										<div class="card-body">
+											<p class="card-text">Rusak</p>
+										</div>
+									</div>
 								<?php
 								}
 								else if ($row["kondisi"] == "Belum Dikalibrasi") {
 								?>
-									<div class="badge bg-warning">Belum Dikalibrasi</div>
+									<div class="card text-white bg-warning mb-3" style="max-width: 15rem;">
+										<div class="card-body">
+											<p class="card-text">Belum Dikalibrasi</p>
+										</div>
+									</div>
 								<?php
 								}
 								else {
 								?>
-									<div class="badge bg-primary">Aktif</div>
+									<div class="card text-white bg-info mb-3" style="max-width: 10rem;">
+										<div class="card-body">
+											<p class="card-text">Aktif</p>
+										</div>
+									</div>
 							<?php
 								}
 							?>

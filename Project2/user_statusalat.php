@@ -117,12 +117,12 @@
 							<?php
 								if ($row["kondisi"] == "Rusak") {
 								?>
-									<div class="badge badge-danger">Rusak</div>
+									<div class="badge bg-danger">Rusak</div>
 								<?php
 								}
 								else if ($row["kondisi"] == "Belum Dikalibrasi") {
 								?>
-									<div class="badge badge-warning">Belum Dikalibrasi</div>
+									<div class="badge bg-warning">Belum Dikalibrasi</div>
 								<?php
 								}
 								else {

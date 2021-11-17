@@ -104,7 +104,6 @@ nav ul li:hover ul{
 }
 nav ul li ul{
 	display: none;
-	height: auto;
 }
 nav ul li ul a{
 	width: 300px;

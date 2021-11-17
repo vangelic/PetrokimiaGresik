@@ -127,7 +127,7 @@
 								}
 								else {
 								?>
-									<div class="badge badge-info">Aktif</div>
+									<div class="badge badge-primary">Aktif</div>
 							<?php
 								}
 							?>

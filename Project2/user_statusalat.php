@@ -117,7 +117,7 @@
 							<?php
 								if ($row["kondisi"] == "Rusak") {
 								?>
-									<div class="badge bg-danger">Rusak</div>
+									<div class="badge bg-danger p-3 h4">Rusak</div>
 								<?php
 								}
 								else if ($row["kondisi"] == "Belum Dikalibrasi") {

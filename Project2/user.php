@@ -90,12 +90,22 @@
 	nav ul li ul{
 		display: none;
 	}
-	nav ul li ul li{
+	nav ul li ul a{
 		width: 300px;
 		height: auto;
 		background-color: #ffff;
-		border-style: solid !important;
-		text-align: left !important;
+		border-style: solid;
+		text-align: left;
+		font-size: 15px !important;
+		font-style: bold !important;
+	}
+	nav ul li ul p{
+		width: 300px;
+		height: auto;
+		background-color: #ffff;
+		border-style: solid;
+		text-align: left;
+		font-size: 12px !important;
 	}
 </style>
 <body>

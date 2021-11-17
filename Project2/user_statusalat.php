@@ -122,7 +122,7 @@
 								}
 								else if ($row["kondisi"] == "Belum Dikalibrasi") {
 								?>
-									<div class="badge bg-warning fs-6 p-3">Belum Dikalibrasi</div>
+									<div class="badge bg-warning fs-6 p-2 px-5">Belum Dikalibrasi</div>
 								<?php
 								}
 								else {

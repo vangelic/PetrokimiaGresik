@@ -2,7 +2,7 @@
 	include "inisiasi.php";
 	require 'adminPermission.inc.php';
 
-	$result = mysqli_query($koneksi, "SELECT checkin, checkout, nama_alat, nama FROM history, daftar_alat, user WHERE history.id_alat=daftar_alat.id_alat AND history.id_user=user.id_user ORDER BY checkin DESC");
+	$result = mysqli_query($koneksi, "SELECT * FROM `daftar_alat` WHERE `id_pinjam` IS NOT NULL OR `kondisi` IS NOT NULL ORDER BY `kondisi` DESC");
 ?>
 
 <!DOCTYPE html>
@@ -114,11 +114,35 @@
 						<td><?=$i; ?></td>
 						<td><?= $row["nama_alat"] ?></td>
 						<td>
-							<div class="card border-primary" style="max-width: 21rem;">
-								<div class="card-body text-primary">
-									<p class="card-text"><?= $row["checkin"] ?>-<?= $row["checkout"] ?></p>
-								</div>
-							</div>
+							<?php
+								if ($row["nama_alat"] == "Rusak") {
+								?>
+									<div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+										<div class="card-body">
+											<p class="card-text">Rusak</p>
+										</div>
+									</div>
+								<?php
+								}
+								else if ($row["nama_alat"] == "Belum Dikalibrasi") {
+								?>
+									<div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+										<div class="card-body">
+											<p class="card-text">Belum Dikalibrasi</p>
+										</div>
+									</div>
+								<?php
+								}
+								else {
+								?>
+									<div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+										<div class="card-body">
+											<p class="card-text">Aktif</p>
+										</div>
+									</div>
+							<?php
+								}
+							?>
 						</td>
 						<td><?= $row["nama"] ?></td>
 					</tr>

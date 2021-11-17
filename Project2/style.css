@@ -110,7 +110,6 @@ nav ul li ul a{
 	width: 300px;
 	height: auto;
 	background-color: #ffff;
-	margin-bottom: 2px;
 	border-style: solid;
 	text-align: left;
 	font-size: 15px !important;
@@ -120,7 +119,6 @@ nav ul li ul p{
 	width: 300px;
 	height: auto;
 	background-color: #ffff;
-	margin-bottom: 2px;
 	border-style: solid;
 	text-align: left;
 	font-size: 12px !important;

@@ -73,14 +73,12 @@
 	}
 	nav{
 		width: 50%;
-		height: 30px;
 		border : 0px solid;
 		line-height: 30px;
 		float: right;
 	}
 	nav ul li{
 		width: 20%;
-		height: 30px;
 		float: left;
 		list-style: none;
 	}
@@ -122,11 +120,16 @@
 							$otherTZ = new DateTimeZone("Asia/Jakarta");
 							$datetime->setTimezone($otherTZ);
 							$date = $datetime->format('Y-m-d');
+
 							$statement = $dbc->prepare("SELECT nama_alat, tgl_kalibrasi FROM kalibrasi, daftar_alat WHERE kalibrasi.id_alat=daftar_alat.id_alat AND DATE(kalibrasi.tgl_kalibrasi) >= :date order by kalibrasi.tgl_kalibrasi ASC");
 							$statement->execute(['date' => $date]);
 							$data = $statement->fetchAll();
 							foreach ($data as $row) {
-								echo "<a href=''><li>{$row['nama_alat']}<br>Lakukan kalibrasi sebelum {$row['tgl_kalibrasi']}</li></a>";
+								$kalibrasi = new DateTime($row["tgl_kalibrasi"]);
+								$tgl = $kalibrasi->format("Y-m-d");
+								
+								echo "<a href=''><li>{$row['nama_alat']}</li></a>";
+								echo "<p>Lakukan kalibrasi sebelum {$tgl}</p>";
 							}
 							?>
 						</ul>

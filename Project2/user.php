@@ -81,20 +81,17 @@
 		width: 20%;
 		float: left;
 		list-style: none;
-		margin-bottom: 5px;
 	}
 	nav ul li:hover ul{
 		display: block;
 	}
 	nav ul li ul{
 		display: none;
-		height: auto;
 	}
 	nav ul li ul li{
 		width: 300px;
 		height: 40px;
 		background-color: #ffff;
-		margin-bottom: 2px;
 		border-style: solid !important;
 		text-align: left !important;
 	}

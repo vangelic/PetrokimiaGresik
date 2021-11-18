@@ -87,7 +87,6 @@
 	}
 	nav ul li:hover ul{
 		display: block;
-		scroll-behavior: smooth;
 	}
 	nav ul li ul{
 		display: none;
@@ -100,6 +99,15 @@
 		border-style: solid !important;
 		text-align: left !important;
 	}
+	.auto {
+            display:block;
+            border: 1px solid red;
+            padding:5px;
+            margin-top:5px;
+            width:300px;
+            height:50px;
+            overflow:auto;
+         }
 </style>
 <body>
 	<thead>
@@ -107,7 +115,7 @@
 			<img src="aset/Logonobg.png" width="140px" height="50px">
 			<nav>
 				<ul class="home">
-					<li>
+					<li class="auto">
 						<img src="gambar/notif.png">
 						<ul>
 							<?php 							

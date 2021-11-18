@@ -99,6 +99,15 @@
 		border-style: solid !important;
 		text-align: left !important;
 	}
+	.scroll{
+	    display:block;
+	    border: 1px solid red;
+	    padding:5px;
+	    margin-top:5px;
+	    width:300px;
+	    height:50px;
+	    overflow:scroll;
+	}
 </style>
 <body>
 	<thead>
@@ -108,7 +117,7 @@
 				<ul class="home">
 					<li>
 						<img src="gambar/notif.png">
-						<ul>
+						<ul class="scroll">
 							<?php 							
 							$datetime = new DateTime;
 							$otherTZ = new DateTimeZone("Asia/Jakarta");

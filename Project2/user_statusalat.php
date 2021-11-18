@@ -2,7 +2,7 @@
 	include "inisiasi.php";
 	require 'adminPermission.inc.php';
 
-	$result = mysqli_query($koneksi, "SELECT nama_alat, kondisi, nama FROM `daftar_alat`, `user` WHERE `id_pinjam`=`id_user` AND `id_pinjam` IS NOT NULL OR `kondisi` IS NOT NULL GROUP BY `nama_alat` ORDER BY `kondisi` DESC");
+	$result = mysqli_query($koneksi, "SELECT nama_alat, kondisi, id_pinjam, user.nama FROM (SELECT nama_alat, kondisi, id_pinjam FROM `daftar_alat` WHERE daftar_alat.id_pinjam IS NOT NULL OR daftar_alat.kondisi IS NOT NULL GROUP BY `nama_alat` ORDER BY `kondisi` DESC) AS A LEFT JOIN user ON id_pinjam=id_user");
 ?>
 
 <!DOCTYPE html>

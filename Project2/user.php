@@ -73,7 +73,6 @@
 	}
 	nav{
 		width: 50%;
-		border : 0px solid;
 		line-height: 30px;
 		float: right;
 	}

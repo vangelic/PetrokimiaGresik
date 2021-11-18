@@ -104,6 +104,22 @@
 		text-align: left;
 		font-size: 12px !important;
 	}
+	.auto {
+	    display:none;
+	    padding:5px;
+	    margin-top:5px;
+	    width:330px;
+	    height:100px;
+	    overflow:auto;
+	}
+	.auto:hover {
+	    display:block;
+	    padding:5px;
+	    margin-top:5px;
+	    width:330px;
+	    height:100px;
+	    overflow:auto;
+	}
 </style>
 <body>
 	<thead>

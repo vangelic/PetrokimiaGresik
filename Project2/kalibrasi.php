@@ -100,6 +100,22 @@
 		border-style: solid !important;
 		text-align: left !important;
 	}
+	.auto {
+	    display:none;
+	    padding:5px;
+	    margin-top:5px;
+	    width:330px;
+	    height:100px;
+	    overflow:auto;
+	}
+	.auto:hover {
+	    display:block;
+	    padding:5px;
+	    margin-top:5px;
+	    width:330px;
+	    height:100px;
+	    overflow:auto;
+	}
 </style>
 
 <body>
@@ -108,7 +124,7 @@
 			<img src="aset/Logonobg.png" width="140px" height="50px">
 			<nav>
 				<ul class="home">
-					<li>
+					<li class="auto">
 						<img src="gambar/notif.png">
 						<ul>
 							<a href=""><li>Notif 1</li></a>

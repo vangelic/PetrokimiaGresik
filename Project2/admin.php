@@ -85,8 +85,14 @@
 		list-style: none;
 		margin-bottom: 5px;
 	}
-	nav ul li:hover ul{
+	nav ul li:hover ul .auto{
 		display: block;
+		border: 1px solid red;
+        padding:5px;
+        margin-top:5px;
+        width:300px;
+        height:50px;
+        overflow:auto;
 	}
 	nav ul li ul{
 		display: none;
@@ -98,16 +104,7 @@
 		margin-bottom: 2px;
 		border-style: solid !important;
 		text-align: left !important;
-	}
-	.auto {
-            display:block;
-            border: 1px solid red;
-            padding:5px;
-            margin-top:5px;
-            width:300px;
-            height:50px;
-            overflow:auto;
-         }
+	}  
 </style>
 <body>
 	<thead>

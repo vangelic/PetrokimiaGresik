@@ -91,7 +91,7 @@
         padding:5px;
         margin-top:5px;
         width:300px;
-        height:50px;
+        height:300px;
         overflow:auto;
 	}
 	nav ul li ul{

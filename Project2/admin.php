@@ -104,7 +104,23 @@
 		margin-bottom: 2px;
 		border-style: solid !important;
 		text-align: left !important;
-	}  
+	}
+	.auto {
+	    display:none;
+	    padding:5px;
+	    margin-top:5px;
+	    width:330px;
+	    height:100px;
+	    overflow:auto;
+	}
+	.auto:hover {
+	    display:block;
+	    padding:5px;
+	    margin-top:5px;
+	    width:330px;
+	    height:100px;
+	    overflow:auto;
+	}
 </style>
 <body>
 	<thead>

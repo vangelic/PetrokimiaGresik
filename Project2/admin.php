@@ -115,9 +115,9 @@
 			<img src="aset/Logonobg.png" width="140px" height="50px">
 			<nav>
 				<ul class="home">
-					<li class="auto">
+					<li>
 						<img src="gambar/notif.png">
-						<ul>
+						<ul class="auto">
 							<?php 							
 							$datetime = new DateTime;
 							$otherTZ = new DateTimeZone("Asia/Jakarta");

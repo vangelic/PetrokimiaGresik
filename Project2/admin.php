@@ -9,7 +9,6 @@
 	<title>Home Admin</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://kit.fontawesome.com/484db9065f.js" crossorigin="anonymous"></script>
-	<meta name="viewport" content="width=device-width">
 </head>
 <style>
 	body{
@@ -100,54 +99,6 @@
 		border-style: solid !important;
 		text-align: left !important;
 	}
-	@media screen and (max-width: 768px){
-        .container{
-            width: auto;
-            height: 600px;
-        }
-    }
-    @media screen and (max-width: 320px){
-        .container{
-            width: 300px !important;
-            height: 525px;
-        }
-        .header img{
-            width: 250px;
-            height: 120px;
-        }
-        .col-12 button{
-            width: 200px;
-            margin-bottom: 20px;
-        }
-    }
-    @media screen and (max-width: 375px){
-        .container{
-            width: 350px !important;
-            height: 525px;
-        }
-        .header img{
-            width: 300px;
-            height: 120px;
-        }
-        .col-12 button{
-            width: 200px;
-            margin-bottom: 20px;
-        }
-    }
-    @media screen and (max-width: 425px){
-        .container{
-            width: 350px !important;
-            height: 525px;
-        }
-        .header img{
-            width: 300px;
-            height: 120px;
-        }
-        .col-12 button{
-            width: 200px;
-            margin-bottom: 20px;
-        }
-    }
 </style>
 <body>
 	<thead>

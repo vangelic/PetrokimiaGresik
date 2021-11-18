@@ -123,7 +123,7 @@
 								$tgl = $kalibrasi->format("Y-m-d");
 								
 								echo "<a href=''><li>{$row['nama_alat']}</li></a>";
-								echo "<p>Lakukan kalibrasi sebelum {$tgl}</p>";
+								echo "<br>Lakukan kalibrasi sebelum {$tgl}</br>";
 							}
 							?>
 						</ul>

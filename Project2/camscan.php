@@ -1,3 +1,12 @@
+<?php 
+	include "inisiasi.php";
+
+	if (isset($_POST['lanjut'])) {
+
+		header("Location: $url/checkin.php");
+        exit();
+    }
+?>
 <html>
   <head>
     <title>QRCode Scanner</title>
@@ -13,8 +22,11 @@
 				  <video id="preview" width="100%"></video>
 			  </div>
 			  <div class="col-md-6">
+			  <form method="POST">
 				  <label>SCAN QR CODE</label>
 				  <input type="text" name="text" id="text" readonyy="" placeholder="scan qrcode" class="form-control">
+				  <button type="submit" name="lanjut" value="lanjut" class="btn btn-success">Lanjut</button>
+			  </form>
 			  </div>
 		  </div>
 	  </div>
@@ -29,7 +41,7 @@
 		  }).catch(function(e) {
 			  console.error(e);
 		  });
-		  
+
 		  scanner.addListener('scan',function(c){
 			  document.getElementById('text').value=c;
 		  });

@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Stock Barang</title>
+  <title>History Admin</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -21,8 +21,7 @@
 
 <body>
 <div class="container">
-			<h2>Stock Bahan</h2>
-			<h4>(Inventory)</h4>
+			<h2>History Penggunaan</h2>
 				<div class="data-tables datatable-dark">
 					
                 <table class="table table-borderes text-center align-middle" id="mauexport">
@@ -66,7 +65,7 @@ $(document).ready(function() {
     $('#mauexport').DataTable( {
         dom: 'Bfrtip',
         buttons: [
-            'copy','csv','excel', 'pdf', 'print'
+            'excel', 'pdf', 'print'
         ]
     } );
 } );

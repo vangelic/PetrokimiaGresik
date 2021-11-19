@@ -25,7 +25,7 @@
 			<h4>(Inventory)</h4>
 				<div class="data-tables datatable-dark">
 					
-                <table class="table table-borderes text-center align-middle" id="manuexport">
+                <table class="table table-borderes text-center align-middle" id="mauexport">
 				<thead>
                 <tr>
 					<th>No.</th>

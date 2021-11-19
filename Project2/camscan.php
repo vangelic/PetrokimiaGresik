@@ -164,8 +164,7 @@
 			    </div>
 		    </div>
 	    </div>
-	</tbody>
-	<script>
+		<script>
 		  let scanner = new Instascan.Scanner({ video: document.getElementById('preview')});
 		  Instascan.Camera.getCameras().then(function(cameras){
 			  if(cameras.length > 0) {
@@ -181,5 +180,6 @@
 			  document.getElementById('text').value=c;
 		  });
 	</script>
+	</tbody>
 	</body>
 </html>

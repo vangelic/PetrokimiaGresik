@@ -20,7 +20,8 @@
 </head>
 
 <body>
-<div class="container">
+<div class="container-fluid" style="margin: 50px; padding:30px;
+	width: calc(100% - 100px);">
 			<h2>History Penggunaan</h2>
 				<div class="data-tables datatable-dark">
 					

@@ -32,6 +32,71 @@
 		background-color: rgba(255,255,255,0.5);
 		box-shadow: 0 0 17px #333;
 	}
+	.home{
+		float: right;
+		display: inline-block;
+		width: 350px;
+		height: 50px;
+		list-style: none;
+		line-height: 50px;	
+		color: black;
+		text-align: center;
+		font-size: 20px;
+	}
+	.home img{
+		width: 30px;
+		height: 30px;
+	}
+	nav{
+		width: 50%;
+		height: 30px;
+		border : 0px solid;
+		line-height: 30px;
+		float: right;
+	}
+	nav ul li{
+		width: 20%;
+		height: 30px;
+		float: left;
+		list-style: none;
+		margin-bottom: 5px;
+	}
+	nav ul li:hover ul .auto{
+		display: block;
+		border: 1px solid red;
+        padding:5px;
+        margin-top:5px;
+        width:300px;
+        height:300px;
+        overflow:auto;
+	}
+	nav ul li ul{
+		display: none;
+	}
+	nav ul li ul li{
+		width: 300px;
+		height: 40px;
+		background-color: #ffff;
+		margin-bottom: 2px;
+		border-style: solid !important;
+		text-align: left !important;
+	}
+	.auto {
+	    display:none;
+	    padding:5px;
+	    margin-top:5px;
+	    width:330px;
+	    height:100px;
+	    overflow:auto;
+	}
+	.auto:hover {
+	    display:block;
+	    padding:5px;
+	    margin-top:5px;
+	    width:330px;
+	    height:100px;
+	    overflow:auto;
+	}
 </style>
 <body>
 	<thead>

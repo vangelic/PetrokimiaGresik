@@ -1,6 +1,12 @@
 <?php 
 	include "inisiasi.php";
 	require 'adminPermission.inc.php';
+
+	if (isset($_POST['scanqr'])) {
+
+		header("Location: $url/camscan.php");
+        exit();
+    }
 	
 	$result = mysqli_query($koneksi, "SELECT * FROM daftar_alat WHERE id_pinjam=$_SESSION[id]");
 	
@@ -126,38 +132,45 @@
 	width: calc(100% - 100px);">
 		<h2>Daftar Alat</h2>
 		<hr style="position: relative; border: none; height: 1px; background: #999;" />
-		<table class="table text-center align-middle">
-				<tr>
-					<th>No.</th>
-					<th>Nama Alat</th>
-					<th>Status</th>
-					<th></th>
-					<th></th>
-				</tr>
+		<form method="POST">
+			<div class="form">
+				<div class="col-md-12">
+					<table class="table text-center align-middle">
+							<tr>
+								<th>No.</th>
+								<th>Nama Alat</th>
+								<th>Status</th>
+								<th></th>
+								<th></th>
+							</tr>
 
-				<?php $i = 1; ?>
-				<?php 
-					while ($row = mysqli_fetch_assoc($result)) : ?>
-					<tr>
-						<td><?=$i; ?></td>
-						<td>
-							<?= $row["nama_alat"] ?>
-						</td>
-						<td>Aktif</td>
-						<td>
-							<a href="rekan.php"><button type="button" class="btn btn-secondary">Tambah Rekan</button></a>
-						</td>
-						<td>
-							<a href="checkout.php?id=<?= $row["nama_alat"] ?>"><button type="button" class="btn btn-danger">Check out</button></a>
-						</td>
-					</tr>
-					<?php $i++; ?>
-				<?php 
-					//endforeach; 
-					endwhile;
-				?>
-				
-			</table>
+							<?php $i = 1; ?>
+							<?php 
+								while ($row = mysqli_fetch_assoc($result)) : ?>
+								<tr>
+									<td><?=$i; ?></td>
+									<td>
+										<?= $row["nama_alat"] ?>
+									</td>
+									<td>Aktif</td>
+									<td>
+										<a href="rekan.php"><button type="button" class="btn btn-secondary">Tambah Rekan</button></a>
+									</td>
+									<td>
+										<a href="checkout.php?id=<?= $row["nama_alat"] ?>"><button type="button" class="btn btn-danger">Check out</button></a>
+									</td>
+								</tr>
+								<?php $i++; ?>
+							<?php 
+								//endforeach; 
+								endwhile;
+							?>
+							
+						</table>
+						<button type="submit" name="scanqr" value="scanqr" class="btn btn-secondary">SCAN QR</button>
+					</div>
+				</div>
+			</form>
 		</div>
 	</tbody>
 </body>

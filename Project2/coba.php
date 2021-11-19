@@ -74,7 +74,7 @@
 					<h2>History Penggunaan</h2>
 						<div class="data-tables datatable-dark">
 							
-		                <table class="table text-center align-middle" id="mauexport">
+		                <table class="table table-borderes text-center align-middle" id="mauexport">
 						<thead>
 		                <tr>
 							<th>No.</th>

@@ -27,7 +27,6 @@
 				  <label>SCAN QR CODE</label>
 				  <input type="text" name="text" id="text" readonyy="" placeholder="scan qrcode" class="form-control">
 				  <button type="submit" name="lanjut" value="lanjut" class="btn btn-success">Lanjut</button>
-
 			  </form>
 			  </div>
 		  </div>

@@ -6,6 +6,118 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
+<style>
+	body{
+		font-family: sans-serif;
+		background-image: url(bg.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.header{
+		text-align: center;
+		padding-top: 50px;
+		margin-left: 0px;
+		padding-bottom: 50px;
+	}
+	.container{
+		width: 800px !important;
+		margin:5% auto;
+		border-radius: 25px;
+		background-color: rgba(255,255,255,0.5);
+		box-shadow: 0 0 17px #333;
+	}
+	.main button{
+		padding-left: 0;
+		background-color:  #4b4e4d;
+		letter-spacing: 2px;
+		font-weight: bold;
+		width: 200px;
+		height: 200px;
+		margin-top: 10px;
+		margin-bottom: 30px;
+		border-radius: 15px ;
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+	.main img{
+		width: 120px; 
+		height: 120px;
+		margin-bottom: 15px;
+	}
+	.main a{
+		color: white;
+		font-size: 20px;
+	}
+	.main button:hover{
+		box-shadow: 2px 5px 5px #555;
+		background-color: #8a8f8d;
+	}
+	.home{
+		float: right;
+		display: inline-block;
+		width: 350px;
+		height: 50px;
+		list-style: none;
+		line-height: 50px;	
+		color: black;
+		text-align: center;
+		font-size: 20px;
+	}
+	.home img{
+		width: 30px;
+		height: 30px;
+	}
+	nav{
+		width: 50%;
+		height: 30px;
+		border : 0px solid;
+		line-height: 30px;
+		float: right;
+	}
+	nav ul li{
+		width: 20%;
+		height: 30px;
+		float: left;
+		list-style: none;
+		margin-bottom: 5px;
+	}
+	nav ul li:hover ul .auto{
+		display: block;
+		border: 1px solid red;
+        padding:5px;
+        margin-top:5px;
+        width:300px;
+        height:300px;
+        overflow:auto;
+	}
+	nav ul li ul{
+		display: none;
+	}
+	nav ul li ul li{
+		width: 300px;
+		height: 40px;
+		background-color: #ffff;
+		margin-bottom: 2px;
+		border-style: solid !important;
+		text-align: left !important;
+	}
+	.auto {
+	    display:none;
+	    padding:5px;
+	    margin-top:5px;
+	    width:330px;
+	    height:100px;
+	    overflow:auto;
+	}
+	.auto:hover {
+	    display:block;
+	    padding:5px;
+	    margin-top:5px;
+	    width:330px;
+	    height:100px;
+	    overflow:auto;
+	}
+</style>
 <body>
   	<thead>
 		<div class="logo">

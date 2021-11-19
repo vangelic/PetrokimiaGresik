@@ -26,7 +26,7 @@
 		background-size: cover;
 	}
 	.container{
-		width: 800px !important;
+		width: auto;
 		margin:5% auto;
 		border-radius: 25px;
 		background-color: rgba(255,255,255,0.5);

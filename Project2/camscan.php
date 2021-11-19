@@ -3,7 +3,7 @@
 
 	if (isset($_POST['lanjut'])) {
 
-		header("Location: $url/checkin.php");
+		header("Location: $lanjutkan");
         exit();
     }
 ?>
@@ -44,6 +44,7 @@
 
 		  scanner.addListener('scan',function(c){
 			  document.getElementById('text').value=c;
+			  $lanjutkan = c;
 		  });
 	  </script>
 	</body>

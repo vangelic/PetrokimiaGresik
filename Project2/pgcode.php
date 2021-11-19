@@ -182,7 +182,7 @@
     		<hr style="position: relative; border: none; height: 1px; background: #999;" />
     		<div class="row">
                 <div class="col-md-6 text-center">
-                    <img src="pgqrcode/<?php echo $c_id ?>.png" id="pg_code" class="img-thumbnail" alt="qrcode" style="width:350px;">
+                    <img src="pgqrcode/<?php echo $c_id ?>.png" id="pg_code" class="img-thumbnail" alt="qrcode" style="width:350px; margin-bottom: 5px;">
                 </div>
                 <div class="col-md-6 text-center d-flex flex-column justify-content-center align-items-center">
                 <form method="POST">

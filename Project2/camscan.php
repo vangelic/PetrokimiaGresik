@@ -2,6 +2,7 @@
 	include "inisiasi.php";
 
 	if (isset($_POST['lanjut'])) {
+		$lanjutkan = $_POST['text'];
 
 		header("Location: $lanjutkan");
         exit();
@@ -44,7 +45,6 @@
 
 		  scanner.addListener('scan',function(c){
 			  document.getElementById('text').value=c;
-			  $lanjutkan = c;
 		  });
 	  </script>
 	</body>

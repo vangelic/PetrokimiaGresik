@@ -22,11 +22,15 @@
 			  <div class="col-md-6">
 				  <video id="preview" width="100%"></video>
 			  </div>
-			  <div class="col-md-6 mt-3">
+			  <div class="col-md-6">
 			  <form method="POST">
 				  <label>SCAN QR CODE</label>
+				  <div class="mt-3">
 				  <input type="text" name="text" id="text" readonyy="" placeholder="scan qrcode" class="form-control">
+				  </div>
+				  <div class="mt-3">
 				  <button type="submit" name="lanjut" value="lanjut" class="btn btn-success">Lanjut</button>
+				  </div>
 			  </form>
 			  </div>
 		  </div>

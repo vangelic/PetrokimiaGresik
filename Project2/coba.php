@@ -25,14 +25,16 @@
 			<h4>(Inventory)</h4>
 				<div class="data-tables datatable-dark">
 					
-                <table class="table text-center align-middle">
-				<tr>
+                <table class="table table-borderes text-center align-middle" id="manuexport">
+				<thead>
+                <tr>
 					<th>No.</th>
 					<th>Nama Alat</th>
 					<th>Waktu</th>
 					<th>Pengguna</th>
 				</tr>
-
+                </thead>
+                <tbody>
 				<?php $i = 1; ?>
 				<?php 
 					while ($row = mysqli_fetch_assoc($result)) : ?>
@@ -53,6 +55,7 @@
 					//endforeach; 
 					endwhile;
 				?>
+                </tbody>
 			</table>
 					
 				</div>

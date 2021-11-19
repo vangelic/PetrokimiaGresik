@@ -146,12 +146,26 @@
 			<img src="aset/Logonobg.png" width="140px" height="50px">
 			<nav>
 				<ul class="home">
-					<li class="auto">
+					<li>
 						<img src="gambar/notif.png">
-						<ul>
-							<a href=""><li>Notif 1</li></a>
-							<a href=""><li>Notif 2</li></a>
-							<a href=""><li>Notif 3</li></a>
+						<ul class="auto">
+							<?php 							
+							$datetime = new DateTime;
+							$otherTZ = new DateTimeZone("Asia/Jakarta");
+							$datetime->setTimezone($otherTZ);
+							$date = $datetime->format('Y-m-d');
+
+							$statement = $dbc->prepare("SELECT nama_alat, tgl_kalibrasi FROM kalibrasi, daftar_alat WHERE kalibrasi.id_alat=daftar_alat.id_alat AND DATE(kalibrasi.tgl_kalibrasi) >= :date order by kalibrasi.tgl_kalibrasi ASC");
+							$statement->execute(['date' => $date]);
+							$data = $statement->fetchAll();
+							foreach ($data as $row) {
+								$kalibrasi = new DateTime($row["tgl_kalibrasi"]);
+								$tgl = $kalibrasi->format("Y-m-d");
+								
+								echo "<a href=''><li>{$row['nama_alat']}</li></a>";
+								echo "<p>Lakukan kalibrasi sebelum {$tgl}</p>";
+							}
+							?>
 						</ul>
 					</li>
 					<a href="admin.php" style="margin-right: 30px">Home</a>

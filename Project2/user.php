@@ -129,7 +129,7 @@
 				<ul class="home">
 					<li>
 						<img src="gambar/notif.png">
-						<ul>
+						<ul class="auto">
 							<?php 							
 							$datetime = new DateTime;
 							$otherTZ = new DateTimeZone("Asia/Jakarta");
@@ -149,7 +149,7 @@
 							?>
 						</ul>
 					</li>
-					<a href="user.php" style="margin-right: 30px">Home</a>
+					<a href="admin.php" style="margin-right: 30px">Home</a>
 					<a href="login.php">Logout</a>
 				</ul>
 			</nav>

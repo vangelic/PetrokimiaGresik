@@ -188,8 +188,8 @@
 	</div>
 </body>
 <footer>
-	<div>
-		<p>&copy; 2021 buncobpg.id</p>
+	<div style="background-color: #939896">
+		<p style="text-align: center; font-family: sans-serif;">&copy; 2021 buncobpg.id</p>
 	</div>
 </footer>
 </html>

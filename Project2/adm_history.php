@@ -2,7 +2,7 @@
 	include "inisiasi.php";
 	require 'adminPermission.inc.php';
 
-	$result = mysqli_query($koneksi, "SELECT checkin, checkout, nama_alat, nama FROM history, daftar_alat, user WHERE history.id_alat=daftar_alat.id_alat AND history.id_user=user.id_user AND history.checkout IS NOT NULL ORDER BY checkin DESC");
+	$result = mysqli_query($koneksi, "SELECT checkin, checkout, nama_alat, review, history.kondisi, nama FROM history, daftar_alat, user WHERE history.id_alat=daftar_alat.id_alat AND history.id_user=user.id_user AND history.checkout IS NOT NULL ORDER BY checkin DESC");
 ?>
 
 <!DOCTYPE html>
@@ -146,6 +146,8 @@
 							<th>Nama Alat</th>
 							<th>Waktu</th>
 							<th>Pengguna</th>
+							<th>Kondisi</th>
+							<th>Review</th>
 						</tr>
 		                </thead>
 		                <tbody>
@@ -163,6 +165,21 @@
 									</div>
 								</td>
 								<td><?= $row["nama"] ?></td>
+								<td>
+								<?php
+								if ($row["kondisi"] == "Rusak") {
+								?>
+									<div class="badge bg-danger fs-6 p-3 px-4">Rusak</div>
+								<?php
+								}
+								else if ($row["kondisi"] == "Belum Dikalibrasi") {
+								?>
+									<div class="badge bg-warning fs-6 p-3 px-4">Belum Dikalibrasi</div>
+								<?php
+								}
+								?>	
+								</td>
+								<td><?= $row["review"] ?></td>
 							</tr>
 							<?php $i++; ?>
 						<?php 

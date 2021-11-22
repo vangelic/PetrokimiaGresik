@@ -139,13 +139,15 @@
 						<h2>History Penggunaan</h2>
 							<div class="data-tables datatable-dark">
 								
-							<table class="table table-borderes text-center align-middle">
+							<table class="table table-borderes text-center align-middle" id="mauexport">
+					<thead>
 					<tr>
 						<th>No.</th>
 						<th>Nama Alat</th>
 						<th>Waktu</th>
 					</tr>
-
+					</thead>
+					<tbody>
 					<?php $i = 1; ?>
 					<?php 
 						while ($row = mysqli_fetch_assoc($result)) : ?>
@@ -173,7 +175,7 @@
 						//endforeach; 
 						endwhile;
 					?>
-					
+					</tbody>
 				</table>
 								
 				</div>

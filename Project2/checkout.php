@@ -11,12 +11,6 @@
 
     if (isset($_POST['checkout'])) {
 
-		if (isset($_POST['kons'])) {
-			$db->update('daftar_alat', ['kondisi' => 'Rusak'], ['nama_alat'=> $c_id]);
-			$db->update('history', ['kondisi' => 'Rusak'], ['id_user'=> $_SESSION['id'], 'id_history' => $history]);
-
-		}
-
 		$db->update('daftar_alat', ['id_pinjam' => null], ['nama_alat'=> $c_id]);
 
 		$query = $db->row("SELECT * FROM daftar_alat WHERE nama_alat=?",$c_id);
@@ -25,8 +19,15 @@
 		$query = $db->row("SELECT * FROM history WHERE id_alat=? ORDER BY id_history DESC LIMIT 1",$id);
 		$history = $query['id_history'];
 
-		$db->update('history', ['checkout' => $date, 'review' => $_POST['review']], ['id_user'=> $_SESSION['id'], 'id_history' => $history]);
+		if (isset($_POST['kons'])) {
+			$db->update('daftar_alat', ['kondisi' => 'Rusak'], ['nama_alat'=> $c_id]);
 
+			$db->update('history', ['checkout' => $date, 'review' => $_POST['review'], 'kondisi' => 'Rusak'], ['id_user'=> $_SESSION['id'], 'id_history' => $history]);
+		}
+		else {
+			$db->update('history', ['checkout' => $date, 'review' => $_POST['review']], ['id_user'=> $_SESSION['id'], 'id_history' => $history]);
+		}
+		
 		header("Location: $url/scan.php");
         exit();
     }

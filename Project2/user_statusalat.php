@@ -124,10 +124,6 @@
 		<div class="container-fluid" style="margin: 50px; padding:30px;
 	width: calc(100% - 100px);">
 		<h2>Status Alat</h2>
-		<form action="" method="post">
-			<input style="margin-left: 800px;" class="search" type="text" name="keyword" placeholder="Cari..." autocomplete="off" required>
-			<input class="button" type="submit" name="cari" value="Cari">
-		</form>
 		<hr style="position: relative; border: none; height: 1px; background: #999;" />
 		<table class="table text-center align-middle">
 				<tr>

@@ -22,7 +22,7 @@
         exit();
     }
 
-	$result = mysqli_query($koneksi, "SELECT nama_alat, id_pinjam, nama FROM daftar_alat, user WHERE daftar_alat.nama_alat LIKE '$c_id' AND daftar_alat.id_pinjam=user.id_user");
+	$result = mysqli_query($koneksi, "SELECT nama_alat, id_pinjam, nama, daftar_alat.kondisi FROM daftar_alat, user WHERE daftar_alat.nama_alat LIKE '$c_id' AND daftar_alat.id_pinjam=user.id_user");
 	$row = mysqli_fetch_assoc($result)
 
 ?>
@@ -58,9 +58,22 @@
 					$row = mysqli_fetch_assoc($result);
 
 					if (!isset($row["id_pinjam"])) {
-						echo "<button type='submit' name='checkin' value='checkin' class='btn btn-primary mb-5'>Check In</button>";
 
-                		echo "<div>Klik untuk menggunakan alat.</div>";
+						if ($row["kondisi"]=="Rusak") {
+							echo "<button type='submit' name='checkin' value='checkin' class='btn btn-primary mb-5' disabled>Check In</button>";
+	
+							echo "<div>Alat sedang rusak, silakan menghubungi admin.</div>";
+						}
+						elseif ($row["kondisi"]=="Belum Dikalibrasi") {
+							echo "<button type='submit' name='checkin' value='checkin' class='btn btn-warning mb-5'>Check In</button>";
+
+                			echo "<div>Alat belum dikalibrasi, klik untuk tetap menggunakan alat.</div>";
+						}
+						else {
+							echo "<button type='submit' name='checkin' value='checkin' class='btn btn-primary mb-5'>Check In</button>";
+
+                			echo "<div>Klik untuk menggunakan alat.</div>";
+						}
 					}
 					elseif ($row["id_pinjam"]==$_SESSION['id']) {
 						echo "<button type='submit' name='checkin' value='checkin' class='btn btn-primary mb-5' disabled>Check In</button>";

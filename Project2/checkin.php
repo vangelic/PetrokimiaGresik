@@ -41,6 +41,13 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
+	.container{
+		width: 800px !important;
+		margin:5% auto;
+		border-radius: 25px;
+		background-color: rgba(255,255,255,0.5);
+		box-shadow: 0 0 17px #333;
+	}
 </style>
 
 <body>

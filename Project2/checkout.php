@@ -82,7 +82,7 @@
 		</div>
 	</thead>
 	<tbody>
-		<div class="container">
+		<div class="container p-3">
 			<h2><?php echo $c_id ?></h2>
 			<hr style="position: relative; border: none; height: 1px; background: #999;" />
 			<form method="POST">

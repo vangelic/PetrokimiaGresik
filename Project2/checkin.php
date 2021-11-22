@@ -22,6 +22,9 @@
         exit();
     }
 
+	$result = mysqli_query($koneksi, "SELECT nama_alat, id_pinjam, nama, daftar_alat.kondisi FROM daftar_alat, user WHERE daftar_alat.nama_alat LIKE '$c_id' AND daftar_alat.id_pinjam=user.id_user");
+	$row = mysqli_fetch_assoc($result)
+
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +54,7 @@
 		<div class="row">
             <div class="col-md-6 text-center d-flex flex-column justify-content-center align-items-center">
 				<?php
-					$result = mysqli_query($koneksi, "SELECT nama_alat, id_pinjam, nama, kondisi FROM daftar_alat, user WHERE daftar_alat.nama_alat LIKE '$c_id' AND daftar_alat.id_pinjam=user.id_user");
+					$result = mysqli_query($koneksi, "SELECT nama_alat, id_pinjam, nama, daftar_alat.kondisi FROM daftar_alat, user WHERE daftar_alat.nama_alat LIKE '$c_id' AND daftar_alat.id_pinjam=user.id_user");
 					$row = mysqli_fetch_assoc($result);
 
 					if (!isset($row["id_pinjam"])) {

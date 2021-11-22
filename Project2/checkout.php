@@ -64,8 +64,8 @@
 					<div class="form-check">
 						<div class="input-group mb-3">
 						<input class="form-check-input" type="checkbox" value="rusak" name="kons" id="flexCheckDefault">
-						<label class="form-check-label" for="flexCheckDefault">
-							Rusak
+						<label class="form-check-label px-2" for="flexCheckDefault">
+							 Rusak
 						</label>
 						</div>
 					</div>

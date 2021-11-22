@@ -51,51 +51,64 @@
 </style>
 
 <body>
-	<div class="container">
-		<h2><?php echo $c_id ?></h2>
-		<hr style="position: relative; border: none; height: 1px; background: #999;" />
-		<form method="POST">
-		<div class="row">
-            <div class="col-md-6 text-center d-flex flex-column justify-content-center align-items-center">
-				<?php
-					$result = mysqli_query($koneksi, "SELECT nama_alat, kondisi, id_pinjam, user.nama FROM (SELECT nama_alat, kondisi, id_pinjam FROM `daftar_alat` WHERE nama_alat LIKE '$c_id' AND (daftar_alat.id_pinjam IS NOT NULL OR daftar_alat.kondisi IS NOT NULL) GROUP BY `nama_alat` ORDER BY `kondisi` DESC) AS A LEFT JOIN user ON id_pinjam=id_user");
-					$row = mysqli_fetch_assoc($result);
+	<thead>
+		<div class="logo">
+			<img src="aset/Logonobg.png" width="140px" height="50px">
+			<nav>
+				<ul class="home">
+					<a href="admin.php" style="margin-right: 30px">Home</a>
+					<a href="login.php">Logout</a>
+				</ul>
+			</nav>
+		</div>
+	</thead>
+	<tbody>
+		<div class="container">
+			<h2><?php echo $c_id ?></h2>
+			<hr style="position: relative; border: none; height: 1px; background: #999;" />
+			<form method="POST">
+			<div class="row">
+	            <div class="col-md-6 text-center d-flex flex-column justify-content-center align-items-center">
+					<?php
+						$result = mysqli_query($koneksi, "SELECT nama_alat, kondisi, id_pinjam, user.nama FROM (SELECT nama_alat, kondisi, id_pinjam FROM `daftar_alat` WHERE nama_alat LIKE '$c_id' AND (daftar_alat.id_pinjam IS NOT NULL OR daftar_alat.kondisi IS NOT NULL) GROUP BY `nama_alat` ORDER BY `kondisi` DESC) AS A LEFT JOIN user ON id_pinjam=id_user");
+						$row = mysqli_fetch_assoc($result);
 
-					if (!isset($row["id_pinjam"])) {
+						if (!isset($row["id_pinjam"])) {
 
-						if ($row["kondisi"]=="Rusak") {
+							if ($row["kondisi"]=="Rusak") {
+								echo "<button type='submit' name='checkin' value='checkin' class='btn btn-primary mb-5' disabled>Check In</button>";
+		
+								echo "<div>Alat sedang rusak, silakan menghubungi admin.</div>";
+							}
+							elseif ($row["kondisi"]=="Belum Dikalibrasi") {
+								echo "<button type='submit' name='checkin' value='checkin' class='btn btn-warning text-white mb-5'>Check In</button>";
+
+	                			echo "<div>Alat belum dikalibrasi, klik untuk tetap menggunakan alat.</div>";
+							}
+							else {
+								echo "<button type='submit' name='checkin' value='checkin' class='btn btn-primary mb-5'>Check In</button>";
+
+	                			echo "<div>Klik untuk menggunakan alat.</div>";
+							}
+						}
+						elseif ($row["id_pinjam"]==$_SESSION['id']) {
 							echo "<button type='submit' name='checkin' value='checkin' class='btn btn-primary mb-5' disabled>Check In</button>";
-	
-							echo "<div>Alat sedang rusak, silakan menghubungi admin.</div>";
+
+	                		echo "<div>Alat sedang anda gunakan.</div>";
+
+							echo "<a href='checkout.php?id=".$c_id."'>Klik untuk check out.</a>";
 						}
-						elseif ($row["kondisi"]=="Belum Dikalibrasi") {
-							echo "<button type='submit' name='checkin' value='checkin' class='btn btn-warning text-white mb-5'>Check In</button>";
+						else{
+							echo "<button type='submit' name='checkin' value='checkin' class='btn btn-primary mb-5' disabled>Check In</button>";
 
-                			echo "<div>Alat belum dikalibrasi, klik untuk tetap menggunakan alat.</div>";
+	                		echo "<div>Sedang  digunakan oleh ".$row["nama"]."</div>";
 						}
-						else {
-							echo "<button type='submit' name='checkin' value='checkin' class='btn btn-primary mb-5'>Check In</button>";
-
-                			echo "<div>Klik untuk menggunakan alat.</div>";
-						}
-					}
-					elseif ($row["id_pinjam"]==$_SESSION['id']) {
-						echo "<button type='submit' name='checkin' value='checkin' class='btn btn-primary mb-5' disabled>Check In</button>";
-
-                		echo "<div>Alat sedang anda gunakan.</div>";
-
-						echo "<a href='checkout.php?id=".$c_id."'>Klik untuk check out.</a>";
-					}
-					else{
-						echo "<button type='submit' name='checkin' value='checkin' class='btn btn-primary mb-5' disabled>Check In</button>";
-
-                		echo "<div>Sedang  digunakan oleh ".$row["nama"]."</div>";
-					}
-				?>
-            </div>
-        </div>
-		</form>
-	</div>
+					?>
+	            </div>
+	        </div>
+			</form>
+		</div>
+	</tbody>
 </body>
 <footer>
 	<div style="background-color: #939896 ; width: auto; height: auto;">

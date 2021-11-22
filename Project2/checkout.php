@@ -61,34 +61,47 @@
 </style>
 
 <body>
-	<div class="container">
-		<h2><?php echo $c_id ?></h2>
-		<hr style="position: relative; border: none; height: 1px; background: #999;" />
-		<form method="POST">
-		<div class="row">
-			<div class="col-12">
-				<div>Bagaimana kondisi alat?</div>
-					<div class="form-check">
-						<div class="input-group mb-3">
-						<input class="form-check-input" type="checkbox" value="rusak" name="kons" id="flexCheckDefault">
-						<label class="form-check-label px-2" for="flexCheckDefault">
-							 Rusak
-						</label>
+	<thead>
+		<div class="logo">
+			<img src="aset/Logonobg.png" width="140px" height="50px">
+			<nav>
+				<ul class="home">
+					<a href="admin.php" style="margin-right: 30px">Home</a>
+					<a href="login.php">Logout</a>
+				</ul>
+			</nav>
+		</div>
+	</thead>
+	<tbody>
+		<div class="container">
+			<h2><?php echo $c_id ?></h2>
+			<hr style="position: relative; border: none; height: 1px; background: #999;" />
+			<form method="POST">
+			<div class="row">
+				<div class="col-12">
+					<div>Bagaimana kondisi alat?</div>
+						<div class="form-check">
+							<div class="input-group mb-3">
+							<input class="form-check-input" type="checkbox" value="rusak" name="kons" id="flexCheckDefault">
+							<label class="form-check-label px-2" for="flexCheckDefault">
+								 Rusak
+							</label>
+							</div>
 						</div>
-					</div>
-			</div>
-			<div class="col-12">
-				<label for="review" class="form-label">Tulis Review</label>
-				<div class="input-group mb-3">
-				<textarea class="form-control" name="review" id="review" rows="3"></textarea>
 				</div>
-			</div>
-        </div>
-		<div class="col-12">
-            <button type="submit" name="checkout" value="checkout" class="btn btn-danger">Check out</button>
-        </div>
-		</form>
-	</div>
+				<div class="col-12">
+					<label for="review" class="form-label">Tulis Review</label>
+					<div class="input-group mb-3">
+					<textarea class="form-control" name="review" id="review" rows="3"></textarea>
+					</div>
+				</div>
+	        </div>
+			<div class="col-12">
+	            <button type="submit" name="checkout" value="checkout" class="btn btn-danger">Check out</button>
+	        </div>
+			</form>
+		</div>
+	</tbody>
 </body>
 <footer>
 	<div style="background-color: #939896 ; width: auto; height: auto;">

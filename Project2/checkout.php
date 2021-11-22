@@ -61,7 +61,7 @@
 </style>
 
 <body>
-	<div class="container p-5">
+	<div class="container p-10">
 		<h2><?php echo $c_id ?></h2>
 		<hr style="position: relative; border: none; height: 1px; background: #999;" />
 		<form method="POST">

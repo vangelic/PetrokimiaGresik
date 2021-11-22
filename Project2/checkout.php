@@ -105,7 +105,7 @@
 					</div>
 				</div>
 	        </div>
-			<div class="col-12">
+			<div class="col-12" style="margin-bottom: 15px;">
 	            <button type="submit" name="checkout" value="checkout" class="btn btn-danger">Check out</button>
 	        </div>
 			</form>

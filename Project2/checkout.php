@@ -13,6 +13,8 @@
 
 		if (isset($_POST['kons'])) {
 			$db->update('daftar_alat', ['kondisi' => 'Rusak'], ['nama_alat'=> $c_id]);
+			$db->update('history', ['kondisi' => 'Rusak'], ['id_user'=> $_SESSION['id'], 'id_history' => $history]);
+
 		}
 
 		$db->update('daftar_alat', ['id_pinjam' => null], ['nama_alat'=> $c_id]);

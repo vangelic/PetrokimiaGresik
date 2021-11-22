@@ -75,12 +75,10 @@
 	<thead>
 		<div class="logo">
 			<img src="aset/Logonobg.png" width="140px" height="50px">
-			<nav>
-				<ul class="home">
-					<a href="admin.php" style="margin-right: 30px">Home</a>
-					<a href="login.php">Logout</a>
-				</ul>
-			</nav>
+			<ul class="home">
+				<a href="admin.php" style="margin-right: 30px">Home</a>
+				<a href="login.php">Logout</a>
+			</ul>
 		</div>
 	</thead>
 	<tbody>

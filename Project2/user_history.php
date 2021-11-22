@@ -2,7 +2,7 @@
 	include "inisiasi.php";
 	require 'adminPermission.inc.php';
 
-	$result = mysqli_query($koneksi, "SELECT checkin, checkout, nama_alat FROM history, daftar_alat WHERE history.id_alat=daftar_alat.id_alat AND id_user=$_SESSION[id]");
+	$result = mysqli_query($koneksi, "SELECT checkin, checkout, nama_alat FROM history, daftar_alat WHERE history.id_alat=daftar_alat.id_alat AND checkout IS NOT NULL AND id_user=$_SESSION[id]");
 ?>
 
 <!DOCTYPE html>

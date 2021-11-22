@@ -29,7 +29,7 @@
 			width: auto;
 			margin:5% auto;
 			border-radius: 25px;
-			background-color: rgba(255,255,255,0.5);
+			background-color: rgba(255,255,255,255);
 			box-shadow: 0 0 17px #333;
 		}
 		.home{
@@ -206,4 +206,9 @@
 			</div>
 		</tbody>
 	</body>
+	<footer>
+		<div style="background-color: #939896 ; width: auto; height: auto;">
+			<p style="text-align: center; font-family: sans-serif;">&copy; 2021 buncobpg.id</p>
+		</div>
+	</footer>
 </html>

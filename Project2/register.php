@@ -108,5 +108,9 @@
         </div>
     </div>
 </body>
-
+<footer>
+    <div style="background-color: #939896 ; width: auto; height: auto;">
+        <p style="text-align: center; font-family: sans-serif;">&copy; 2021 buncobpg.id</p>
+    </div>
+</footer>
 </html>

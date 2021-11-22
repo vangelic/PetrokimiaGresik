@@ -62,7 +62,7 @@
 							echo "<div>Alat sedang rusak, silakan menghubungi admin.</div>";
 						}
 						elseif ($row["kondisi"]=="Belum Dikalibrasi") {
-							echo "<button type='submit' name='checkin' value='checkin' class='btn btn-warning mb-5'>Check In</button>";
+							echo "<button type='submit' name='checkin' value='checkin' class='btn btn-warning text-white mb-5'>Check In</button>";
 
                 			echo "<div>Alat belum dikalibrasi, klik untuk tetap menggunakan alat.</div>";
 						}

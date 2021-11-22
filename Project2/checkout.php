@@ -58,6 +58,17 @@
 		background-color: rgba(255,255,255,0.5);
 		box-shadow: 0 0 17px #333;
 	}
+	.home{
+		float: right;
+		display: inline-block;
+		width: 350px;
+		height: 50px;
+		list-style: none;
+		line-height: 50px;	
+		color: black;
+		text-align: center;
+		font-size: 20px;
+	}
 </style>
 
 <body>

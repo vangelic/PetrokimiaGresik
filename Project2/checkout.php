@@ -87,6 +87,21 @@
 								 Rusak
 							</label>
 							</div>
+=======
+	<div class="container p-10">
+		<h2><?php echo $c_id ?></h2>
+		<hr style="position: relative; border: none; height: 1px; background: #999;" />
+		<form method="POST">
+		<div class="row">
+			<div class="col-12">
+				<div>Bagaimana kondisi alat?</div>
+					<div class="form-check">
+						<div class="input-group mb-3">
+						<input class="form-check-input" type="checkbox" value="rusak" name="kons" id="flexCheckDefault">
+						<label class="form-check-label px-2" for="flexCheckDefault">
+							 Rusak
+						</label>
+>>>>>>> a160ce4e02b475a7632d6eed92b4616cc502ab39
 						</div>
 				</div>
 				<div class="col-12">

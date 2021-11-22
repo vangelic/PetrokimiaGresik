@@ -187,4 +187,9 @@
 		</p>
 	</div>
 </body>
+<footer>
+	<div>
+		<p>&copy; 2021 buncobpg.id</p>
+	</div>
+</footer>
 </html>

@@ -15,7 +15,7 @@
 		font-family: sans-serif;
 		background-image: url(bg.jpg);
 		background-repeat: no-repeat;
-		background-size: auto;
+		background-size: cover;
 	}
 	.header{
 		text-align: center;

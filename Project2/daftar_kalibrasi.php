@@ -166,95 +166,97 @@
 		</div>
 	</thead>
 	<tbody>
-		<div class="container-fluid" style="margin: 50px; padding:30px;
-	width: calc(100% - 100px);">
-		<h2>Jadwal Kalibrasi</h2>
-		<hr style="position: relative; border: none; height: 1px; background: #999;" />
-		<form method="POST">
-			<div class="form">
-				<div class="col-md-12">
-					<table class="table text-center align-middle">
-							<tr>
-								<th>No.</th>
-								<th>Nama Alat</th>
-								<th>Waktu</th>
-								<th colspan="2">Keterangan</th>
-							</tr>
-
-							<?php $i = 1; ?>
-							<?php 
-								while ($row = mysqli_fetch_assoc($result)) : ?>
+		<div class="container">
+			<div class="container-fluid" style="margin: 50px; padding:30px;
+		width: calc(100% - 100px);">
+			<h2>Jadwal Kalibrasi</h2>
+			<hr style="position: relative; border: none; height: 1px; background: #999;" />
+			<form method="POST">
+				<div class="form">
+					<div class="col-md-12">
+						<table class="table text-center align-middle">
 								<tr>
-									<td><?=$i; ?></td>
-									<td><?= $row["nama_alat"] ?></td>
-									<td>
-										<div class="card border-primary" style="max-width: 16rem;">
-											<div class="card-body text-primary">
-												<?php 
-													$in = new DateTime($row["tgl_kalibrasi"]);
-													$tgl = $in->format("Y-m-d");
-												?>
-												<p class="card-text"><?= $tgl ?></p>
-											</div>
-										</div>
-									</td>
-									<td>
-										<?php
-										echo "<a href=".$url."/validasi.php?id=".$row['id_kalibrasi'].">";
-										?>
-											<button type="button" class="btn btn-primary">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
-												<path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
-												<path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-												</svg>
-											</button>
-										</a>
-									</td>
-									<td>
-									<?php 
+									<th>No.</th>
+									<th>Nama Alat</th>
+									<th>Waktu</th>
+									<th colspan="2">Keterangan</th>
+								</tr>
 
-										$datetime = new DateTime;
-										$otherTZ = new DateTimeZone("Asia/Jakarta");
-										$datetime->setTimezone($otherTZ);
-										$date = $datetime->format('Y-m-d H:i:s');
-
-										$temp = new DateTime($row["tgl_kalibrasi"]);
-										$kal = $in->format("Y-m-d H:i:s");
-
-										$now = date('Y-m-d', strtotime($date));
-
-										$cek = date('Y-m-d', strtotime($kal));
-											
-										if ($now >= $cek){
-									?>
-											<div class="card text-white bg-danger mb-3" style="max-width: 16rem;">
-												<div class="card-body">
-													<p class="card-text">Melewati Deadline</p>
+								<?php $i = 1; ?>
+								<?php 
+									while ($row = mysqli_fetch_assoc($result)) : ?>
+									<tr>
+										<td><?=$i; ?></td>
+										<td><?= $row["nama_alat"] ?></td>
+										<td>
+											<div class="card border-primary" style="max-width: 16rem;">
+												<div class="card-body text-primary">
+													<?php 
+														$in = new DateTime($row["tgl_kalibrasi"]);
+														$tgl = $in->format("Y-m-d");
+													?>
+													<p class="card-text"><?= $tgl ?></p>
 												</div>
 											</div>
-									<?php
-										}else if (date('Y-m-d',strtotime("tomorrow")) == $cek) {
-									?>
-										<div class="card text-white bg-warning mb-3" style="max-width: 16rem;">
-											<div class="card-body">
-												<p class="card-text">Kurang 1Hari</p>
+										</td>
+										<td>
+											<?php
+											echo "<a href=".$url."/validasi.php?id=".$row['id_kalibrasi'].">";
+											?>
+												<button type="button" class="btn btn-primary">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
+													<path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+													<path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+													</svg>
+												</button>
+											</a>
+										</td>
+										<td>
+										<?php 
+
+											$datetime = new DateTime;
+											$otherTZ = new DateTimeZone("Asia/Jakarta");
+											$datetime->setTimezone($otherTZ);
+											$date = $datetime->format('Y-m-d H:i:s');
+
+											$temp = new DateTime($row["tgl_kalibrasi"]);
+											$kal = $in->format("Y-m-d H:i:s");
+
+											$now = date('Y-m-d', strtotime($date));
+
+											$cek = date('Y-m-d', strtotime($kal));
+												
+											if ($now >= $cek){
+										?>
+												<div class="card text-white bg-danger mb-3" style="max-width: 16rem;">
+													<div class="card-body">
+														<p class="card-text">Melewati Deadline</p>
+													</div>
+												</div>
+										<?php
+											}else if (date('Y-m-d',strtotime("tomorrow")) == $cek) {
+										?>
+											<div class="card text-white bg-warning mb-3" style="max-width: 16rem;">
+												<div class="card-body">
+													<p class="card-text">Kurang 1Hari</p>
+												</div>
 											</div>
-										</div>
-									<?php
-										}
-									?>
-									</td>
-								</tr>
-								<?php $i++; ?>
-							<?php 
-								//endforeach; 
-								endwhile;
-							?>
-						</table>
-						<button type="submit" name="kalibrasi" value="Kalibrasi" class="btn btn-success">Tambah Kalibrasi</button>
+										<?php
+											}
+										?>
+										</td>
+									</tr>
+									<?php $i++; ?>
+								<?php 
+									//endforeach; 
+									endwhile;
+								?>
+							</table>
+							<button type="submit" name="kalibrasi" value="Kalibrasi" class="btn btn-success">Tambah Kalibrasi</button>
+						</div>
 					</div>
-				</div>
-			</form>
+				</form>
+			</div>
 		</div>
 	</tbody>
 </body>

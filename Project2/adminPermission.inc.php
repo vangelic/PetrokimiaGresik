@@ -16,6 +16,6 @@
 	$que->execute(['date' => $tgl]);
 	$data = $que->fetchAll();
     foreach ($data as $row) {
-		$db->update('daftar_alat', ['kondisi' => 'Rusak'], ['nama_alat'=> $row['nama_alat']]);
+		$db->update('daftar_alat', ['kondisi' => 'Belum Dikalibrasi'], ['nama_alat'=> $row['nama_alat']]);
 	}
 ?>

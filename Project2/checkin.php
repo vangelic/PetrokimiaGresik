@@ -91,7 +91,7 @@
 						if (!isset($row["id_pinjam"])) {
 
 							if ($row["kondisi"]=="Rusak") {
-								echo "<button type='submit' name='checkin' value='checkin' class='btn btn-primary mb-5' disabled>Check In</button>";
+								echo "<button type='submit' name='checkin' value='checkin' class='btn btn-secondary mb-5' disabled>Check In</button>";
 		
 								echo "<div>Alat sedang rusak, silakan menghubungi admin.</div>";
 							}

@@ -155,7 +155,7 @@
 						<div class="mb-3">
 							<label><b>Nama Alat</b></label><br>
 							<select class="form-select" aria-label="Default select example" name="jenis" id="jenis">
-							<option selected disabled value="">Open this select menu</option>
+							<option selected disabled value="">Pilih Rekan</option>
 								<?php 
 									$iduser = $_SESSION['id'];
 									$statement = $dbc->prepare("SELECT * FROM `user` WHERE id_user > 1 AND id_user != $iduser");

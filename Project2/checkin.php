@@ -3,6 +3,8 @@
     require 'adminPermission.inc.php';
 
     $c_id = $_GET['id'];
+
+	$kons = Null;
 	
 	$datetime = new DateTime;
 	$otherTZ = new DateTimeZone("Asia/Jakarta");
@@ -14,7 +16,7 @@
 	if ($row["kondisi"]=="Belum Dikalibrasi"){
 		$kons = "Belum Dikalibrasi";
 	}
-	
+
     if (isset($_POST['checkin'])) {
 
 		$db->update('daftar_alat', ['id_pinjam' => $_SESSION['id']], ['nama_alat'=> $c_id]);

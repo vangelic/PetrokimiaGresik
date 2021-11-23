@@ -4,6 +4,8 @@
 
     $c_id = $_GET['id'];
 
+	$kons = Null;
+
 	$datetime = new DateTime;
 	$otherTZ = new DateTimeZone("Asia/Jakarta");
 	$datetime->setTimezone($otherTZ);
@@ -16,7 +18,7 @@
 		$query = $db->row("SELECT * FROM daftar_alat WHERE nama_alat=?",$c_id);
 		$id = $query['id_alat'];
 
-		$db->insert("history", ["id_alat" => $id, "checkin" => $date, "id_user" => $_SESSION['id']]);
+		$db->insert("history", ["id_alat" => $id, "checkin" => $date, "kondisi" => $kons, "id_user" => $_SESSION['id']]);
 
 		header("Location: $url/user.php");
         exit();
@@ -90,6 +92,8 @@
 								echo "<div>Alat sedang rusak, silakan menghubungi admin.</div>";
 							}
 							elseif ($row["kondisi"]=="Belum Dikalibrasi") {
+								$kons = "Belum Dikalibrasi";
+
 								echo "<button type='submit' name='checkin' value='checkin' class='btn btn-warning text-white mb-5'>Check In</button>";
 
 	                			echo "<div>Alat belum dikalibrasi, klik untuk tetap menggunakan alat.</div>";

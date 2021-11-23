@@ -5,6 +5,8 @@ include "inisiasi.php";
 	$id = $_GET['id'];
 
 	try {
+		$db->update('daftar_alat', ['kondisi' => Null], ['nama_alat'=> $id]);
+
 		$statement = $dbc->prepare("DELETE FROM kalibrasi WHERE id_kalibrasi = :id");
 		$statement->bindValue(':id', $_GET['id']);
 		$statement->execute();

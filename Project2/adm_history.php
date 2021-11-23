@@ -172,7 +172,7 @@
 									<div class="badge bg-danger text-white fs-2 p-3 px-4">Rusak</div>
 								<?php
 								}
-								else if ($row["kondisi"] == "Belum Dikalibrasi") {
+								if ($row["kondisi"] == "Belum Dikalibrasi") {
 								?>
 									<div class="badge bg-warning text-white fs-2 p-3 px-4">Belum Dikalibrasi</div>
 								<?php

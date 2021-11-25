@@ -16,6 +16,21 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   </head>
+  <style>
+  	body{
+		font-family: sans-serif;
+		background-image: url(bg.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.container{
+		width: 800px !important;
+		margin:5% auto;
+		border-radius: 25px;
+		background-color: rgba(255,255,255,0.5);
+		box-shadow: 0 0 17px #333;
+	}
+  </style>
   <body>
 	  <div class="container">
 		  <div class="row">
@@ -50,7 +65,7 @@
 	</body>
 	<footer>
 		<div style="background-color: #939896 ; width: auto; height: auto;">
-			<p style="text-align: center; font-family: sans-serif;">&copy; 2021 buncobpg.id</p>
+			<p style="text-align: center; font-family: sans-serif;"> Copyright &copy; 2021 ivfatusySyrani & rufinarahma</p>
 		</div>
 	</footer>
 </html>

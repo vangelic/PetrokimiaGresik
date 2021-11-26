@@ -121,11 +121,27 @@
 	    height:100px;
 	    overflow:auto;
 	}
+	.badge-notif {
+        position:absolute;
+        top : 8px;
+        right: 25%;
+        background-color: rgba(255,255,255,0.5);
+        height: 20px;
+        border-radius: 10px;
+        padding: 0.5px;
+	}
 </style>
 <body>
 	<thead>
 		<div class="logo">
 			<img src="aset/Logonobg.png" width="140px" height="50px">
+			<h4 class="badge-notif">
+				<?php 
+					foreach($dbc->prepare("SELECT COUNT(*) AS NumberofKalibrasi FROM kalibrasi")as $notif){
+						echo $notif ["COUNT(*)"];
+					}
+				?>
+			</h4>
 			<nav>
 				<ul class="home">
 					<li>

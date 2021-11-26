@@ -195,7 +195,7 @@
 																					
 												QRcode::png("$kode","pgqrcode/".$row["nama_alat"].".png","M", 10,3);
 											?>
-											<a href="<?php $url?>/pgcode?id=<?php echo $row["nama_alat"] ?>"><img src="pgqrcode/<?php echo $row["nama_alat"] ?>.png" alt="" style="width:100px;"></a>
+											<a href="<?php $url?>/pgcode.php?id=<?php echo $row["nama_alat"] ?>"><img src="pgqrcode/<?php echo $row["nama_alat"] ?>.png" alt="" style="width:100px;"></a>
 											
 										</td>
 										<td>

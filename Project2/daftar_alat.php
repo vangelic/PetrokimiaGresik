@@ -178,6 +178,7 @@
 								<tr>
 									<th>No.</th>
 									<th>Nama Alat</th>
+									<th>QR Code</th>
 									<th colspan="2">Keterangan</th>
 								</tr>
 
@@ -187,6 +188,16 @@
 									<tr>
 										<td><?=$i; ?></td>
 										<td><?= $row["nama_alat"] ?></td>
+										<td>
+											<?php
+												$kode = "$url/checkin.php?id=".$row["nama_alat"]."";
+												require_once("qrcode/qrlib.php");
+																					
+												QRcode::png("$kode","pgqrcode/".$row["nama_alat"].".png","M", 10,3);
+											?>
+											<a href="<?php $url?>/pgcode?id=<?php echo $row["nama_alat"] ?>"><img src="pgqrcode/<?php echo $row["nama_alat"] ?>.png" alt="" style="width:100px;"></a>
+											
+										</td>
 										<td>
 											<?php
 											if ($row["kondisi"] == "Rusak"){

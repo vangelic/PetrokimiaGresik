@@ -169,7 +169,7 @@
 		<div class="container">
 			<div class="container-fluid" style="margin: 50px; padding:30px;
 		width: calc(100% - 100px);">
-			<h2>Jadwal Kalibrasi</h2>
+			<h2>Daftar Alat</h2>
 			<hr style="position: relative; border: none; height: 1px; background: #999;" />
 			<form method="POST">
 				<div class="form">
@@ -241,7 +241,7 @@
 									endwhile;
 								?>
 							</table>
-							<button type="submit" name="kalibrasi" value="Kalibrasi" class="btn btn-success">Tambah Kalibrasi</button>
+							<button type="submit" name="bisa" value="Bisa" class="btn btn-success">Tambah Alat</button>
 						</div>
 					</div>
 				</form>

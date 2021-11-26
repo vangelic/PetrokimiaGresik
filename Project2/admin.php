@@ -123,8 +123,8 @@
 	}
 	.badge-notif {
         position:absolute;
-        top : 8px;
-        right: 25%;
+        top : 5px;
+        right: 20%;
         background-color: rgba(255,255,255,0.5);
         height: 20px;
         border-radius: 10px;

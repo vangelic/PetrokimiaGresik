@@ -8,7 +8,7 @@
         exit();
     }
 
-	$result = mysqli_query($koneksi, "SELECT * FROM daftar_alat");
+	$result = mysqli_query($koneksi, "SELECT * FROM daftar_alat ORDER BY kondisi DESC");
 ?>
 
 <!DOCTYPE html>

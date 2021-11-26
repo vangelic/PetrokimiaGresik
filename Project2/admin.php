@@ -124,7 +124,7 @@
 	.badge-notif {
         position:absolute;
         top : 5px;
-        right: 23%;
+        right: 20%;
         background-color: rgba(255,255,255,0.5);
         height: 20px;
         border-radius: 10px;

@@ -8,7 +8,7 @@
         exit();
     }
 
-	$result = mysqli_query($koneksi, "SELECT * FROM `daftar_alat` ORDER BY kondisi DESC");
+	$result = mysqli_query($koneksi, "SELECT * FROM daftar_alat ORDER BY kondisi DESC");
 ?>
 
 <!DOCTYPE html>
@@ -178,7 +178,6 @@
 								<tr>
 									<th>No.</th>
 									<th>Nama Alat</th>
-									<th>QR</th>
 									<th colspan="2">Keterangan</th>
 								</tr>
 
@@ -188,16 +187,6 @@
 									<tr>
 										<td><?=$i; ?></td>
 										<td><?= $row["nama_alat"] ?></td>
-										<td>
-										<?php
-											$nama = $row['nama_alat'];
-											$kode = "$url/checkin.php?id=$nama";
-											require_once("qrcode/qrlib.php");
-										
-											QRcode::png("$kode","pgqrcode/".$row['nama_alat'].".png","M", 10,3);
-										?>
-											<a href="pgcode?id=<?php echo $row["nama_alat"] ?>"><img src="pgqrcode/qr<?php echo $row["nama_alat"] ?>.png" alt="" style="width:100px;"></a>
-										</td>
 										<td>
 											<?php
 											if ($row["kondisi"] >= "Rusak"){

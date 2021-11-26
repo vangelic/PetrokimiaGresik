@@ -189,9 +189,9 @@
 			</div>
 			<div class="main">
 				<form>
-					<button formaction="insert.php">
+					<button formaction="daftar_alat.php">
 						<img src="gambar/insertt.png"><br>
-						<a href="insert.php">INSERT</a>
+						<a href="daftar_alat.php">INSERT</a>
 					</button>
 					<button formaction="adm_history.php">
 						<img src="gambar/history1.png"><br>

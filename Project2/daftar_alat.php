@@ -4,11 +4,11 @@
 
 	if (isset($_POST['bisa'])) {
 
-		header("Location: $url/daftar_alat.php");
+		header("Location: $url/insert.php");
         exit();
     }
 
-	$result = mysqli_query($koneksi, "SELECT * FROM daftar_alat ORDER BY kondisi DESC");
+	$result = mysqli_query($koneksi, "SELECT * FROM daftar_alat");
 ?>
 
 <!DOCTYPE html>
@@ -189,7 +189,7 @@
 										<td><?= $row["nama_alat"] ?></td>
 										<td>
 											<?php
-											if ($row["kondisi"] >= "Rusak"){
+											if ($row["kondisi"] == "Rusak"){
 												echo "<a href=".$url."/validate.php?id=".$row['id_alat'].">";
 											?>
 												<button type="button" class="btn btn-primary">
@@ -204,7 +204,7 @@
 										<td>
 										<?php 
 
-											if ($row["kondisi"] >= "Rusak"){
+											if ($row["kondisi"] == "Rusak"){
 										?>
 												<div class="card text-white bg-danger mb-3" style="max-width: 16rem;">
 													<div class="card-body">
@@ -212,7 +212,7 @@
 													</div>
 												</div>
 										<?php
-											}else if ($row["kondisi"] >= "Belum Dikalibrasi") {
+											}else if ($row["kondisi"] == "Belum Dikalibrasi") {
 										?>
 											<div class="card text-white bg-warning mb-3" style="max-width: 16rem;">
 												<div class="card-body">

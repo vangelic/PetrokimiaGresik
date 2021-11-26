@@ -136,6 +136,7 @@
 		<div class="logo">
 			<img src="aset/Logonobg.png" width="140px" height="50px">
 			<h4 class="badge-notif">
+				1
 				<?php 
 					foreach($dbc->prepare("SELECT COUNT(*) AS NumberofKalibrasi FROM kalibrasi")as $notif){
 						echo $notif ["COUNT(*)"];

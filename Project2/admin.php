@@ -127,6 +127,7 @@
         right: 20%;
         background-color: rgba(255,255,255,0.5);
         height: 20px;
+        width: 5px;
         border-radius: 10px;
         padding: 0.5px;
 	}
@@ -153,7 +154,7 @@
 			<nav>
 				<ul class="home">
 					<li>
-						<img src="gambar/notif.png">
+						<img src="gambar/notification.png">
 						<ul class="auto">
 							<?php 							
 							$datetime = new DateTime;

@@ -127,7 +127,7 @@
         right: 20%;
         background-color: rgba(255,255,255,0.5);
         height: 20px;
-        width: 5px;
+        width: 15px;
         border-radius: 10px;
         padding: 0.5px;
 	}

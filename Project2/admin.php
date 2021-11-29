@@ -124,10 +124,10 @@
 	.badge-notif {
         position:absolute;
         top : 5px;
-        right: 20%;
+        right: 25%;
         background-color: rgba(255,255,255,0.5);
         height: 20px;
-        width: 15px;
+        width: 20px;
         border-radius: 10px;
         padding: 0.5px;
 	}

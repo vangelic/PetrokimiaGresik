@@ -19,7 +19,7 @@
 			
 			$statement->execute() or die ('Error '.$statement->errorInfo()[2]);
 
-		header("Location: $url/pgcode.php?id=$nama");
+		header("Location: $url/scan.php");
         exit();
     }
 
@@ -153,7 +153,7 @@
 							?>
 						</ul>
 					</li>
-					<a href="admin.php" style="margin-right: 30px">Home</a>
+					<a href="user.php" style="margin-right: 30px">Home</a>
 					<a href="login.php">Logout</a>
 				</ul>
 			</nav>

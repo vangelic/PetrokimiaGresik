@@ -12,7 +12,7 @@
 		$datetime->setTimezone($otherTZ);
 		$date = $datetime->format('Y-m-d H:i:s');
 
-		$statement = $dbc->prepare("INSERT INTO rekan (id_pengguna, id_alat, pukul) VALUES(:user, :alat, :pukul)");
+		$statement = $dbc->prepare("INSERT INTO rekan (id_pengguna, id_barang, pukul) VALUES(:user, :alat, :pukul)");
 			$statement->bindValue(':user', $_POST['rekan']);
 			$statement->bindValue(':alat', $id_alat);
 			$statement->bindValue(':pukul', $date);

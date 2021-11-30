@@ -37,9 +37,7 @@
         color: #333;
         font-size: 16px;
         top: 10px;
-        overflow:auto;
-        display:block;
-        width: auto;
+        overflow-y: scroll;
     }
     body{
         background-image: url(bg.jpg);

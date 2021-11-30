@@ -57,13 +57,15 @@
         font-size: 20px;
     }
     .scrolling-box {
-      background-color: #eaeaea;
       display: block;
-      width: 200px;
-      height: 200px;
+      width: 800px !important;
       padding: 1em;
       overflow-y: scroll;
       text-align: center;
+      margin:5% auto;
+      border-radius: 25px;
+      background-color: rgba(255,255,255,0.5);
+      box-shadow: 0 0 17px #333;
     }
 </style>
 

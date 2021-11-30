@@ -37,7 +37,6 @@
         color: #333;
         font-size: 16px;
         top: 10px;
-        overflow-y: scroll;
     }
     body{
         background-image: url(bg.jpg);
@@ -57,6 +56,15 @@
         text-align: center;
         font-size: 20px;
     }
+    .scrolling-box {
+      background-color: #eaeaea;
+      display: block;
+      width: 200px;
+      height: 200px;
+      padding: 1em;
+      overflow-y: scroll;
+      text-align: center;
+    }
 </style>
 
 <body>
@@ -68,44 +76,46 @@
                 </ul>
     </div>
     <div class="container">
-        <div class="main">
-            <h2 style="font-family: serif;"><b>Create Account</b></h2>
-            <form class="row g-3" id="form" name="myForm" method="POST">
-            <div class="col-12">
-                <label for="nama" class="form-label"><b>Name</b></label>
-                <div class="input-group mb-3">
-	    			<input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama" required>
-				</div>
-            </div>
-            <div class="col-12">
-                <label for="email" class="form-label"><b>Email</b></label>
-                <div class="input-group mb-3">
-	    			<input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email" required>
-				</div>
-            </div>
-            <div class="col-12">
-                <label for="nik" class="form-label"><b>NIK</b></label>
-                <div class="input-group mb-3">
-	    			<input type="text" class="form-control" id="nik" name="nik" placeholder="Masukkan NIK" required>
-				</div>
-            </div>
-            <div class="col-12">
-                <label for="passwd" class="form-label"><b>Password</b></label>
-                <div class="input-group mb-3">
-                    <input type="password" name="passwd" class="form-control" id="passwd" placeholder="Masukkan password" required>
+        <div class="scrolling-box">
+            <div class="main">
+                <h2 style="font-family: serif;"><b>Create Account</b></h2>
+                <form class="row g-3" id="form" name="myForm" method="POST">
+                <div class="col-12">
+                    <label for="nama" class="form-label"><b>Name</b></label>
+                    <div class="input-group mb-3">
+    	    			<input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama" required>
+    				</div>
                 </div>
-            </div>
-            <div class="col-12">
-                <label for="pw" class="form-label"><b>Confirm Password</b></label>
-                <div class="input-group mb-3">
-                    <input type="password" name="pw" class="form-control" id="pw" placeholder="Ulangi password" required>
+                <div class="col-12">
+                    <label for="email" class="form-label"><b>Email</b></label>
+                    <div class="input-group mb-3">
+    	    			<input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email" required>
+    				</div>
                 </div>
+                <div class="col-12">
+                    <label for="nik" class="form-label"><b>NIK</b></label>
+                    <div class="input-group mb-3">
+    	    			<input type="text" class="form-control" id="nik" name="nik" placeholder="Masukkan NIK" required>
+    				</div>
+                </div>
+                <div class="col-12">
+                    <label for="passwd" class="form-label"><b>Password</b></label>
+                    <div class="input-group mb-3">
+                        <input type="password" name="passwd" class="form-control" id="passwd" placeholder="Masukkan password" required>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="pw" class="form-label"><b>Confirm Password</b></label>
+                    <div class="input-group mb-3">
+                        <input type="password" name="pw" class="form-control" id="pw" placeholder="Ulangi password" required>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button type="submit" name="register" value="Register" class="btn btn-success">Register</button>
+                </div>
+                <div>Have already an account ? <a href='login.php'>Login here</a></div>
+                </form>
             </div>
-            <div class="col-12">
-                <button type="submit" name="register" value="Register" class="btn btn-success">Register</button>
-            </div>
-            <div>Have already an account ? <a href='login.php'>Login here</a></div>
-            </form>
         </div>
     </div>
 </body>

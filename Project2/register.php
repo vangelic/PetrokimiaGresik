@@ -31,7 +31,7 @@
     <title>Register</title>
 </head>
 <style>
-    .main{
+    .main i{
         position: absolute;
         left: 7px;
         color: #333;

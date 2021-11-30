@@ -3,9 +3,23 @@
 	include "inisiasi.php";
 	require 'adminPermission.inc.php';
 
+	$id_alat = $_GET['id'];
+
     if (isset($_POST['tambah'])) {
 
-		header("Location: $url/scan.php");
+		$datetime = new DateTime;
+		$otherTZ = new DateTimeZone("Asia/Jakarta");
+		$datetime->setTimezone($otherTZ);
+		$date = $datetime->format('Y-m-d H:i:s');
+
+		$statement = $dbc->prepare("INSERT INTO rekan (id_pengguna, id_barang, pukul) VALUES(:user, :alat, :pukul)");
+			$statement->bindValue(':user', $_POST['rekan']);
+			$statement->bindValue(':alat', $id_alat);
+			$statement->bindValue(':pukul', $date);
+			
+			$statement->execute() or die ('Error '.$statement->errorInfo()[2]);
+
+		header("Location: $url/pgcode.php?id=$nama");
         exit();
     }
 
@@ -154,7 +168,7 @@
 					<div class="col-md-6">
 						<div class="mb-3">
 							<label><b>Nama Alat</b></label><br>
-							<select class="form-select" aria-label="Default select example" name="jenis" id="jenis">
+							<select class="form-select" aria-label="Default select example" name="rekan" id="rekan">
 							<option selected disabled value="">Pilih Rekan</option>
 								<?php 
 									$iduser = $_SESSION['id'];

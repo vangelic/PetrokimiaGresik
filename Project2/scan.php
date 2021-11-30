@@ -154,7 +154,7 @@
 									</td>
 									<td>Aktif</td>
 									<td>
-										<a href="rekan.php"><button type="button" class="btn btn-secondary">Tambah Rekan</button></a>
+										<a href="rekan.php?id=<?= $row["nama_alat"] ?>"><button type="button" class="btn btn-secondary">Tambah Rekan</button></a>
 									</td>
 									<td>
 										<a href="checkout.php?id=<?= $row["nama_alat"] ?>"><button type="button" class="btn btn-danger">Check out</button></a>

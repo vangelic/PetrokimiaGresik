@@ -60,12 +60,18 @@
       background-color: rgba(255,255,255,0.5);
       display: block;
       width: 800px;
-      height: 200px;
+      height: 800px;
       padding: 1em;
       overflow-y: scroll;
       text-align: center;
       margin:5% auto;
       border-radius: 25px;
+    }
+    .container{
+        width: 800px !important;
+        border-radius: 25px;
+        background-color: rgba(255,255,255,0.5);
+        box-shadow: 0 0 17px #333;
     }
 </style>
 
@@ -77,7 +83,8 @@
                     <a href="login.php">Logout</a>
                 </ul>
     </div>
-    <div class="scrolling-box">
+    <div class="container">
+        <div class="scrolling-box">
             <div class="main">
                 <h2 style="font-family: serif;"><b>Create Account</b></h2>
                 <form class="row g-3" id="form" name="myForm" method="POST">
@@ -117,6 +124,7 @@
                 <div>Have already an account ? <a href='login.php'>Login here</a></div>
                 </form>
             </div>
+        </div>
     </div>
 </body>
 <footer>

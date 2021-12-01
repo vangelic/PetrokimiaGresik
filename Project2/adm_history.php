@@ -109,6 +109,7 @@
 	}
 	.logo h5{
 		padding-left: 3px;
+		padding-bottom: 2px;
 	}
 </style>
 <body>

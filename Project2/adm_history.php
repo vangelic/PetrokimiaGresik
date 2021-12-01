@@ -83,16 +83,12 @@
 	}
 	.auto {
 	    display:none;
-	    padding:5px;
-	    margin-top:5px;
 	    width:330px;
 	    height:100px;
 	    overflow:auto;
 	}
 	.auto:hover {
 	    display:block;
-	    padding:5px;
-	    margin-top:5px;
 	    width:330px;
 	    height:100px;
 	    overflow:auto;
@@ -100,7 +96,7 @@
 	.badge-notif {
         position:absolute;
         top : 5px;
-        right: 265px;
+        right: 260px;
         background-color: rgba(255,255,255,0.5);
         height: 20px;
         width: 20px;

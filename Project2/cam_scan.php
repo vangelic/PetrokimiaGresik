@@ -11,6 +11,10 @@
 						<span class="font-weight-bold text-primary">Scan</span>
 					</h5>
 					<div class="card-body">
+						<video id="preview" width="300" height="300"></video>
+						<div class="form-group">
+							<input type="text" class="form-control"/>
+						</div>
 
 
 					</div>

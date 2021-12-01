@@ -130,7 +130,7 @@
 			<nav>
 				<ul class="home">
 					<li>
-						<img src="gambar/notif.png">
+						<img src="gambar/notification.png">
 						<ul class="auto">
 							<?php 							
 							$datetime = new DateTime;

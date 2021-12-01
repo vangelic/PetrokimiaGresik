@@ -90,12 +90,15 @@
 		.badge-notif {
 	        position:absolute;
 	        top : 5px;
-	        right: 250px;
+	        right: 280px;
 	        background-color: rgba(255,255,255,0.5);
 	        height: 20px;
 	        width: 20px;
 	        border-radius: 8px;
 	        padding: 0.5px;
+		}
+		.logo h5{
+			padding-left: 3px;
 		}
 	</style>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -106,7 +109,7 @@
 	<thead>
 		<div class="logo">
 			<img src="aset/Logonobg.png" width="140px" height="50px">
-			<h3 class="badge-notif">
+			<h5 class="badge-notif">
 				<?php 							
 							$datetime = new DateTime;
 							$otherTZ = new DateTimeZone("Asia/Jakarta");
@@ -120,7 +123,7 @@
 								echo "{$row['jumlah']}";
 							}
 							?>
-			</h3>
+			</h5>
 			<nav>
 				<ul class="home">
 					<li>

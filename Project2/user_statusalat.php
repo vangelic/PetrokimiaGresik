@@ -90,6 +90,9 @@
 	        border-radius: 8px;
 	        padding: 0.5px;
 		}
+		.logo h5{
+			padding-left: 3px;
+		}
 	</style>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -99,7 +102,7 @@
 	<thead>
 		<div class="logo">
 			<img src="aset/Logonobg.png" width="140px" height="50px">
-			<h3 class="badge-notif">
+			<h5 class="badge-notif">
 				<?php 							
 							$datetime = new DateTime;
 							$otherTZ = new DateTimeZone("Asia/Jakarta");
@@ -113,11 +116,11 @@
 								echo "{$row['jumlah']}";
 							}
 							?>
-			</h3>
+			</h5>
 			<nav>
 				<ul class="home">
 					<li>
-						<img src="gambar/notif.png">
+						<img src="gambar/notification.png">
 						<ul class="auto">
 							<?php 							
 							$datetime = new DateTime;

@@ -100,19 +100,22 @@
 		.badge-notif {
 	        position:absolute;
 	        top : 5px;
-	        right: 250px;
+	        right: 280px;
 	        background-color: rgba(255,255,255,0.5);
 	        height: 20px;
 	        width: 20px;
 	        border-radius: 8px;
 	        padding: 0.5px;
 		}
+		.logo h5{
+			padding-left: 3px;
+		}
 	</style>
 	<body>
 		<thead>
 			<div class="logo">
 				<img src="aset/Logonobg.png" width="140px" height="50px">
-				<h3 class="badge-notif">
+				<h5 class="badge-notif">
 					<?php 							
 								$datetime = new DateTime;
 								$otherTZ = new DateTimeZone("Asia/Jakarta");
@@ -126,7 +129,7 @@
 									echo "{$row['jumlah']}";
 								}
 								?>
-				</h3>
+				</h5>
 				<nav>
 					<ul class="home">
 						<li>

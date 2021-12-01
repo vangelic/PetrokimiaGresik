@@ -130,6 +130,9 @@
         border-radius: 8px;
         padding: 0.5px;
 	}
+	.logo h3{
+		padding-left: 3px;
+	}
 </style>
 <body>
 	<thead>

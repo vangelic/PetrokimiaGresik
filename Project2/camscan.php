@@ -32,7 +32,7 @@
 	}
   </style>
   <body>
-	  <div class="container p-3">
+	  <div class="container my-3">
 		  <div class="row">
 			  <div class="col-md-6">
 				  <video id="preview" width="100%"></video>

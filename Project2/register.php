@@ -70,7 +70,7 @@
     .container{
         width: 800px !important;
         border-radius: 25px;
-        background-color: rgba(255,255,255,0.5);
+        background-color: rgba(255,255,255,0.0);
         box-shadow: 0 0 17px #333;
     }
 </style>

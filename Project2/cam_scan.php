@@ -7,12 +7,12 @@
 		<div class="row justify-content-center mt-5">
 			<div class="col=md-5">
 				<div class="card-header bg-transparent mb-0">
-					<h5 class="text center">
+					<h5 class="text-center">
 						<span class="font-weight-bold text-primary">Scan</span>
 					</h5>
 					<div class="card-body">
 
-					
+
 					</div>
 				</div>
 			</div>

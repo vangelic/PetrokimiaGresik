@@ -131,7 +131,7 @@
         border-radius: 8px;
         padding: 0.5px;
 	}
-	h5{
+	h3{
 		padding: 100px;
 	}
 </style>
@@ -153,7 +153,7 @@
 								echo "{$row['jumlah']}";
 							}
 							?>
-			</h5>
+			</h3>
 			<nav>
 				<ul class="home">
 					<li>

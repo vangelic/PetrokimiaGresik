@@ -11,6 +11,9 @@
 						<span class="font-weight-bold text-primary">Scan</span>
 					</h5>
 					<div class="card-body">
+						<div class="form-group">
+							<input type="text" class="form-control"/>
+						</div>
 
 
 					</div>

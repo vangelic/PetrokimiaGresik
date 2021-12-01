@@ -23,3 +23,10 @@
 		</div>
 	</div>
 </body>
+
+<script type="text/javascript">
+	let scanner = new Instascan.Scanner(video{video: document.getElementById('preview')});
+	scanner.addListener('scan', function(content)){
+		alert(content);
+	}
+</script>

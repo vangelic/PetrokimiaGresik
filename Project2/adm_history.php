@@ -100,12 +100,15 @@
 	.badge-notif {
         position:absolute;
         top : 5px;
-        right: 250px;
+        right: 255px;
         background-color: rgba(255,255,255,0.5);
         height: 20px;
         width: 20px;
         border-radius: 8px;
         padding: 0.5px;
+	}
+	.logo h5{
+		padding-left: 3px;
 	}
 </style>
 <body>

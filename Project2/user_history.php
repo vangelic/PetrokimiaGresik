@@ -100,7 +100,7 @@
 		.badge-notif {
 	        position:absolute;
 	        top : 5px;
-	        right: 280px;
+	        right: 250px;
 	        background-color: rgba(255,255,255,0.5);
 	        height: 20px;
 	        width: 20px;
@@ -109,6 +109,7 @@
 		}
 		.logo h5{
 			padding-left: 3px;
+			padding-bottom: 3px;
 		}
 	</style>
 	<body>

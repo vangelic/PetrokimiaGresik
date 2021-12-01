@@ -132,6 +132,7 @@
 	}
 	.logo h3{
 		padding-left: 3px;
+		padding-bottom: 3px;
 	}
 </style>
 <body>

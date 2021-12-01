@@ -131,9 +131,6 @@
         border-radius: 8px;
         padding: 0.5px;
 	}
-	h3{
-		padding: 100px;
-	}
 </style>
 <body>
 	<thead>

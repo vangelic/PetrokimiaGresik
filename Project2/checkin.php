@@ -67,16 +67,119 @@
 		text-align: center;
 		font-size: 20px;
 	}
+	.home img{
+		width: 30px;
+		height: 30px;
+	}
+	nav{
+		width: 50%;
+		height: 30px;
+		border : 0px solid;
+		line-height: 30px;
+		float: right;
+	}
+	nav ul li{
+		width: 20%;
+		height: 30px;
+		float: left;
+		list-style: none;
+		margin-bottom: 5px;
+	}
+	nav ul li:hover ul .auto{
+		display: block;
+		border: 1px solid red;
+        padding:5px;
+        margin-top:5px;
+        width:300px;
+        height:300px;
+        overflow:auto;
+	}
+	nav ul li ul{
+		display: none;
+	}
+	nav ul li ul li{
+		width: 300px;
+		height: 40px;
+		background-color: #ffff;
+		margin-bottom: 2px;
+		border-style: solid !important;
+		text-align: left !important;
+	}
+	.auto {
+	    display:none;
+	    padding:5px;
+	    margin-top:5px;
+	    width:330px;
+	    height:100px;
+	    overflow:auto;
+	}
+	.auto:hover {
+	    display:block;
+	    padding:5px;
+	    margin-top:5px;
+	    width:330px;
+	    height:100px;
+	    overflow:auto;
+	}
+	.badge-notif {
+        position:absolute;
+        top : 5px;
+        right: 300px;
+        background-color: rgba(255,255,255,0.5);
+        height: 20px;
+        width: 20px;
+        border-radius: 8px;
+        padding: 0.5px;
+	}
 </style>
 
 <body>
 	<thead>
 		<div class="logo">
 			<img src="aset/Logonobg.png" width="140px" height="50px">
-			<ul class="home">
-				<a href="user.php" style="margin-right: 30px">Home</a>
-				<a href="login.php">Logout</a>
-			</ul>
+			<h3 class="badge-notif">
+				<?php 							
+							$datetime = new DateTime;
+							$otherTZ = new DateTimeZone("Asia/Jakarta");
+							$datetime->setTimezone($otherTZ);
+							$date = $datetime->format('Y-m-d');
+
+							$statement = $dbc->prepare("SELECT COUNT(nama_alat) as jumlah FROM (SELECT nama_alat, tgl_kalibrasi FROM kalibrasi, daftar_alat WHERE kalibrasi.id_alat=daftar_alat.id_alat AND DATE(kalibrasi.tgl_kalibrasi) >= :date order by kalibrasi.tgl_kalibrasi ASC) as A");
+							$statement->execute(['date' => $date]);
+							$data = $statement->fetchAll();
+							foreach ($data as $row) {
+								echo "{$row['jumlah']}";
+							}
+							?>
+			</h3>
+			<nav>
+				<ul class="home">
+					<li>
+						<img src="gambar/notification.png">
+						<ul class="auto">
+							<?php 							
+							$datetime = new DateTime;
+							$otherTZ = new DateTimeZone("Asia/Jakarta");
+							$datetime->setTimezone($otherTZ);
+							$date = $datetime->format('Y-m-d');
+
+							$statement = $dbc->prepare("SELECT nama_alat, tgl_kalibrasi FROM kalibrasi, daftar_alat WHERE kalibrasi.id_alat=daftar_alat.id_alat AND DATE(kalibrasi.tgl_kalibrasi) >= :date order by kalibrasi.tgl_kalibrasi ASC");
+							$statement->execute(['date' => $date]);
+							$data = $statement->fetchAll();
+							foreach ($data as $row) {
+								$kalibrasi = new DateTime($row["tgl_kalibrasi"]);
+								$tgl = $kalibrasi->format("Y-m-d");
+								
+								echo "<a href=''><li>{$row['nama_alat']}</li></a>";
+								echo "<p>Lakukan kalibrasi sebelum {$tgl}</p>";
+							}
+							?>
+						</ul>
+					</li>
+					<a href="admin.php" style="margin-right: 30px">Home</a>
+					<a href="login.php">Logout</a>
+				</ul>
+			</nav>
 		</div>
 	</thead>
 	<tbody>

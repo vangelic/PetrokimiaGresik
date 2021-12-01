@@ -97,11 +97,36 @@
 			height:100px;
 			overflow:auto;
 		}
+		.badge-notif {
+	        position:absolute;
+	        top : 5px;
+	        right: 300px;
+	        background-color: rgba(255,255,255,0.5);
+	        height: 20px;
+	        width: 20px;
+	        border-radius: 8px;
+	        padding: 0.5px;
+		}
 	</style>
 	<body>
 		<thead>
 			<div class="logo">
 				<img src="aset/Logonobg.png" width="140px" height="50px">
+				<h3 class="badge-notif">
+					<?php 							
+								$datetime = new DateTime;
+								$otherTZ = new DateTimeZone("Asia/Jakarta");
+								$datetime->setTimezone($otherTZ);
+								$date = $datetime->format('Y-m-d');
+
+								$statement = $dbc->prepare("SELECT COUNT(nama_alat) as jumlah FROM (SELECT nama_alat, tgl_kalibrasi FROM kalibrasi, daftar_alat WHERE kalibrasi.id_alat=daftar_alat.id_alat AND DATE(kalibrasi.tgl_kalibrasi) >= :date order by kalibrasi.tgl_kalibrasi ASC) as A");
+								$statement->execute(['date' => $date]);
+								$data = $statement->fetchAll();
+								foreach ($data as $row) {
+									echo "{$row['jumlah']}";
+								}
+								?>
+				</h3>
 				<nav>
 					<ul class="home">
 						<li>

@@ -161,7 +161,7 @@
 	</thead>
 	<tbody>
 		<div class="container">
-			<h2>INSERT DATA</h2>
+			<h2>TAMBAH REKAN</h2>
 			<hr style="position: relative; border: none; height: 1px; background: #999;" />
 			<form method="POST">
 				<div class="form">

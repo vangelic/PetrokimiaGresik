@@ -129,7 +129,7 @@
         height: 20px;
         width: 20px;
         border-radius: 8px;
-        padding: 0.5px;
+        padding: 1px;
 	}
 </style>
 <body>

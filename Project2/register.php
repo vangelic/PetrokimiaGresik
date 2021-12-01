@@ -68,10 +68,6 @@
       border-radius: 25px;
       box-shadow: 0 0 17px #333;
     }
-    .container{
-        width: 800px !important;
-        background-color: rgba(255,255,255,0.0);
-    }
 </style>
 
 <body>
@@ -82,7 +78,7 @@
                     <a href="login.php">Logout</a>
                 </ul>
     </div>
-    <div class="container">
+    <div>
         <div class="scrolling-box">
             <div class="main">
                 <h2 style="font-family: serif;"><b>Create Account</b></h2>

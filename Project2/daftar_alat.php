@@ -129,7 +129,7 @@
 	.badge-notif {
         position:absolute;
         top : 5px;
-        right: 300px;
+        right: 265px;
         background-color: rgba(255,255,255,0.5);
         height: 20px;
         width: 20px;
@@ -163,7 +163,7 @@
 			<nav>
 				<ul class="home">
 					<li>
-						<img src="gambar/notif.png">
+						<img src="gambar/notification.png">
 						<ul class="auto">
 							<?php 							
 							$datetime = new DateTime;

@@ -90,7 +90,7 @@
 		.badge-notif {
 	        position:absolute;
 	        top : 5px;
-	        right: 250px;
+	        right: 275px;
 	        background-color: rgba(255,255,255,0.5);
 	        height: 20px;
 	        width: 20px;
@@ -99,7 +99,7 @@
 		}
 		.logo h5{
 			padding-left: 3px;
-			padding-bottom: 3px;
+			margin-bottom: 3px;
 		}
 	</style>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">

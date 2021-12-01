@@ -131,7 +131,7 @@
         padding: 0.5px;
 	}
 	.logo h3{
-		padding-left: 3px;
+		padding-left: 4px;
 		padding-bottom: 3px;
 	}
 </style>

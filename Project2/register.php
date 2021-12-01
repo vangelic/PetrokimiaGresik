@@ -59,8 +59,8 @@
     .scrolling-box {
       background-color: rgba(255,255,255,0.5);
       display: block;
-      width: 800px;
-      height: 800px;
+      width: 500px;
+      height: 500px;
       padding: 1em;
       overflow-y: scroll;
       text-align: center;

@@ -1,5 +1,6 @@
 <?php 
 	include "inisiasi.php";
+	require 'adminPermission.inc.php';
 
 	if (isset($_POST['lanjut'])) {
 		$lanjutkan = $_POST['text'];

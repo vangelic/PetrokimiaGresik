@@ -5,12 +5,22 @@
 
 	$id_alat = $_GET['id'];
 
+	$kons = Null;
+
+	$result = mysqli_query($koneksi, "SELECT nama_alat, kondisi, id_pinjam, user.nama FROM (SELECT nama_alat, kondisi, id_pinjam FROM `daftar_alat` WHERE nama_alat LIKE '$c_id' AND (daftar_alat.id_pinjam IS NOT NULL OR daftar_alat.kondisi IS NOT NULL) GROUP BY `nama_alat` ORDER BY `kondisi` DESC) AS A LEFT JOIN user ON id_pinjam=id_user");
+	$row = mysqli_fetch_assoc($result);
+	if ($row["kondisi"]=="Belum Dikalibrasi"){
+		$kons = "Belum Dikalibrasi";
+	}
+
     if (isset($_POST['tambah'])) {
 
 		$datetime = new DateTime;
 		$otherTZ = new DateTimeZone("Asia/Jakarta");
 		$datetime->setTimezone($otherTZ);
 		$date = $datetime->format('Y-m-d H:i:s');
+
+		$db->insert("history", ["id_alat" => $id_alat, "checkin" => $date, "kondisi" => $kons, "id_user" => $_POST['rekan']]);
 
 		$statement = $dbc->prepare("INSERT INTO rekan (id_pengguna, id_barang, pukul) VALUES(:user, :alat, :pukul)");
 			$statement->bindValue(':user', $_POST['rekan']);

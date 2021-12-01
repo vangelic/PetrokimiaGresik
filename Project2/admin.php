@@ -129,7 +129,10 @@
         height: 20px;
         width: 20px;
         border-radius: 8px;
-        padding: 1px;
+        padding: 0.5px;
+	}
+	h5{
+		padding: 1px;
 	}
 </style>
 <body>

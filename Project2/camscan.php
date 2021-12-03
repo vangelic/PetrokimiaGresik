@@ -10,13 +10,16 @@
     }
 ?>
 <html>
-  <head>
-    <title>QRCode Scanner</title>
-    <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QRCODE SCANNER</title>
+  <link rel="stylesheet" href="../dist/css/qrcode-reader.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+ 
+</head>
   <style>
   	body{
 		font-family: sans-serif;
@@ -34,40 +37,53 @@
 	}
   </style>
   <body>
-	  <div class="container">
-		  <div class="row">
-			  <div class="col-md-6">
-				  <video id="preview" width="100%"></video>
-			  </div>
-			  <div class="col-md-6">
-			  <form method="POST">
-				  <label>SCAN QR CODE</label>
-				  <input type="text" name="text" id="text" readonyy="" placeholder="scan qrcode" class="form-control">
-				  <button type="submit" name="lanjut" value="lanjut" class="btn btn-success">Lanjut</button>
-			  </form>
-			  </div>
-		  </div>
-	  </div>
-	  <script>
-		  let scanner = new Instascan.Scanner({ video: document.getElementById('preview')});
-		  Instascan.Camera.getCameras().then(function(cameras){
-			  if(cameras.length > 0) {
-				  scanner.start(cameras[0]);
-			  } else {
-				  alert("No cameras found");
-			  }
-		  }).catch(function(e) {
-			  console.error(e);
-		  });
+<div class="container">
 
-		  scanner.addListener('scan',function(c){
-			  document.getElementById('text').value=c;
-		  });
-	  </script>
-	</body>
-	<footer>
-		<div style="background-color: #939896 ; width: auto; height: auto;">
-			<p style="text-align: center; font-family: sans-serif;"> Copyright &copy; 2021 ivfatusySyrani & rufinarahma</p>
-		</div>
-	</footer>
+<hr style="position: relative; border: none; height: 1px; background: #999;" />
+<form>
+<div class="form">
+<div class="col-md-6">
+<div class="mb-3">
+  <input id="single2" type="text" class="form-control"> 
+</div>
+  <button class="btn btn-success" type="button" id="openreader-single2" 
+    data-qrr-target="#single2" 
+    data-qrr-audio-feedback="true">Read or follow QRCode</button>
+</div>
+</div>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../dist/js/qrcode-reader.min.js?v=20190604"></script>
+
+<script>
+  
+  $(function(){
+
+    // overriding path of JS script and audio 
+    $.qrCodeReader.jsQRpath = "../dist/js/jsQR/jsQR.min.js";
+    $.qrCodeReader.beepPath = "../dist/audio/beep.mp3";
+
+    // bind all elements of a given class
+    $(".qrcode-reader").qrCodeReader();
+
+    // read or follow qrcode depending on the content of the target input
+    $("#openreader-single2").qrCodeReader({callback: function(code) {
+      if (code) {
+        window.location.href = code;
+      }  
+    }}).off("click.qrCodeReader").on("click", function(){
+      var qrcode = $("#single2").val().trim();
+      if (qrcode) {
+        window.location.href = qrcode;
+      } else {
+        $.qrCodeReader.instance.open.call(this);
+      }
+    });
+
+
+  });
+
+</script>
+</body>
 </html>

@@ -26,7 +26,7 @@
 <div class="mb-3">
   <input id="single2" type="text" class="form-control"> 
 </div>
-  <button type="button" id="openreader-single2" 
+  <button class="btn btn-success" type="button" id="openreader-single2" 
     data-qrr-target="#single2" 
     data-qrr-audio-feedback="true">Read or follow QRCode</button>
 </div>

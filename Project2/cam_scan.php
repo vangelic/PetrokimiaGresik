@@ -6,6 +6,9 @@
   <title>qrcode-reader usage example</title>
   <link rel="stylesheet" href="../dist/css/qrcode-reader.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  
   <style>
     body {
       font-family: 'Lato', sans-serif;
@@ -14,15 +17,20 @@
 </head>
 
 <body>
-  
-<h1>QRCode reader plugin examples</h1>
+<div class="container">
 
+<hr style="position: relative; border: none; height: 1px; background: #999;" />
 <form>
-  <label for="single">Single input (rebound click, depending on target input's content):</label> 
-  <input id="single2" type="text" size="50"> 
+<div class="form">
+<div class="col-md-6">
+<div class="mb-3">
+  <input id="single2" type="text" class="form-control"> 
+</div>
   <button type="button" id="openreader-single2" 
     data-qrr-target="#single2" 
     data-qrr-audio-feedback="true">Read or follow QRCode</button>
+</div>
+</div>
 </form>
 
 

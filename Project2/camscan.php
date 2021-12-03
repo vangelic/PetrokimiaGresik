@@ -39,6 +39,7 @@
   <body>
 <div class="container">
 
+<h2>SCAN QRCODE</h2>
 <hr style="position: relative; border: none; height: 1px; background: #999;" />
 <form>
 <div class="form">
@@ -48,7 +49,7 @@
 </div>
   <button class="btn btn-success" type="button" id="openreader-single2" 
     data-qrr-target="#single2" 
-    data-qrr-audio-feedback="true">Read or follow QRCode</button>
+    data-qrr-audio-feedback="true">Klik untuk Scan</button>
 </div>
 </div>
 </form>

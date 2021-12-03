@@ -43,7 +43,7 @@
 <hr style="position: relative; border: none; height: 1px; background: #999;" />
 <form>
 <div class="form">
-<div class="col-md-6">
+<div class="col-md-12">
 <div class="mb-3">
   <input id="single2" type="text" class="form-control"> 
 </div>

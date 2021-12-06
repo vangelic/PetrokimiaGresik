@@ -62,7 +62,7 @@
 		margin-bottom: 5px;
 	}
 	nav ul li:hover ul .auto{
-		display: block;
+		display: block !important;
 		border: 1px solid red;
         padding:5px;
         margin-top:5px;
@@ -82,13 +82,13 @@
 		text-align: left !important;
 	}
 	.auto {
-	    display:none;
+	    display:none !important;
 	    width:330px;
 	    height:100px;
 	    overflow:auto;
 	}
 	.auto:hover {
-	    display:block;
+	    display:block !important;
 	    width:330px;
 	    height:100px;
 	    overflow:auto;

@@ -108,8 +108,14 @@
 		list-style: none;
 		margin-bottom: 5px;
 	}
-	nav ul li:hover ul{
+	nav ul li:hover ul .auto{
 		display: block;
+		border: 1px solid red;
+        padding:5px;
+        margin-top:5px;
+        width:300px;
+        height:300px;
+        overflow:auto;
 	}
 	nav ul li ul{
 		display: none;

@@ -89,9 +89,15 @@ nav ul li{
 	float: left;
 	list-style: none;
 }
-nav ul li:hover ul{
-	display: block;
-}
+nav ul li ul:hover .auto{
+		display: block;
+		border: 1px solid red;
+        padding:5px;
+        margin-top:5px;
+        width:300px;
+        height:300px;
+        overflow:auto;
+	}
 nav ul li ul{
 	display: none;
 	height: auto;

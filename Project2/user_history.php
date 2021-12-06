@@ -61,7 +61,7 @@
 			list-style: none;
 			margin-bottom: 5px;
 		}
-		nav ul li:hover ul .auto{
+		nav ul li:hover .auto{
 			display: block;
 			border: 1px solid red;
 			padding:5px;

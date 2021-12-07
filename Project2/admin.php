@@ -86,9 +86,11 @@
 	}
 	nav ul li:hover .auto{
 		display: block;
-        width:300px;
-        height:300px;
+        width:350px;
+        height:200px;
         overflow:auto;
+        background-color: #ffff;
+        border-radius: 5px;
 	}
 	nav ul li ul{
 		display: none;
@@ -97,17 +99,21 @@
 		width: 300px;
 		height: 40px;
 		background-color: #ffff;
-		border-style: solid !important;
+		margin-bottom: 2px;
 		text-align: left !important;
 	}
 	.auto {
 	    display:none;
+	    padding:5px;
+	    margin-top:5px;
 	    width:330px;
 	    height:100px;
 	    overflow:auto;
 	}
 	.auto:hover {
 	    display:block;
+	    padding:5px;
+	    margin-top:5px;
 	    width:330px;
 	    height:100px;
 	    overflow:auto;

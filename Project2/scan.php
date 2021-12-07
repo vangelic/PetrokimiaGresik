@@ -59,6 +59,8 @@
 		}
 		nav ul li:hover ul{
 			display: block;
+			background-color: rgba(255,255,255,0.5);
+			border-radius: 5px;
 		}
 		nav ul li ul{
 			display: none;
@@ -75,7 +77,7 @@
 		    display:none;
 		    padding:5px;
 		    margin-top:5px;
-		    width:330px;
+		    width:300px;
 		    height:100px;
 		    overflow:auto;
 		}
@@ -83,7 +85,7 @@
 		    display:block;
 		    padding:5px;
 		    margin-top:5px;
-		    width:330px;
+		    width:300px;
 		    height:100px;
 		    overflow:auto;
 		}

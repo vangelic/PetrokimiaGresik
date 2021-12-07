@@ -63,12 +63,11 @@
 		}
 		nav ul li:hover .auto{
 			display: block;
-			border: 1px solid red;
-			padding:5px;
-			margin-top:5px;
 			width:300px;
-			height:300px;
+			height:130px;
 			overflow:auto;
+			background-color: rgba(255,255,255,0.5);
+			border-radius: 5px;
 		}
 		nav ul li ul{
 			display: none;

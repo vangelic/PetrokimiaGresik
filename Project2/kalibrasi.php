@@ -88,12 +88,11 @@
 	}
 	nav ul li:hover .auto{
 		display: block;
-		border: 1px solid red;
-        padding:5px;
-        margin-top:5px;
         width:300px;
         height:300px;
         overflow:auto;
+        background-color: #ffff;
+        border-radius: 5px;
 	}
 	nav ul li ul{
 		display: none;
@@ -109,7 +108,6 @@
 	.auto {
 	    display:none;
 	    padding:5px;
-	    margin-top:5px;
 	    width:330px;
 	    height:100px;
 	    overflow:auto;
@@ -117,7 +115,7 @@
 	.badge-notif {
         position:absolute;
         top : 5px;
-        right: 300px;
+        right: 265px;
         background-color: rgba(255,255,255,0.5);
         height: 20px;
         width: 20px;
@@ -130,7 +128,7 @@
 	<thead>
 		<div class="logo">
 			<img src="aset/Logonobg.png" width="140px" height="50px">
-			<h3 class="badge-notif">
+			<h5 class="badge-notif">
 				<?php 							
 							$datetime = new DateTime;
 							$otherTZ = new DateTimeZone("Asia/Jakarta");
@@ -144,11 +142,11 @@
 								echo "{$row['jumlah']}";
 							}
 							?>
-			</h3>
+			</h5>
 			<nav>
 				<ul class="home">
 					<li>
-						<img src="gambar/notif.png">
+						<img src="gambar/notification.png">
 						<ul class="auto">
 							<?php 							
 							$datetime = new DateTime;

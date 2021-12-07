@@ -61,14 +61,10 @@
 			list-style: none;
 			margin-bottom: 5px;
 		}
-		nav ul li:hover .auto{
+		nav ul li:hover ul{
 			display: block;
-			border: 1px solid red;
-			padding:5px;
-			margin-top:5px;
-			width:300px;
-			height:300px;
-			overflow:auto;
+			background-color: rgba(255,255,255,0.5);
+			border-radius: 5px;
 		}
 		nav ul li ul{
 			display: none;
@@ -82,20 +78,20 @@
 			text-align: left !important;
 		}
 		.auto {
-			display:none;
-			padding:5px;
-			margin-top:5px;
-			width:330px;
-			height:100px;
-			overflow:auto;
+		    display:none;
+		    padding:5px;
+		    margin-top:5px;
+		    width:300px;
+		    height:100px;
+		    overflow:auto;
 		}
 		.auto:hover {
-			display:block;
-			padding:5px;
-			margin-top:5px;
-			width:330px;
-			height:100px;
-			overflow:auto;
+		    display:block;
+		    padding:5px;
+		    margin-top:5px;
+		    width:300px;
+		    height:100px;
+		    overflow:auto;
 		}
 		.badge-notif {
 	        position:absolute;

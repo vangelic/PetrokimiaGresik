@@ -73,36 +73,34 @@
 	}
 	nav{
 		width: 50%;
+		height: 30px;
 		line-height: 30px;
 		float: right;
 	}
 	nav ul li{
 		width: 20%;
+		height: 30px;
 		float: left;
 		list-style: none;
+		margin-bottom: 5px;
 	}
-	nav ul li:hover ul{
+	nav ul li:hover .auto{
 		display: block;
+        width:350px;
+        height:200px;
+        overflow:auto;
+        background-color: #ffff;
+        border-radius: 5px;
 	}
 	nav ul li ul{
 		display: none;
 	}
-	nav ul li ul a{
+	nav ul li ul li{
 		width: 300px;
-		height: auto;
+		height: 40px;
 		background-color: #ffff;
-		border-style: solid;
-		text-align: left;
-		font-size: 15px !important;
-		font-style: bold !important;
-	}
-	nav ul li ul p{
-		width: 300px;
-		height: auto;
-		background-color: #ffff;
-		border-style: solid;
-		text-align: left;
-		font-size: 12px !important;
+		margin-bottom: 2px;
+		text-align: left !important;
 	}
 	.auto {
 	    display:none;
@@ -123,16 +121,15 @@
 	.badge-notif {
         position:absolute;
         top : 5px;
-        right: 300px;
+        right: 305px;
         background-color: rgba(255,255,255,0.5);
         height: 20px;
-        width: 20px;
+        width: 15px;
         border-radius: 8px;
         padding: 0.5px;
 	}
 	.logo h3{
-		padding-left: 4px;
-		padding-bottom: 3px;
+		padding-left: 3px;
 	}
 </style>
 <body>

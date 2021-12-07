@@ -92,12 +92,12 @@
 	}
 	nav ul li:hover .auto{
 		display: block;
-		border: 1px solid red;
-        padding:5px;
         margin-top:5px;
         width:300px;
-        height:300px;
+	    height:130px;
         overflow:auto;
+        background-color: #ffff;
+        border-radius: 3px;
 	}
 	nav ul li ul{
 		display: none;
@@ -112,16 +112,13 @@
 	}
 	.auto {
 	    display:none;
-	    padding:5px;
-	    margin-top:5px;
+	    padding: 5px;
 	    width:330px;
 	    height:100px;
 	    overflow:auto;
 	}
 	.auto:hover {
 	    display:block;
-	    padding:5px;
-	    margin-top:5px;
 	    width:330px;
 	    height:100px;
 	    overflow:auto;
@@ -135,10 +132,6 @@
         width: 20px;
         border-radius: 8px;
         padding: 0.5px;
-	}
-	.logo h5{
-		padding-left: 3px;
-		padding-bottom: 3px;
 	}
 	</style>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">

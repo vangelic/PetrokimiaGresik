@@ -120,7 +120,7 @@
 		display: none;
 	}
 	nav ul li ul li{
-		width: 300px;
+		width: 250px;
 		height: 40px;
 		background-color: #ffff;
 		margin-bottom: 2px;

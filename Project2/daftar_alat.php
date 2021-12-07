@@ -92,18 +92,17 @@
 	}
 	nav ul li:hover .auto{
 		display: block;
-        margin-top:5px;
         width:300px;
-	    height:130px;
+        height:200px;
         overflow:auto;
         background-color: #ffff;
-        border-radius: 3px;
+        border-radius: 5px;
 	}
 	nav ul li ul{
 		display: none;
 	}
 	nav ul li ul li{
-		width: 300px;
+		width: 250px;
 		height: 40px;
 		background-color: #ffff;
 		margin-bottom: 2px;
@@ -112,13 +111,16 @@
 	}
 	.auto {
 	    display:none;
-	    padding: 5px;
+	    padding:5px;
+	    margin-top:5px;
 	    width:330px;
 	    height:100px;
 	    overflow:auto;
 	}
 	.auto:hover {
 	    display:block;
+	    padding:5px;
+	    margin-top:5px;
 	    width:330px;
 	    height:100px;
 	    overflow:auto;

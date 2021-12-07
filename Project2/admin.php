@@ -74,6 +74,7 @@
 	nav{
 		width: 50%;
 		height: 30px;
+		border : 0px solid;
 		line-height: 30px;
 		float: right;
 	}
@@ -86,7 +87,7 @@
 	}
 	nav ul li:hover .auto{
 		display: block;
-        width:350px;
+        width:300px;
         height:200px;
         overflow:auto;
         background-color: #ffff;
@@ -96,10 +97,11 @@
 		display: none;
 	}
 	nav ul li ul li{
-		width: 300px;
+		width: 250px;
 		height: 40px;
 		background-color: #ffff;
 		margin-bottom: 2px;
+		border-style: solid !important;
 		text-align: left !important;
 	}
 	.auto {

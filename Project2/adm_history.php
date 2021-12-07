@@ -48,68 +48,68 @@
 			height: 30px;
 		}
 		nav{
-			width: 50%;
-			height: 30px;
-			border : 0px solid;
-			line-height: 30px;
-			float: right;
-		}
-		nav ul li{
-			width: 20%;
-			height: 30px;
-			float: left;
-			list-style: none;
-			margin-bottom: 5px;
-		}
-		nav ul li:hover .auto{
-			display: block;
-			width:300px;
-			height:130px;
-			overflow:auto;
-			background-color: rgba(255,255,255,0.5);
-			border-radius: 5px;
-		}
-		nav ul li ul{
-			display: none;
-		}
-		nav ul li ul li{
-			width: 300px;
-			height: 40px;
-			background-color: #ffff;
-			margin-bottom: 2px;
-			border-style: solid !important;
-			text-align: left !important;
-		}
-		.auto {
-			display:none;
-			padding:5px;
-			margin-top:5px;
-			width:330px;
-			height:100px;
-			overflow:auto;
-		}
-		.auto:hover {
-			display:block;
-			padding:5px;
-			margin-top:5px;
-			width:330px;
-			height:100px;
-			overflow:auto;
-		}
-		.badge-notif {
-	        position:absolute;
-	        top : 5px;
-	        right: 265px;
-	        background-color: rgba(255,255,255,0.5);
-	        height: 20px;
-	        width: 20px;
-	        border-radius: 8px;
-	        padding: 0.5px;
-		}
-		.logo h5{
-			padding-left: 3px;
-			margin-bottom: 3px;
-		}
+		width: 50%;
+		height: 30px;
+		border : 0px solid;
+		line-height: 30px;
+		float: right;
+	}
+	nav ul li{
+		width: 20%;
+		height: 30px;
+		float: left;
+		list-style: none;
+		margin-bottom: 5px;
+	}
+	nav ul li:hover .auto{
+		display: block;
+        width:300px;
+        height:100px;
+        overflow:auto;
+        background-color: rgba(255,255,255,0.5);
+        border-radius: 5px;
+	}
+	nav ul li ul{
+		display: none;
+	}
+	nav ul li ul li{
+		width: 250px;
+		height: 40px;
+		background-color: #ffff;
+		margin-bottom: 2px;
+		border-style: solid !important;
+		text-align: left !important;
+	}
+	.auto {
+	    display:none;
+	    padding:5px;
+	    margin-top:5px;
+	    width:330px;
+	    height:100px;
+	    overflow:auto;
+	}
+	.auto:hover {
+	    display:block;
+	    padding:5px;
+	    margin-top:5px;
+	    width:330px;
+	    height:100px;
+	    overflow:auto;
+	}
+	.badge-notif {
+        position:absolute;
+        top : 5px;
+        right: 260px;
+        background-color: rgba(255,255,255,0.5);
+        height: 20px;
+        width: 20px;
+        border-radius: 8px;
+        padding: 0.5px;
+	}
+	.logo h5{
+		padding-left: 3px;
+		margin-bottom: 3px;
+	}
 </style>
 <body>
 	<thead>

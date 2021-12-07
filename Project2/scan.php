@@ -17,92 +17,95 @@
 <head>
 	<title>Petrocode</title>
 	<style>
-		body{
-			font-family: sans-serif;
-			background-repeat: no-repeat;
-        	background-image: url(bg.jpg);
-			background-size: cover;
-		}
-		.container-fluid{
+	body{
+		font-family: sans-serif;
+		background-repeat: no-repeat;
+       	background-image: url(bg.jpg);
+		background-size: cover;
+	}
+	.container-fluid{
     	border-radius: 25px;
     	background-color: rgba(255,255,255,0.8);
     	box-shadow: 0 0 17px #333;
-		}
-		.home{
-			float: right;
-			display: inline-block;
-			width: 350px;
-			height: 50px;
-			list-style: none;
-			line-height: 50px;	
-			color: black;
-			text-align: center;
-			font-size: 20px;
-		}
-		.home img{
-			width: 30px;
-			height: 30px;
-		}
-		nav{
-			width: 50%;
-			height: 30px;
-			border : 0px solid;
-			line-height: 30px;
-			float: right;
-		}
-		nav ul li{
-			width: 20%;
-			height: 30px;
-			float: left;
-			list-style: none;
-			margin-bottom: 5px;
-		}
-		nav ul li:hover ul{
-			display: block;
-			background-color: rgba(255,255,255,0.5);
-			border-radius: 5px;
-		}
-		nav ul li ul{
-			display: none;
-		}
-		nav ul li ul li{
-			width: 300px;
-			height: 40px;
-			background-color: #ffff;
-			margin-bottom: 2px;
-			border-style: solid !important;
-			text-align: left !important;
-		}
-		.auto {
-		    display:none;
-		    padding:5px;
-		    margin-top:5px;
-		    width:300px;
-		    height:100px;
-		    overflow:auto;
-		}
-		.auto:hover {
-		    display:block;
-		    padding:5px;
-		    margin-top:5px;
-		    width:300px;
-		    height:100px;
-		    overflow:auto;
-		}
-		.badge-notif {
-	        position:absolute;
-	        top : 5px;
-	        right: 265px;
-	        background-color: rgba(255,255,255,0.5);
-	        height: 20px;
-	        width: 20px;
-	        border-radius: 8px;
-	        padding: 0.5px;
-		}
-		.logo h5{
-			padding-left: 3px;
-			padding-bottom: 3px;
-		}
+	}
+	.home{
+		float: right;
+		display: inline-block;
+		width: 350px;
+		height: 50px;
+		list-style: none;
+		line-height: 50px;	
+		color: black;
+		text-align: center;
+		font-size: 20px;
+	}
+	.home img{
+		width: 30px;
+		height: 30px;
+	}
+	nav{
+		width: 50%;
+		height: 30px;
+		border : 0px solid;
+		line-height: 30px;
+		float: right;
+	}
+	nav ul li{
+		width: 20%;
+		height: 30px;
+		float: left;
+		list-style: none;
+		margin-bottom: 5px;
+	}
+	nav ul li:hover .auto{
+		display: block;
+        width:300px;
+        height:200px;
+        overflow:auto;
+        background-color: #ffff;
+        border-radius: 5px;
+	}
+	nav ul li ul{
+		display: none;
+	}
+	nav ul li ul li{
+		width: 250px;
+		height: 40px;
+		background-color: #ffff;
+		margin-bottom: 2px;
+		border-style: solid !important;
+		text-align: left !important;
+	}
+	.auto {
+	    display:none;
+	    padding:5px;
+	    margin-top:5px;
+	    width:330px;
+	    height:100px;
+	    overflow:auto;
+	}
+	.auto:hover {
+	    display:block;
+	    padding:5px;
+	    margin-top:5px;
+	    width:330px;
+	    height:100px;
+	    overflow:auto;
+	}
+	.badge-notif {
+	    position:absolute;
+	    top : 5px;
+	    right: 265px;
+	    background-color: rgba(255,255,255,0.5);
+	    height: 20px;
+	    width: 20px;
+	    border-radius: 8px;
+	    padding: 0.5px;
+	}
+	.logo h5{
+		padding-left: 3px;
+		padding-bottom: 3px;
+	}
 	</style>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">

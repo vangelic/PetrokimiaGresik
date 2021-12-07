@@ -89,7 +89,7 @@
 	nav ul li:hover .auto{
 		display: block;
         width:300px;
-        height:300px;
+        height:200px;
         overflow:auto;
         background-color: #ffff;
         border-radius: 5px;
